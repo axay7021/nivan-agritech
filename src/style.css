@@ -1,0 +1,41 @@
+/* styles.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Pushes items to the left */
+}
+
+.navbar-item {
+  color: inherit;
+  font-weight: bolder;
+  margin-right: 20px; /* Adjust spacing between items */
+  position: relative;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #cc5e26; /* Underline color */
+  transition: width 0.3s ease;
+}
+
+.navbar-item:hover::after {
+  width: 100%;
+}
+
+.navbar-dropdown-icon {
+  margin-left: 8px;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}

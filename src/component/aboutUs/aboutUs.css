@@ -1,0 +1,29 @@
+/* Ensure full-width container */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 4px 0;
+}
+
+@media (max-width: 600px) {
+  .MuiTypography-h2 {
+    font-size: 1.5rem;
+  }
+
+  .MuiTypography-h4 {
+    font-size: 1.25rem;
+  }
+
+  ul li {
+    font-size: 0.875rem;
+  }
+}
