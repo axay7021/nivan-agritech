@@ -3,19 +3,17 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import {
-  AppBar,
-  Box,
-  Button,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-  useTheme
+    AppBar,
+    Box,
+    Button, Drawer,
+    IconButton, List, ListItem, ListItemText,
+    Toolbar,
+    Typography,
+    useMediaQuery,
+    useTheme
 } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
+
 import React, { useState } from "react";
 import './index.css';
 
@@ -255,19 +253,18 @@ const Navbar = () => {
     setDrawerOpen(false);
   };
 
-  
-
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  console.log(isMobile, 'isMobile')
   return (
     <Box>
       {/* Top Bar */}
       <Box
-        sx={isMobile ? {  display: "flex", justifyContent: "center", alignItems: "center", } : { display: "flex", justifyContent: "space-between", alignItems: "center", backgroundColor: "#f8f5ec", padding: "10px 0" }}
+        sx={isMobile ? {  display: "flex", justifyContent: "center", alignItems: "center" } : { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 0" }}
       >
         {!isMobile ? (
           <>
-            <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+            <Box sx={{ paddingLeft: 5, display: "flex", gap: 2, alignItems: "center" }}>
               <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
                 <Email sx={{ color: "green" }} />
                 <Phone sx={{ color: "green" }} />
@@ -280,10 +277,10 @@ const Navbar = () => {
             <Box sx={{ width: "150px", height: "auto" }}>
               <img src="/images/resources/logo.png" alt="agrikol-logo" style={{ width: "100%", height: "auto" }} />
             </Box>
-            <Box sx={{ display: "flex", gap: 1 }}>
-              <IconButton><FacebookIcon /></IconButton>
-              <IconButton><TwitterIcon /></IconButton>
-              <IconButton><InstagramIcon /></IconButton>
+            <Box sx={{ display: "flex", gap: 1, paddingRight: 5}}>
+              <IconButton sx={{ "&:hover": {backgroundColor: 'green', color: "white" }, backgroundColor: '#f5f0e9', color: '#878986'}}><FacebookIcon /></IconButton>
+              <IconButton sx={{ "&:hover": {backgroundColor: 'green', color: "white" }, backgroundColor: '#f5f0e9', color: '#878986'}}><TwitterIcon /></IconButton>
+              <IconButton sx={{ "&:hover": {backgroundColor: 'green', color: "white" }, backgroundColor: '#f5f0e9', color: '#878986'}}><InstagramIcon /></IconButton>
             </Box>
           </>
         ) : (
@@ -295,13 +292,11 @@ const Navbar = () => {
 
        {/* Main Navbar */}
       <AppBar position="static" sx={{ backgroundColor: "#f8f5ec", boxShadow: "none" }}>
+          <Box sx={{ backgroundImage: "url(/images/shapes/header-bg.png)", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center", padding: "10px 0" }}/>
         {!isMobile ? (
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography variant="h6" color="black" sx={{ fontWeight: "bold" }}>
-            AGRIKOL
-          </Typography>
           <Box sx={{ display: "flex", gap: 2 }}>
-            <Button sx={{ backgroundColor: "#f1d354", borderRadius: "5px" }}>Home</Button>
+            <Button sx={{ backgroundColor: "green", borderRadius: "5px", color: "white" }}>Home</Button>
             <Button>Services</Button>
             <Button>Our Projects</Button>
             <Button>Shop</Button>
@@ -309,32 +304,34 @@ const Navbar = () => {
             <Button>News</Button>
             <Button>Contact</Button>
           </Box>
-          <Box sx={{ display: "flex", gap: 1 }}>
-            <IconButton><Search /></IconButton>
-            <IconButton><ShoppingCart /></IconButton>
-          </Box>
+          {/*<Box sx={{ display: "flex", gap: 1 }}>*/}
+          {/*  <IconButton><Search /></IconButton>*/}
+          {/*  <IconButton><ShoppingCart /></IconButton>*/}
+          {/*</Box>*/}
         </Toolbar>
         ) : (
-          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <IconButton onClick={() => setDrawerOpen(true)}>
-            {/* // drover icon */}
-            {/* Drawer for Mobile Menu */}
-            <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose}>
-              <Box sx={{ width: 250, backgroundColor: "#f8f5ec", height: "100vh", padding: "20px" }}>
-                <List>
-                  {["Home", "Services", "Our Projects", "Shop", "Pages", "News", "Contact"].map((text) => (
-                    <ListItem button key={text} onClick={() => setDrawerOpen(false)}>
-                      <ListItemText primary={text} />
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            </Drawer>
-
-          </IconButton>
-        </Toolbar>
+            <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+              <IconButton onClick={() => setDrawerOpen(true)}>
+                <MenuIcon />
+              </IconButton>
+            </Toolbar>
         )}
       </AppBar>
+
+        <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose}   PaperProps={{
+            sx: { height: "100%", top: 184, width: 250, borderRadius: "0 10px 10px 0" } // Adjust top if needed
+        }}
+        >
+            <Box sx={{height: "100%",backgroundColor: "#f8f5ec", overflow: "auto" }}>
+                <List>
+                    {["Home", "Services", "Our Projects", "Shop", "Pages", "News", "Contact"].map((text) => (
+                        <ListItem button key={text} onClick={() => setDrawerOpen(false)}>
+                            <ListItemText primary={text} />
+                        </ListItem>
+                    ))}
+                </List>
+            </Box>
+        </Drawer>
 
     </Box>
   );
