@@ -63,7 +63,7 @@ const MainContent = () => {
           <ImageSlider />
           <Banner />
           <AboutUs />
-          <Component />
+          {/* <Component /> */}
           <ProductionFacilities />
           <CategorySelection />
           <Numbers />

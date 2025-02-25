@@ -1,5 +1,5 @@
-import React from "react";
 import { Box, Typography } from "@mui/material";
+import React from "react";
 import companyImage from "../../Images/infastructure-home.jpg";
 
 const ProductionFacilities = () => {
@@ -7,7 +7,7 @@ const ProductionFacilities = () => {
     <Box
       className="production-facilities"
       sx={{
-        marginTop: 2,
+        // marginTop: 2,
         display: "flex",
         justifyContent: { xs: "center", md: "flex-start" },
         alignItems: "center",
