@@ -11,7 +11,7 @@ const Footer = () => {
         backgroundColor: "#1a1a1a",
         color: "#ffffff",
         padding: { xs: "20px 10px", sm: "40px 10px" }, // Adjust padding for 10px space around
-        width: "100%", // Make sure it spans full width
+        // width: "100%", // Make sure it spans full width
       }}
     >
       <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2 } }}>

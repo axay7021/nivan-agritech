@@ -103,79 +103,110 @@
 
 // export default Banner;
 
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Create a custom theme with custom breakpoints
+const theme = createTheme({
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 600, // Custom small screen size
+            md: 1040,
+            lg: 1280,
+            xl: 1920,
+        },
+    },
+});
+
 const Banner = () => {
-  return (
-    <Box sx={{ py: 8 }}>
-      <Container>
-        <Grid container spacing={4} alignItems="center">
-          {/* Left Image Section */}
-          <Grid item xs={12} md={6}>
-            <Box sx={{ position: "relative", textAlign: "center" }}>
-              <Box component="img" src="/images/about/about-1-img-1.jpg" alt="About" sx={{ width: "100%", borderRadius: 2 }} />
-              <Box
-                sx={{
-                  position: "absolute",
-                  top: "10%",
-                  left: "10%",
-                  background: "white",
-                  width: 80,
-                  height: 80,
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: 3,
-                }}
-              >
-                <span className="icon-focus"></span>
-              </Box>
-              <Box component="img" src="/images/about/about-1-img-2.jpg" alt="" sx={{ position: "absolute", bottom: 0, right: 0, width: "40%", borderRadius: 2 }} />
+    return (
+        <ThemeProvider theme={theme}>
+            <Box sx={{ py: 20, width: "100%", backgroundColor: "#f9f9f9", position: "relative" }}>
+                <Container>
+                    <Grid container spacing={4} alignItems="center" sx={{ flexDirection: { xs: "column", sm: "column", md: "row" } }}>
+                        {/* Left Image Section */}
+                        <Grid item xs={12} md={7} sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: { xs: 4, md: 0 } }}>
+                            <Box sx={{ position: "relative", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                <Box sx={{
+                                    position: 'absolute',
+                                    left: { xs: '50%', md: '-215px' },
+                                    top: { xs: '50%', md: '70px' },
+                                    transform: { xs: 'translate(-50%, -50%)', md: 'none' },
+                                    height: '430px',
+                                    width: '430px',
+                                    background: '#f5f0e9',
+                                    borderRadius: '50%',
+                                    zIndex: 0 }} />
+                                <Box component="img" src="/images/about/about-1-img-1.jpg" alt="About" sx={{ width: "100%", borderRadius: 2, zIndex: 1 }} />
+                                <Box
+                                    sx={{
+                                        position: "absolute",
+                                        top: { xs: "40%", sm: "45%", md: "50%" },
+                                        left: { xs: '38%', md: '-10%' },
+                                        transform: { xs: "translate(-50%, -50%)", md: "translateY(-57.5px)" },
+                                        zIndex: 2,
+                                    }}
+                                >
+                                    <Box sx={{
+                                        background: '#1976D2',
+                                        width: '115px',
+                                        height: '115px',
+                                        borderRadius: "50%",
+                                        position: "absolute",
+                                        textAlign: "center",
+                                    }} >
+                                        <span className="icon-focus"></span>
+                                    </Box>
+                                </Box>
+                                <Box component="img" src="/images/about/about-1-img-2.jpg" alt="" sx={{ position: "absolute", bottom: -110, right: { xs: 60, md: -80 }, width: "70%", borderRadius: 2, zIndex: 2 }} />
+                            </Box>
+                        </Grid>
+                        {/* Right Content Section */}
+                        <Grid item xs={12} md={5} sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", mt: { xs: 10, md: 0 } }}>
+                            <Typography variant="h6" color="primary" gutterBottom>
+                                About Agriculture
+                            </Typography>
+                            <Typography variant="h4" fontWeight="bold" gutterBottom>
+                                We’re leader in agriculture market
+                            </Typography>
+                            <Box component="img" src="/images/resources/leaf.png" alt="Leaf" sx={{ mb: 2 }} />
+                            <Typography variant="body1" paragraph>
+                                There are many variations of passages of Lorem Ipsum available, but the majority have
+                                suffered alteration in some form, by injected humour, or randomised words which
+                                don't look even slightly believable.
+                            </Typography>
+                            <Grid container spacing={2} sx={{ mt: 2 }}>
+                                <Grid item xs={6}>
+                                    <Box display="flex" alignItems="center" gap={2}>
+                                        {/*<span className="icon-harvest" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
+                                        <img src="/images/icon/veggies_banner_icon.png" alt="Harvest Icon" style={{ fontSize: 32, marginRight: 8, height: 60 }} />
+                                        <Typography sx={{ fontWeight: 800, fontSize: {xs: 20, sm: 18, md: 16}}}>Growing Fruits and Vegetables</Typography>
+                                    </Box>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Box display="flex" alignItems="center" gap={2}>
+                                        {/*<span className="icon-temperature" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
+                                        <img src="/images/icon/crops_banner_icon.png" alt="Harvest Icon" style={{ fontSize: 32, marginRight: 8, height: 60 }} />
+                                        <Typography sx={{ fontWeight: 800, fontSize: {xs: 20, sm: 18, md: 16}}}>Tips for Ripening your Fruits</Typography>
+                                    </Box>
+                                </Grid>
+                            </Grid>
+                            <Typography variant="body1" paragraph sx={{ mt: 2 }}>
+                                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                anything embarrassing hidden in the middle of text.
+                            </Typography>
+                            <Button component={Link} to="/about" variant="contained" color="primary" sx={{ mt: 3 }}>
+                                Learn More
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Container>
             </Box>
-          </Grid>
-          {/* Right Content Section */}
-          <Grid item xs={12} md={6}>
-            <Typography variant="h6" color="primary" gutterBottom>
-              About Agriculture
-            </Typography>
-            <Typography variant="h4" fontWeight="bold" gutterBottom>
-              We’re leader in agriculture market
-            </Typography>
-            <Box component="img" src="/images/resources/leaf.png" alt="Leaf" sx={{ mb: 2 }} />
-            <Typography variant="body1" paragraph>
-              There are many variations of passages of Lorem Ipsum available, but the majority have
-              suffered alteration in some form, by injected humour, or randomised words which
-              don't look even slightly believable.
-            </Typography>
-            <Grid container spacing={2} sx={{ mt: 2 }}>
-              <Grid item xs={6}>
-                <Box display="flex" alignItems="center">
-                  <span className="icon-harvest" style={{ fontSize: 32, marginRight: 8 }}></span>
-                  <Typography>Growing Fruits and Vegetables</Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={6}>
-                <Box display="flex" alignItems="center">
-                  <span className="icon-temperature" style={{ fontSize: 32, marginRight: 8 }}></span>
-                  <Typography>Tips for Ripening your Fruits</Typography>
-                </Box>
-              </Grid>
-            </Grid>
-            <Typography variant="body1" paragraph sx={{ mt: 2 }}>
-              If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
-              anything embarrassing hidden in the middle of text.
-            </Typography>
-            <Button component={Link} to="/about" variant="contained" color="primary" sx={{ mt: 3 }}>
-              Learn More
-            </Button>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
-  );
+        </ThemeProvider>
+    );
 };
 
 export default Banner;
