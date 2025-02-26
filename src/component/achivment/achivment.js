@@ -1,10 +1,10 @@
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import { Box, Typography, Grid } from "@mui/material";
 import CountUp from "react-countup";
 
 const Numbers = () => {
   return (
-    <Box sx={{ py: { xs: 5, sm: 8, lg: 10 }, backgroundColor: "#f7fafc" }}>
+    <Box sx={{ py: { xs: 5, sm: 8, lg: 10 }, backgroundColor: "#f5f0e9" }}>
       <Box sx={{ maxWidth: "1200px", mx: "auto", px: { xs: 2, sm: 3, lg: 4 } }}>
         <Box sx={{ maxWidth: "800px", mx: "auto", textAlign: "center" }}>
           <Typography
