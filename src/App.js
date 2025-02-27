@@ -89,8 +89,17 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Navbar />
-          <MainContent />{" "}
+          {/* <MainContent />{" "} */}
           {/* All content sections are rendered conditionally here */}
+          <ImageSlider />
+          <Banner />
+          <AboutUs />
+          {/* <Component /> */}
+          <ProductionFacilities />
+          <ProductCarousel />
+          {/* <ContactUs /> */}
+          <CategorySelection />
+          <Numbers />
           <Footer />
         </header>
       </div>
