@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import "./news.css";
 
 const cardsData = [
