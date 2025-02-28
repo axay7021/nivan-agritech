@@ -146,6 +146,9 @@ import {
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import ServiceImage1 from "../../images/service/service-1-img-1.jpg";
+import ServiceImage2 from "../../images/service/service-1-img-2.jpg";
+import ServiceImage3 from "../../images/service/service-1-img-3.jpg";
 
 const services = [
   {
@@ -154,7 +157,7 @@ const services = [
     description:
       "There are many variations of passages available, but the majority have suffered.",
     link: "/service-detail",
-    serviceImage: "/images/service/service-1-img-1.jpg",
+    serviceImage: ServiceImage1,
     delay: 0.3,
   },
   {
@@ -163,7 +166,7 @@ const services = [
     description:
       "There are many variations of passages available, but the majority have suffered.",
     link: "/service-detail",
-    serviceImage: "/images/service/service-1-img-2.jpg",
+    serviceImage: ServiceImage2,
     delay: 0.6,
   },
   {
@@ -172,7 +175,7 @@ const services = [
     description:
       "There are many variations of passages available, but the majority have suffered.",
     link: "/service-detail",
-    serviceImage: "/images/service/service-1-img-3.jpg",
+    serviceImage: ServiceImage3,
     delay: 0.9,
   },
 ];
@@ -283,7 +286,7 @@ const AboutUs = () => {
           </Typography>
           <Box
             component="img"
-            src="/images/resources/leaf.png"
+            src="./images/resources/leaf.png"
             alt="Leaf"
             sx={{ mt: 2, width: 50 }}
           />

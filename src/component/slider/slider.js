@@ -73,9 +73,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const slides = [
-  "/images/main-slider/slide_v1_1.jpg",
-  "/images/main-slider/slide_v1_2.jpg",
-  "/images/main-slider/slide_v1_3.jpg",
+  "./images/main-slider/slide_v1_1.jpg",
+  "./images/main-slider/slide_v1_2.jpg",
+  "./images/main-slider/slide_v1_3.jpg",
 ];
 
 const ImageSlider = () => {

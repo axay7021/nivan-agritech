@@ -122,7 +122,7 @@ const ContactUs = () => {
                   borderRadius: 2,
                   color: "white",
                   backgroundImage:
-                    "url(/assets/images/resources/get_quote_bg.jpg)",
+                    "url(./images/resources/get_quote_bg.jpg)",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   height: "100%",
