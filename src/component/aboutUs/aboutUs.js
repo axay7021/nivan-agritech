@@ -146,6 +146,9 @@ import {
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import serviceImage1 from "../../assets/images/service/service-1-img-1.jpg";
+import serviceImage2 from "../../assets/images/service/service-1-img-2.jpg";
+import serviceImage3 from "../../assets/images/service/service-1-img-3.jpg";
 
 const services = [
   {
@@ -154,7 +157,7 @@ const services = [
     description:
       "There are many variations of passages available, but the majority have suffered.",
     link: "/service-detail",
-    serviceImage: "/images/service/service-1-img-1.jpg",
+    serviceImage: serviceImage1,
     delay: 0.3,
   },
   {
@@ -163,7 +166,7 @@ const services = [
     description:
       "There are many variations of passages available, but the majority have suffered.",
     link: "/service-detail",
-    serviceImage: "/images/service/service-1-img-2.jpg",
+    serviceImage: serviceImage2,
     delay: 0.6,
   },
   {
@@ -172,7 +175,7 @@ const services = [
     description:
       "There are many variations of passages available, but the majority have suffered.",
     link: "/service-detail",
-    serviceImage: "/images/service/service-1-img-3.jpg",
+    serviceImage: serviceImage3,
     delay: 0.9,
   },
 ];

@@ -103,10 +103,15 @@
 
 // export default Banner;
 
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import React from "react";
 import { Link } from "react-router-dom";
+import aboutImageOne from "../../assets/images/about/about-1-img-1.jpg";
+import aboutImageTwo from "../../assets/images/about/about-1-img-2.jpg";
+import cropsIcon from "../../assets/images/icon/crops_banner_icon.png";
+import harvestIcon from "../../assets/images/icon/veggies_banner_icon.png";
+import leafImage from "../../assets/images/resources/leaf.png";
 
 // Create a custom theme with custom breakpoints
 const theme = createTheme({
@@ -140,7 +145,7 @@ const Banner = () => {
                                     background: '#f5f0e9',
                                     borderRadius: '50%',
                                     zIndex: 0 }} />
-                                <Box component="img" src="/images/about/about-1-img-1.jpg" alt="About" sx={{ width: "100%", borderRadius: 2, zIndex: 1 }} />
+                                <Box component="img" src={aboutImageOne} alt="About" sx={{ width: "100%", borderRadius: 2, zIndex: 1 }} />
                                 <Box
                                     sx={{
                                         position: "absolute",
@@ -161,7 +166,7 @@ const Banner = () => {
                                         <span className="icon-focus"></span>
                                     </Box>
                                 </Box>
-                                <Box component="img" src="/images/about/about-1-img-2.jpg" alt="" sx={{ position: "absolute", bottom: -110, right: { xs: 60, md: -80 }, width: "70%", borderRadius: 2, zIndex: 2 }} />
+                                <Box component="img" src={aboutImageTwo} alt="" sx={{ position: "absolute", bottom: -110, right: { xs: 60, md: -80 }, width: "70%", borderRadius: 2, zIndex: 2 }} />
                             </Box>
                         </Grid>
                         {/* Right Content Section */}
@@ -172,7 +177,7 @@ const Banner = () => {
                             <Typography variant="h4" fontWeight="bold" gutterBottom>
                                 We’re leader in agriculture market
                             </Typography>
-                            <Box component="img" src="/images/resources/leaf.png" alt="Leaf" sx={{ mb: 2 }} />
+                            <Box component="img" src={leafImage} alt="Leaf" sx={{ mb: 2 }} />
                             <Typography variant="body1" paragraph>
                                 There are many variations of passages of Lorem Ipsum available, but the majority have
                                 suffered alteration in some form, by injected humour, or randomised words which
@@ -182,14 +187,14 @@ const Banner = () => {
                                 <Grid item xs={6}>
                                     <Box display="flex" alignItems="center" gap={2}>
                                         {/*<span className="icon-harvest" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
-                                        <img src="/images/icon/veggies_banner_icon.png" alt="Harvest Icon" style={{ fontSize: 32, marginRight: 8, height: 60 }} />
+                                        <img src={harvestIcon} alt="Harvest Icon" style={{ fontSize: 32, marginRight: 8, height: 60 }} />
                                         <Typography sx={{ fontWeight: 800, fontSize: {xs: 20, sm: 18, md: 16}}}>Growing Fruits and Vegetables</Typography>
                                     </Box>
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Box display="flex" alignItems="center" gap={2}>
                                         {/*<span className="icon-temperature" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
-                                        <img src="/images/icon/crops_banner_icon.png" alt="Harvest Icon" style={{ fontSize: 32, marginRight: 8, height: 60 }} />
+                                        <img src={cropsIcon} alt="Harvest Icon" style={{ fontSize: 32, marginRight: 8, height: 60 }} />
                                         <Typography sx={{ fontWeight: 800, fontSize: {xs: 20, sm: 18, md: 16}}}>Tips for Ripening your Fruits</Typography>
                                     </Box>
                                 </Grid>

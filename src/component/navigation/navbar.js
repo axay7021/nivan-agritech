@@ -1,6 +1,7 @@
 import { Email, Phone } from "@mui/icons-material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import MenuIcon from '@mui/icons-material/Menu';
 import TwitterIcon from "@mui/icons-material/Twitter";
 import {
     AppBar,
@@ -16,9 +17,10 @@ import {
     useMediaQuery,
     useTheme
 } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+import logo from "../../assets/images/resources/logo.png";
+import headerBackgroundImage from "../../assets/images/shapes/header-bg.png";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './index.css';
 
 const Navbar = () => {
@@ -72,7 +74,7 @@ const Navbar = () => {
                             </Box>
                         </Box>
                         <Box sx={{ width: "150px", height: "auto" }}>
-                            <img src="/images/resources/logo.png" alt="agrikol-logo" style={{ width: "100%", height: "auto" }} />
+                            <img src={logo} alt="agrikol-logo" style={{ width: "100%", height: "auto" }} />
                         </Box>
                         <Box sx={{ display: "flex", gap: 1, paddingRight: 5}}>
                             <IconButton sx={{ "&:hover": {backgroundColor: 'green', color: "white" }, backgroundColor: '#f5f0e9', color: '#878986'}}><FacebookIcon /></IconButton>
@@ -82,7 +84,7 @@ const Navbar = () => {
                     </>
                 ) : (
                     <Box sx={{ width: "150px", height: "auto", justifyContent: "center" }}>
-                        <img src="/images/resources/logo.png" alt="agrikol-logo" style={{ width: "100%", height: "auto" }} />
+                        <img src={logo} alt="agrikol-logo" style={{ width: "100%", height: "auto" }} />
                     </Box>
                 )}
             </Box>
@@ -98,7 +100,7 @@ const Navbar = () => {
                 }}
             >
                 <Box sx={{
-                    backgroundImage: "url(/images/shapes/header-bg.png)",
+                    backgroundImage: "url(" + headerBackgroundImage + ")",
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",

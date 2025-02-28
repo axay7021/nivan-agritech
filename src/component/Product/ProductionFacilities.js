@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import companyImage from "../../Images/infastructure-home.jpg";
+import companyImage from "../../assets/images/infastructure-home.jpg";
 
 const ProductionFacilities = () => {
   return (

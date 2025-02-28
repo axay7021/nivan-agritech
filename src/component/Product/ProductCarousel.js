@@ -3,13 +3,19 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import gallaryImage1 from "../../assets/images/gallery/gallery-1-img-1.jpg";
+import gallaryImage2 from "../../assets/images/gallery/gallery-1-img-2.jpg";
+import gallaryImage3 from "../../assets/images/gallery/gallery-1-img-3.jpg";
+import gallaryImage4 from "../../assets/images/gallery/gallery-1-img-4.jpg";
+import gallaryImage5 from "../../assets/images/gallery/gallery-1-img-5.jpg";
+import leaf from "../../assets/images/resources/leaf.png";
 
 const images = [
-  "/images/gallery/gallery-1-img-1.jpg",
-  "/images/gallery/gallery-1-img-2.jpg",
-  "/images/gallery/gallery-1-img-3.jpg",
-  "/images/gallery/gallery-1-img-4.jpg",
-  "/images/gallery/gallery-1-img-5.jpg",
+  gallaryImage1,
+  gallaryImage2,
+  gallaryImage3,
+  gallaryImage4,
+  gallaryImage5,
 ];
 
 const settings = {
@@ -39,7 +45,7 @@ const ProductCarousel = () => {
           <Typography variant="h4" fontWeight="bold">
             Checkout Gallery
           </Typography>
-          <Box component="img" src="/assets/images/resources/leaf.png" alt="Leaf" sx={{ width: 50 }} />
+          <Box component="img" src={leaf} alt="Leaf" sx={{ width: 50 }} />
         </Stack>
 
         <Box sx={{ mt: 4 }}>

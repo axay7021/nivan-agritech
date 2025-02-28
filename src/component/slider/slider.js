@@ -63,19 +63,22 @@
 //
 // export default ImageSlider;
 
-import React, {useState} from "react";
-import Slider from "react-slick";
-import { Box, Typography, Button, Container, useTheme } from "@mui/material";
+import { Box, Button, Container, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
+import React, { useState } from "react";
+import Slider from "react-slick";
 
 import { Link } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import sliderImage1 from "../../assets/images/main-slider/slide_v1_1.jpg";
+import sliderImage2 from "../../assets/images/main-slider/slide_v1_2.jpg";
+import sliderImage3 from "../../assets/images/main-slider/slide_v1_3.jpg";
 
 const slides = [
-  "/images/main-slider/slide_v1_1.jpg",
-  "/images/main-slider/slide_v1_2.jpg",
-  "/images/main-slider/slide_v1_3.jpg",
+  sliderImage1,
+  sliderImage2,
+  sliderImage3,
 ];
 
 const ImageSlider = () => {

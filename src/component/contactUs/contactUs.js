@@ -1,12 +1,13 @@
 import {
-    Box,
-    Button,
-    Container,
-    Grid,
-    TextField,
-    Typography,
+  Box,
+  Button,
+  Container,
+  Grid,
+  TextField,
+  Typography,
 } from "@mui/material";
 import { useState } from "react";
+import quoteBackground from "../../assets/images/resources/get_quote_bg.jpg";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -122,7 +123,7 @@ const ContactUs = () => {
                   borderRadius: 2,
                   color: "white",
                   backgroundImage:
-                    "url(/assets/images/resources/get_quote_bg.jpg)",
+                    "url(" + quoteBackground + ")",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   height: "100%",
