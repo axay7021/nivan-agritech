@@ -1,20 +1,26 @@
 {
   "files": {
-    "main.css": "/nivan-agritech/static/css/main.3666f2cd.css",
-    "main.js": "/nivan-agritech/static/js/main.d99c8879.js",
+    "main.css": "/nivan-agritech/static/css/main.5e87127d.css",
+    "main.js": "/nivan-agritech/static/js/main.057581d1.js",
     "static/js/453.f63c711a.chunk.js": "/nivan-agritech/static/js/453.f63c711a.chunk.js",
     "static/media/infastructure-home.jpg": "/nivan-agritech/static/media/infastructure-home.cf70633ce79454f0fc8c.jpg",
+    "static/media/logo.png": "/nivan-agritech/static/media/logo.26d09ec42e5b8bcaa10b.png",
+    "static/media/veggies_banner_icon.png": "/nivan-agritech/static/media/veggies_banner_icon.bf2eee9e4fc87a2aaea4.png",
+    "static/media/crops_banner_icon.png": "/nivan-agritech/static/media/crops_banner_icon.4ac16b4f39bf08fca19d.png",
+    "static/media/slide_v1_1.jpg": "/nivan-agritech/static/media/slide_v1_1.291d18d741f63512b274.jpg",
+    "static/media/slide_v1_2.jpg": "/nivan-agritech/static/media/slide_v1_2.291d18d741f63512b274.jpg",
+    "static/media/slide_v1_3.jpg": "/nivan-agritech/static/media/slide_v1_3.291d18d741f63512b274.jpg",
     "static/media/slick.svg": "/nivan-agritech/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/nivan-agritech/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/nivan-agritech/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/nivan-agritech/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/nivan-agritech/index.html",
-    "main.3666f2cd.css.map": "/nivan-agritech/static/css/main.3666f2cd.css.map",
-    "main.d99c8879.js.map": "/nivan-agritech/static/js/main.d99c8879.js.map",
+    "main.5e87127d.css.map": "/nivan-agritech/static/css/main.5e87127d.css.map",
+    "main.057581d1.js.map": "/nivan-agritech/static/js/main.057581d1.js.map",
     "453.f63c711a.chunk.js.map": "/nivan-agritech/static/js/453.f63c711a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3666f2cd.css",
-    "static/js/main.d99c8879.js"
+    "static/css/main.5e87127d.css",
+    "static/js/main.057581d1.js"
   ]
 }
