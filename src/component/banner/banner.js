@@ -144,13 +144,16 @@ const Banner = () => {
                                     width: '430px',
                                     background: '#f5f0e9',
                                     borderRadius: '50%',
-                                    zIndex: 0 }} />
+                                    zIndex: 0 ,
+                                    display: { xs: 'none', md: 'block' }
+                                    }} 
+                                />
                                 <Box component="img" src={aboutImageOne} alt="About" sx={{ width: "100%", borderRadius: 2, zIndex: 1 }} />
                                 <Box
                                     sx={{
                                         position: "absolute",
-                                        top: { xs: "40%", sm: "45%", md: "50%" },
-                                        left: { xs: '38%', md: '-10%' },
+                                        top: { xs: "39%", sm: "40%", md: "50%" },
+                                        left: { xs: '35%', sm: '40%', md: '-10%' },
                                         transform: { xs: "translate(-50%, -50%)", md: "translateY(-57.5px)" },
                                         zIndex: 2,
                                     }}
@@ -166,7 +169,7 @@ const Banner = () => {
                                         <span className="icon-focus"></span>
                                     </Box>
                                 </Box>
-                                <Box component="img" src={aboutImageTwo} alt="" sx={{ position: "absolute", bottom: -110, right: { xs: 60, md: -80 }, width: "70%", borderRadius: 2, zIndex: 2 }} />
+                                <Box component="img" src={aboutImageTwo} alt="" sx={{ position: "absolute", bottom: -110, right: { xs: 47, md: -80 }, width: "70%", borderRadius: 2, zIndex: 2 }} />
                             </Box>
                         </Grid>
                         {/* Right Content Section */}
@@ -183,7 +186,7 @@ const Banner = () => {
                                 suffered alteration in some form, by injected humour, or randomised words which
                                 don't look even slightly believable.
                             </Typography>
-                            <Grid container spacing={2} sx={{ mt: 2 }}>
+                            <Grid container spacing={2} sx={{ mt: 2, display: "flex", justifyContent: "center", flexDirection: { xs: "column", sm: "row", md: "row" } }}>
                                 <Grid item xs={6}>
                                     <Box display="flex" alignItems="center" gap={2}>
                                         {/*<span className="icon-harvest" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
