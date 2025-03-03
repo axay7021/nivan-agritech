@@ -138,14 +138,14 @@ const Banner = () => {
                                 <Box sx={{
                                     position: 'absolute',
                                     left: { xs: '50%', md: '-215px' },
-                                    top: { xs: '50%', md: '70px' },
+                                    top: { xs: '1px', md: '70px' },
                                     transform: { xs: 'translate(-50%, -50%)', md: 'none' },
-                                    height: '430px',
-                                    width: '430px',
+                                    height: { xs: '230px', md: '430px' },
+                                    width: { xs: '230px', md: '430px' },
                                     background: '#f5f0e9',
                                     borderRadius: '50%',
                                     zIndex: 0 ,
-                                    display: { xs: 'none', md: 'block' }
+                                    // display: { xs: 'none', md: 'block' }
                                     }} 
                                 />
                                 <Box component="img" src={aboutImageOne} alt="About" sx={{ width: "100%", borderRadius: 2, zIndex: 1 }} />

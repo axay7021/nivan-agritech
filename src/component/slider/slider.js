@@ -99,6 +99,7 @@ const ImageSlider = () => {
         <Box
             sx={{
               position: "absolute",
+            //   left: { xs: "10%", md: "calc(50% - 20px)" },
               left: "85%",
               gap: 3,
               top: "62%",

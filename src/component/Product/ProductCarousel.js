@@ -10,13 +10,54 @@ import gallaryImage4 from "../../assets/images/gallery/gallery-1-img-4.jpg";
 import gallaryImage5 from "../../assets/images/gallery/gallery-1-img-5.jpg";
 import leaf from "../../assets/images/resources/leaf.png";
 
-const images = [
-  gallaryImage1,
-  gallaryImage2,
-  gallaryImage3,
-  gallaryImage4,
-  gallaryImage5,
-];
+const images = [gallaryImage1, gallaryImage2, gallaryImage3, gallaryImage4, gallaryImage5];
+
+const CustomPrevArrow = (props) => {
+  const { className, onClick } = props;
+  return (
+    <Box
+      className={className}
+      onClick={onClick}
+      sx={{
+        left: "10px",
+        zIndex: 1,
+        width: 40,
+        height: 40,
+        // backgroundColor: "rgba(0, 0, 0, 0.5)",
+        borderRadius: "50%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        cursor: "pointer",
+        "&:hover": { backgroundColor: "rgba(0, 0, 0, 0.8)" },
+      }}
+    />
+  );
+};
+
+const CustomNextArrow = (props) => {
+  const { className, onClick } = props;
+  return (
+    <Box
+      className={className}
+      onClick={onClick}
+      sx={{
+        right: "10px",
+        zIndex: 1,
+        width: 40,
+        height: 40,
+        // backgroundColor: "rgba(0, 0, 0, 0.5)",
+        borderRadius: "50%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        cursor: "pointer",
+        "&:hover": { backgroundColor: "rgba(0, 0, 0, 0.8)" },
+      }}
+    />
+  );
+};
+
 
 const settings = {
   dots: false,
@@ -27,12 +68,16 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 2000,
   centerMode: true,
-  centerPadding: "40px", // Increased padding
+  centerPadding: "40px",
   responsive: [
     { breakpoint: 1024, settings: { slidesToShow: 2, centerPadding: "30px" } },
     { breakpoint: 640, settings: { slidesToShow: 1, centerPadding: "20px" } },
   ],
+  arrows: true,
+  prevArrow: <CustomPrevArrow />,
+  nextArrow: <CustomNextArrow />,
 };
+
 
 const ProductCarousel = () => {
   return (
@@ -48,7 +93,7 @@ const ProductCarousel = () => {
           <Box component="img" src={leaf} alt="Leaf" sx={{ width: 50 }} />
         </Stack>
 
-        <Box sx={{ mt: 4 }}>
+        <Box sx={{ mt: 4, position: "relative" }}>
           <Slider {...settings}>
             {images.map((img, index) => (
               <Box key={index} sx={{ px: 2, boxSizing: "border-box", padding: "0 10px" }}>

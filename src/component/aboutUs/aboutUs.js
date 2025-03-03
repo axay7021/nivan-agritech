@@ -149,6 +149,7 @@ import { Link } from "react-router-dom";
 import serviceImage1 from "../../assets/images/service/service-1-img-1.jpg";
 import serviceImage2 from "../../assets/images/service/service-1-img-2.jpg";
 import serviceImage3 from "../../assets/images/service/service-1-img-3.jpg";
+import leaf from "../../assets/images/resources/leaf.png";
 
 const services = [
   {
@@ -286,7 +287,7 @@ const AboutUs = () => {
           </Typography>
           <Box
             component="img"
-            src="/images/resources/leaf.png"
+            src={leaf}
             alt="Leaf"
             sx={{ mt: 2, width: 50 }}
           />
