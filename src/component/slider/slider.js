@@ -71,9 +71,9 @@ import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import sliderImage1 from "../../assets/images/main-slider/slide_v1_1.jpg";
-import sliderImage2 from "../../assets/images/main-slider/slide_v1_2.jpg";
-import sliderImage3 from "../../assets/images/main-slider/slide_v1_3.jpg";
+import sliderImage1 from "../../assets/images/main-slider/slide_v5_1.jpg";
+import sliderImage2 from "../../assets/images/main-slider/slide_v5_2.jpg";
+import sliderImage3 from "../../assets/images/main-slider/slide_v5_3.jpg";
 
 const slides = [
   sliderImage1,
@@ -152,7 +152,7 @@ const ImageSlider = () => {
                             padding: "20px",
                             borderRadius: "8px",
                             textAlign: "center",
-                            color: "#fff",
+                            // color: "#1976D2",
                         }}
                     >
                         {activeSlide === index && (
@@ -162,14 +162,14 @@ const ImageSlider = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.5 }}
                                 >
-                                    <Typography variant="h6">The best Agriculture products</Typography>
+                                    <Typography variant="h6" sx={{ color: "white", textShadow: "2px 2px 4px black" }}>The best Agriculture products</Typography>
                                 </motion.div>
                                 <motion.div
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 1 }}
                                 >
-                                    <Typography variant="h3" component="h1" sx={{ fontWeight: "bold", mt: 1 }}>
+                                    <Typography variant="h3" component="h1" sx={{ fontWeight: "bold", mt: 1, color: "white", textShadow: "2px 2px 4px black" }}>
                                         Welcome to
                                     </Typography>
                                 </motion.div>
@@ -178,7 +178,7 @@ const ImageSlider = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 1.5 }}
                                 >
-                                    <Typography variant="h3" component="h1" sx={{ fontWeight: "bold", mt: 1 }}>
+                                    <Typography variant="h3" component="h1" sx={{ fontWeight: "bold", mt: 1, color: "white", textShadow: "2px 2px 4px black" }}>
                                         Agriculture Farm
                                     </Typography>
                                 </motion.div>
