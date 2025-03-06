@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nivan-agritech/static/css/main.5e87127d.css",
-    "main.js": "/nivan-agritech/static/js/main.3ed7f1c2.js",
+    "main.js": "/nivan-agritech/static/js/main.e3ce5f55.js",
     "static/js/453.f63c711a.chunk.js": "/nivan-agritech/static/js/453.f63c711a.chunk.js",
     "static/media/infastructure-home.jpg": "/nivan-agritech/static/media/infastructure-home.cf70633ce79454f0fc8c.jpg",
     "static/media/slide_v5_3.jpg": "/nivan-agritech/static/media/slide_v5_3.c07e3b40c1d1281bd604.jpg",
@@ -16,11 +16,11 @@
     "static/media/slick.woff": "/nivan-agritech/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/nivan-agritech/index.html",
     "main.5e87127d.css.map": "/nivan-agritech/static/css/main.5e87127d.css.map",
-    "main.3ed7f1c2.js.map": "/nivan-agritech/static/js/main.3ed7f1c2.js.map",
+    "main.e3ce5f55.js.map": "/nivan-agritech/static/js/main.e3ce5f55.js.map",
     "453.f63c711a.chunk.js.map": "/nivan-agritech/static/js/453.f63c711a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e87127d.css",
-    "static/js/main.3ed7f1c2.js"
+    "static/js/main.e3ce5f55.js"
   ]
 }
