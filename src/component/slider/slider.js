@@ -75,7 +75,7 @@ import sliderImage1 from "../../assets/images/main-slider/slide_v5_1.jpg";
 import sliderImage2 from "../../assets/images/main-slider/slide_v5_2.jpg";
 import sliderImage3 from "../../assets/images/main-slider/slide_v5_3.jpg";
 
-const slides = [sliderImage1, sliderImage2, sliderImage3];
+// const slides = [sliderImage1, sliderImage2, sliderImage3];
 
 const ImageSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
