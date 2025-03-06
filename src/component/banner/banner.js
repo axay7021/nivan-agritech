@@ -110,111 +110,236 @@ import { Link } from "react-router-dom";
 import aboutImageOne from "../../assets/images/about/about-1-img-1.jpg";
 import aboutImageTwo from "../../assets/images/about/about-1-img-2.jpg";
 import cropsIcon from "../../assets/images/icon/crops_banner_icon.png";
+import plantIcon from "../../assets/images/icon/plant_icon-100.png";
 import harvestIcon from "../../assets/images/icon/veggies_banner_icon.png";
 import leafImage from "../../assets/images/resources/leaf.png";
 
 // Create a custom theme with custom breakpoints
 const theme = createTheme({
-    breakpoints: {
-        values: {
-            xs: 0,
-            sm: 600, // Custom small screen size
-            md: 1040,
-            lg: 1280,
-            xl: 1920,
-        },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600, // Custom small screen size
+      md: 1040,
+      lg: 1280,
+      xl: 1920,
     },
+  },
 });
 
 const Banner = () => {
-    return (
-        <ThemeProvider theme={theme}>
-            <Box sx={{ py: 20, width: "100%", backgroundColor: "#f9f9f9", position: "relative" }}>
-                <Container>
-                    <Grid container spacing={4} alignItems="center" sx={{ flexDirection: { xs: "column", sm: "column", md: "row" } }}>
-                        {/* Left Image Section */}
-                        <Grid item xs={12} md={7} sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: { xs: 4, md: 0 } }}>
-                            <Box sx={{ position: "relative", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                <Box sx={{
-                                    position: 'absolute',
-                                    left: { xs: '50%', md: '-215px' },
-                                    top: { xs: '1px', md: '70px' },
-                                    transform: { xs: 'translate(-50%, -50%)', md: 'none' },
-                                    height: { xs: '230px', md: '430px' },
-                                    width: { xs: '230px', md: '430px' },
-                                    background: '#f5f0e9',
-                                    borderRadius: '50%',
-                                    zIndex: 0 ,
-                                    // display: { xs: 'none', md: 'block' }
-                                    }} 
-                                />
-                                <Box component="img" src={aboutImageOne} alt="About" sx={{ width: "100%", borderRadius: 2, zIndex: 1 }} />
-                                <Box
-                                    sx={{
-                                        position: "absolute",
-                                        top: { xs: "39%", sm: "40%", md: "50%" },
-                                        left: { xs: '35%', sm: '40%', md: '-10%' },
-                                        transform: { xs: "translate(-50%, -50%)", md: "translateY(-57.5px)" },
-                                        zIndex: 2,
-                                    }}
-                                >
-                                    <Box sx={{
-                                        background: '#1976D2',
-                                        width: '115px',
-                                        height: '115px',
-                                        borderRadius: "50%",
-                                        position: "absolute",
-                                        textAlign: "center",
-                                    }} >
-                                        <span className="icon-focus"></span>
-                                    </Box>
-                                </Box>
-                                <Box component="img" src={aboutImageTwo} alt="" sx={{ position: "absolute", bottom: -110, right: { xs: 47, md: -80 }, width: "70%", borderRadius: 2, zIndex: 2 }} />
-                            </Box>
-                        </Grid>
-                        {/* Right Content Section */}
-                        <Grid item xs={12} md={5} sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", mt: { xs: 10, md: 0 } }}>
-                            <Typography variant="h6" color="primary" gutterBottom>
-                                About Agriculture
-                            </Typography>
-                            <Typography variant="h4" fontWeight="bold" gutterBottom>
-                                We’re leader in agriculture market
-                            </Typography>
-                            <Box component="img" src={leafImage} alt="Leaf" sx={{ mb: 2 }} />
-                            <Typography variant="body1" paragraph>
-                                There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which
-                                don't look even slightly believable.
-                            </Typography>
-                            <Grid container spacing={2} sx={{ mt: 2, display: "flex", justifyContent: "center", flexDirection: { xs: "column", sm: "row", md: "row" } }}>
-                                <Grid item xs={6}>
-                                    <Box display="flex" alignItems="center" gap={2}>
-                                        {/*<span className="icon-harvest" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
-                                        <img src={harvestIcon} alt="Harvest Icon" style={{ fontSize: 32, marginRight: 8, height: 60 }} />
-                                        <Typography sx={{ fontWeight: 800, fontSize: {xs: 20, sm: 18, md: 16}}}>Growing Fruits and Vegetables</Typography>
-                                    </Box>
-                                </Grid>
-                                <Grid item xs={6}>
-                                    <Box display="flex" alignItems="center" gap={2}>
-                                        {/*<span className="icon-temperature" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
-                                        <img src={cropsIcon} alt="Harvest Icon" style={{ fontSize: 32, marginRight: 8, height: 60 }} />
-                                        <Typography sx={{ fontWeight: 800, fontSize: {xs: 20, sm: 18, md: 16}}}>Tips for Ripening your Fruits</Typography>
-                                    </Box>
-                                </Grid>
-                            </Grid>
-                            <Typography variant="body1" paragraph sx={{ mt: 2 }}>
-                                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
-                                anything embarrassing hidden in the middle of text.
-                            </Typography>
-                            <Button component={Link} to="/about" variant="contained" color="primary" sx={{ mt: 3 }}>
-                                Learn More
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </Container>
-            </Box>
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider theme={theme}>
+      <Box
+        sx={{
+          py: 20,
+          width: "100%",
+          backgroundColor: "#f9f9f9",
+          position: "relative",
+        }}
+      >
+        <Container>
+          <Grid
+            container
+            spacing={4}
+            alignItems="center"
+            sx={{ flexDirection: { xs: "column", sm: "column", md: "row" } }}
+          >
+            {/* Left Image Section */}
+            <Grid
+              item
+              xs={12}
+              md={7}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                mb: { xs: 4, md: 0 },
+              }}
+            >
+              <Box
+                sx={{
+                  position: "relative",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box
+                  sx={{
+                    position: "absolute",
+                    left: { xs: "50%", md: "-215px" },
+                    top: { xs: "1px", md: "70px" },
+                    transform: { xs: "translate(-50%, -50%)", md: "none" },
+                    height: { xs: "230px", md: "430px" },
+                    width: { xs: "230px", md: "430px" },
+                    background: "#f5f0e9",
+                    borderRadius: "50%",
+                    zIndex: 0,
+                    // display: { xs: 'none', md: 'block' }
+                  }}
+                />
+                <Box
+                  component="img"
+                  src={aboutImageOne}
+                  alt="About"
+                  sx={{ width: "100%", borderRadius: 2, zIndex: 1 }}
+                />
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: { xs: "39%", sm: "40%", md: "50%" },
+                    left: { xs: "35%", sm: "40%", md: "-10%" },
+                    transform: {
+                      xs: "translate(-50%, -50%)",
+                      md: "translateY(-57.5px)",
+                    },
+                    zIndex: 2,
+                  }}
+                >
+                  <Box
+                    sx={{
+                      background: "#1976D2",
+                      width: "115px",
+                      height: "115px",
+                      borderRadius: "50%",
+                      position: "absolute",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img
+                      src={plantIcon}
+                      alt="Plant Icon"
+                      style={{
+                        // top: 50,
+                        marginTop: 8,
+                        height: 100,
+                        // lineHeight: "150px",
+                        filter:
+                          "brightness(0) saturate(100%) invert(83%) sepia(50%) saturate(500%) hue-rotate(0deg)",
+                      }}
+                    />
+                    {/* <SvgIcon component={plantIcon} style={{ fontSize: 60, color: "white", marginTop: 30 }} /> */}
+                    {/* <span className="icon-focus"></span> */}
+                  </Box>
+                </Box>
+                <Box
+                  component="img"
+                  src={aboutImageTwo}
+                  alt=""
+                  sx={{
+                    position: "absolute",
+                    bottom: -110,
+                    right: { xs: 47, md: -80 },
+                    width: "70%",
+                    borderRadius: 2,
+                    zIndex: 2,
+                  }}
+                />
+              </Box>
+            </Grid>
+            {/* Right Content Section */}
+            <Grid
+              item
+              xs={12}
+              md={5}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "start",
+                justifyContent: "center",
+                mt: { xs: 10, md: 0 },
+              }}
+            >
+              <Typography variant="h6" color="primary" gutterBottom>
+                About Agriculture
+              </Typography>
+              <Typography variant="h4" fontWeight="bold" gutterBottom>
+                We’re leader in <br /> agriculture market
+              </Typography>
+              <Box component="img" src={leafImage} alt="Leaf" sx={{ mb: 2 }} />
+              <Typography variant="body1" paragraph>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable.
+              </Typography>
+              <Grid
+                container
+                spacing={2}
+                sx={{
+                  mt: 2,
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection: { xs: "column", sm: "row", md: "row" },
+                }}
+              >
+                <Grid item xs={6}>
+                  <Box display="flex" alignItems="center" gap={2}>
+                    {/*<span className="icon-harvest" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
+                    <img
+                      src={harvestIcon}
+                      alt="Harvest Icon"
+                      style={{
+                        height: 60,
+                        filter:
+                          "brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(500%) hue-rotate(180deg)",
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        fontWeight: 800,
+                        fontSize: { xs: 20, sm: 18, md: 16 },
+                      }}
+                    >
+                      Growing Fruits and Vegetables
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={6}>
+                  <Box display="flex" alignItems="center" gap={2}>
+                    {/*<span className="icon-temperature" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
+                    <img
+                      src={cropsIcon}
+                      alt="Harvest Icon"
+                      //   style={{ fontSize: 32, marginRight: 8, height: 60 }}
+                      style={{
+                        height: 60,
+                        filter:
+                          "brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(500%) hue-rotate(180deg)",
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        fontWeight: 800,
+                        fontSize: { xs: 20, sm: 18, md: 16 },
+                      }}
+                    >
+                      Tips for Ripening your Fruits
+                    </Typography>
+                  </Box>
+                </Grid>
+              </Grid>
+              <Typography variant="body1" paragraph sx={{ mt: 2 }}>
+                If you are going to use a passage of Lorem Ipsum, you need to be
+                sure there isn't anything embarrassing hidden in the middle of
+                text.
+              </Typography>
+              <Button
+                component={Link}
+                to="/about"
+                variant="contained"
+                color="primary"
+                sx={{ mt: 3 }}
+              >
+                Learn More
+              </Button>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+    </ThemeProvider>
+  );
 };
 
 export default Banner;
