@@ -1,14 +1,19 @@
 {
   "files": {
     "main.css": "/nivan-agritech/static/css/main.5e87127d.css",
-    "main.js": "/nivan-agritech/static/js/main.e3ce5f55.js",
+    "main.js": "/nivan-agritech/static/js/main.ab8816e2.js",
     "static/js/453.f63c711a.chunk.js": "/nivan-agritech/static/js/453.f63c711a.chunk.js",
     "static/media/infastructure-home.jpg": "/nivan-agritech/static/media/infastructure-home.cf70633ce79454f0fc8c.jpg",
+    "static/media/service-1-img-7.jpg": "/nivan-agritech/static/media/service-1-img-7.fb52918845f86c7d4773.jpg",
     "static/media/slide_v5_3.jpg": "/nivan-agritech/static/media/slide_v5_3.c07e3b40c1d1281bd604.jpg",
     "static/media/slide_v5_1.jpg": "/nivan-agritech/static/media/slide_v5_1.41f9fc23e4f92797b20e.jpg",
     "static/media/slide_v5_2.jpg": "/nivan-agritech/static/media/slide_v5_2.04d50962f411c5ed0c4b.jpg",
     "static/media/logo.png": "/nivan-agritech/static/media/logo.26d09ec42e5b8bcaa10b.png",
+    "static/media/about-1-img-4.jpg": "/nivan-agritech/static/media/about-1-img-4.feb54a4e6cf460cf3c68.jpg",
+    "static/media/about-1-img-3.jpg": "/nivan-agritech/static/media/about-1-img-3.f49ae42112fda708d51b.jpg",
     "static/media/veggies_banner_icon.png": "/nivan-agritech/static/media/veggies_banner_icon.bf2eee9e4fc87a2aaea4.png",
+    "static/media/service-1-img-6.jpg": "/nivan-agritech/static/media/service-1-img-6.d09d3be81a6d6fc036bc.jpg",
+    "static/media/service-1-img-5.jpg": "/nivan-agritech/static/media/service-1-img-5.0c34488d583459683fec.jpg",
     "static/media/crops_banner_icon.png": "/nivan-agritech/static/media/crops_banner_icon.4ac16b4f39bf08fca19d.png",
     "static/media/slick.svg": "/nivan-agritech/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/nivan-agritech/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -16,11 +21,11 @@
     "static/media/slick.woff": "/nivan-agritech/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/nivan-agritech/index.html",
     "main.5e87127d.css.map": "/nivan-agritech/static/css/main.5e87127d.css.map",
-    "main.e3ce5f55.js.map": "/nivan-agritech/static/js/main.e3ce5f55.js.map",
+    "main.ab8816e2.js.map": "/nivan-agritech/static/js/main.ab8816e2.js.map",
     "453.f63c711a.chunk.js.map": "/nivan-agritech/static/js/453.f63c711a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e87127d.css",
-    "static/js/main.e3ce5f55.js"
+    "static/js/main.ab8816e2.js"
   ]
 }
