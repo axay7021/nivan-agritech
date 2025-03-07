@@ -146,10 +146,10 @@ import {
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import serviceImage1 from "../../assets/images/service/service-1-img-1.jpg";
-import serviceImage2 from "../../assets/images/service/service-1-img-2.jpg";
-import serviceImage3 from "../../assets/images/service/service-1-img-3.jpg";
 import leaf from "../../assets/images/resources/leaf.png";
+import serviceImage1 from "../../assets/images/service/service-1-img-5.jpg";
+import serviceImage2 from "../../assets/images/service/service-1-img-6.jpg";
+import serviceImage3 from "../../assets/images/service/service-1-img-7.jpg";
 
 const services = [
   {
