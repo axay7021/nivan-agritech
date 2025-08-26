@@ -153,28 +153,37 @@ import serviceImage3 from "../../assets/images/service/service-1-img-7.jpg";
 
 const services = [
   {
-    title: "Fresh Vegetables",
+    title: "Insecticides",
     // icon: <AccessAlarmIcon fontSize="large" color="primary" />,
     description:
-      "There are many variations of passages available, but the majority have suffered.",
+      "We manufacture a broad spectrum of insecticides designed to protect crops from a variety of harmful insects, ensuring healthier fields and better yields. Our solutions are formulated for efficacy, safety, and sustainability, helping farmers prevent losses due to pest infestations.",
     link: "/service-detail",
     serviceImage: serviceImage1,
     delay: 0.3,
   },
   {
-    title: "Agriculture Products",
+    title: "Fungicides",
     // icon: <AgricultureIcon fontSize="large" color="primary" />,
     description:
-      "There are many variations of passages available, but the majority have suffered.",
+      "Our fungicides help protect crops from diseases caused by pathogenic fungi, improving crop quality and yield. Fungicides are essential for preventing and controlling fungal infections that can devastate agricultural production.",
     link: "/service-detail",
     serviceImage: serviceImage2,
     delay: 0.6,
   },
   {
-    title: "Organic Products",
+    title: "Herbicides",
     // icon: <SpaIcon fontSize="large" color="primary" />,
     description:
-      "There are many variations of passages available, but the majority have suffered.",
+      "Herbicides in our lineup are formulated to control weeds efficiently, reducing the need for manual weeding, conserving water and nutrients, and promoting optimal crop growth. Proper weed management ensures that crops utilize resources to their fullest potential.",
+    link: "/service-detail",
+    serviceImage: serviceImage3,
+    delay: 0.9,
+  },
+  {
+    title: "Plant Growth Regulators (PGR) and Crop Stimulants",
+    // icon: <SpaIcon fontSize="large" color="primary" />,
+    description:
+      "We also manufacture advanced plant growth regulators (PGRs) and stimulants, which enhance crop vigor, yield, and quality. These products also foster better nutrient uptake and overall",
     link: "/service-detail",
     serviceImage: serviceImage3,
     delay: 0.9,
@@ -186,10 +195,11 @@ const ServiceCard = ({ service }) => {
 
   return (
     <motion.div
+      style={{ display: "flex", flexDirection: "column", width: "100%" }}
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: service.delay }}
-      whileHover={{ scale: 1.05, transition: { duration: 0.2 }  }} // Slight scale effect on hover
+      whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
     >
       <Card
         sx={{
@@ -197,6 +207,7 @@ const ServiceCard = ({ service }) => {
           position: "relative",
           display: "flex",
           flexDirection: "column",
+          height: "100%",
           overflow: "hidden",
           transition: "all 0.3s ease-in-out",
         }}
@@ -210,6 +221,9 @@ const ServiceCard = ({ service }) => {
             background: "#ffffff",
             borderTopLeftRadius: "5px",
             borderTopRightRadius: "5px",
+            display: "flex",
+            flexDirection: "column",
+            flex: 1,
           }}
         >
           <Box>{service.icon}</Box>
@@ -228,14 +242,22 @@ const ServiceCard = ({ service }) => {
             </Typography>
           </CardContent>
         </Box>
-        <Box sx={{ position: "relative", display: "block", width: "100%" }}>
+        <Box
+          sx={{
+            position: "relative",
+            display: "block",
+            width: "100%",
+            height: { xs: 180, sm: 200, md: 220 },
+          }}
+        >
           <img
             src={service.serviceImage}
             alt={service.title}
             style={{
-              margin: "-3px",
+              // margin: "-2px",
               top: "1px",
               width: "100%",
+              height: "100%",
               // width: { xs: "100%", sm: "100%", md: "100%" },
               // height: "",
               opacity: 1,
@@ -245,26 +267,30 @@ const ServiceCard = ({ service }) => {
             }}
           />
         </Box>
-        
+
         {/* Animated Arrow Icon (Only Appears on Hovered Card) */}
         {isHovered && (
           <motion.div
-            initial={{ left: "0%", opacity: 0 }}  // Start at the leftmost edge of the card
+            initial={{ left: "0%", opacity: 0 }} // Start at the leftmost edge of the card
             animate={{ left: "50%", opacity: 1 }} // Move to the center and appear
-            exit={{ left: "0%", opacity: 0 }}  // Move back left on hover out
+            exit={{ left: "0%", opacity: 0 }} // Move back left on hover out
             transition={{ duration: 0.4, ease: "easeOut" }}
             style={{
               position: "absolute",
-              top: "45%", 
+              top: "45%",
               // left: "50%",
               transform: "translate(-50%, -50%)",
               background: "rgba(255, 255, 255, 0.9)",
               borderRadius: "50%",
               padding: "10px",
-              boxShadow: "0px 4px 10px rgba(0,0,0,0.2)"
+              boxShadow: "0px 4px 10px rgba(0,0,0,0.2)",
             }}
           >
-            <IconButton component={Link} to={service.link} sx={{ color: "primary.main" }}>
+            <IconButton
+              component={Link}
+              to={service.link}
+              sx={{ color: "primary.main" }}
+            >
               <ArrowForwardIcon />
             </IconButton>
           </motion.div>
@@ -276,14 +302,24 @@ const ServiceCard = ({ service }) => {
 
 const AboutUs = () => {
   return (
-    <Box sx={{ py: 8, backgroundColor: "#f5f0e9" }}>
-      <Container>
+    <Box
+      sx={{
+        py: 10,
+        pb: 15,
+        backgroundColor: (theme) => theme.palette.secondary.light || "#e6f0f3",
+      }}
+    >
+      <Container
+        maxWidth={false}
+        disableGutters
+        sx={{ px: { xs: 2, sm: 3, md: 6, lg: 8, xl: 10 } }}
+      >
         <Box textAlign="center" mb={5}>
           <Typography variant="h6" color="primary">
             What we do
           </Typography>
           <Typography variant="h3" fontWeight="bold">
-            Services We Offer
+            Products We Offer
           </Typography>
           <Box
             component="img"
@@ -292,9 +328,17 @@ const AboutUs = () => {
             sx={{ mt: 2, width: 50 }}
           />
         </Box>
-        <Grid container spacing={4}>
+        <Grid container spacing={{ xs: 2, md: 3 }} alignItems="stretch">
           {services.map((service, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={6}
+              lg={3}
+              key={index}
+              sx={{ display: "flex" }}
+            >
               <ServiceCard service={service} />
             </Grid>
           ))}

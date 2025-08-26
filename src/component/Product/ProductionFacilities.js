@@ -62,10 +62,11 @@ const ProductionFacilities = () => {
             lineHeight: 1.6,
           }}
         >
-          Our manufacturing facility is located at Plot No. 408 to 411, Kerala
-          GIDC Estate, Off NH-8, Kerala, Taluka Bavla, Ahmedabad – 382220,
-          Gujarat, India. Our Company manufactured 7,577.21 MT of agrochemical
-          formulations in Fiscal 2021.
+          Our manufacturing facility is strategically located at Plot No. 8/13,
+          Opp. SunPharma GIDC, Panoli, Dist. Bharuch, Gujarat – 394116, India.
+          This prime location enables us to streamline logistics and efficiently
+          serve clients across India, strengthening our distribution
+          capabilities and customer reach.
         </Typography>
         <Typography
           variant="body1"
@@ -76,10 +77,12 @@ const ProductionFacilities = () => {
             lineHeight: 1.6,
           }}
         >
-          Our manufacturing facility is equipped with modern plant and machinery
-          capable of producing quality agrochemical products and has received
-          quality control certifications such as ISO 9001:2015, ISO 14001:2015,
-          and ISO 45001:2018 for development.
+          Equipped with modern plant and machinery, our facility is designed for
+          the highest levels of efficiency and product quality. We proudly hold
+          ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications,
+          underscoring our commitment to quality control, environmental
+          responsibility, and occupational health and safety throughout our
+          operations.
         </Typography>
       </Box>
     </Box>

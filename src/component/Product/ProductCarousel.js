@@ -10,7 +10,13 @@ import gallaryImage4 from "../../assets/images/gallery/gallery-1-img-4.jpg";
 import gallaryImage5 from "../../assets/images/gallery/gallery-1-img-5.jpg";
 import leaf from "../../assets/images/resources/leaf.png";
 
-const images = [gallaryImage1, gallaryImage2, gallaryImage3, gallaryImage4, gallaryImage5];
+const images = [
+  gallaryImage1,
+  gallaryImage2,
+  gallaryImage3,
+  gallaryImage4,
+  gallaryImage5,
+];
 
 const CustomPrevArrow = (props) => {
   const { className, onClick } = props;
@@ -58,7 +64,6 @@ const CustomNextArrow = (props) => {
   );
 };
 
-
 const settings = {
   dots: false,
   infinite: true,
@@ -78,10 +83,14 @@ const settings = {
   nextArrow: <CustomNextArrow />,
 };
 
-
 const ProductCarousel = () => {
   return (
-    <Box sx={{ py: 5, backgroundColor: "#f5f0e9" }}>
+    <Box
+      sx={{
+        py: 5,
+        backgroundColor: (theme) => theme.palette.secondary.light || "#e6f0f3",
+      }}
+    >
       <Container maxWidth="lg">
         <Stack spacing={2} alignItems="center" textAlign="center">
           <Typography variant="h6" color="textSecondary">
@@ -96,7 +105,10 @@ const ProductCarousel = () => {
         <Box sx={{ mt: 4, position: "relative" }}>
           <Slider {...settings}>
             {images.map((img, index) => (
-              <Box key={index} sx={{ px: 2, boxSizing: "border-box", padding: "0 10px" }}>
+              <Box
+                key={index}
+                sx={{ px: 2, boxSizing: "border-box", padding: "0 10px" }}
+              >
                 <Box
                   component="img"
                   src={img}

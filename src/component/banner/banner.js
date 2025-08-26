@@ -100,11 +100,67 @@
 //     </Box>
 //   );
 // };
+// <Grid
+//   container
+//   spacing={2}
+//   sx={{
+//     mt: 2,
+//     display: "flex",
+//     justifyContent: "center",
+//     flexDirection: { xs: "column", sm: "row", md: "row" },
+//   }}
+// >
+//   <Grid item xs={6}>
+//     <Box display="flex" alignItems="center" gap={2}>
+//       {/*<span className="icon-harvest" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
+//       <img
+//         src={harvestIcon}
+//         alt="Harvest Icon"
+//         style={{
+//           height: 60,
+//           filter:
+//             "brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(500%) hue-rotate(180deg)",
+//         }}
+//       />
+//       <Typography
+//         sx={{
+//           fontWeight: 800,
+//           fontSize: { xs: 20, sm: 18, md: 16 },
+//         }}
+//       >
+//         Growing Fruits and Vegetables
+//       </Typography>
+//     </Box>
+//   </Grid>
+//   <Grid item xs={6}>
+//     <Box display="flex" alignItems="center" gap={2}>
+//       {/*<span className="icon-temperature" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
+//       <img
+//         src={cropsIcon}
+//         alt="Harvest Icon"
+//         //   style={{ fontSize: 32, marginRight: 8, height: 60 }}
+//         style={{
+//           height: 60,
+//           filter:
+//             "brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(500%) hue-rotate(180deg)",
+//         }}
+//       />
+//       <Typography
+//         sx={{
+//           fontWeight: 800,
+//           fontSize: { xs: 20, sm: 18, md: 16 },
+//         }}
+//       >
+//         Tips for Ripening your Fruits
+//       </Typography>
+//     </Box>
+//   </Grid>
+// </Grid>
 
 // export default Banner;
 
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
 import React from "react";
 import { Link } from "react-router-dom";
 import aboutImageTwo from "../../assets/images/about/about-1-img-3.jpg";
@@ -113,28 +169,72 @@ import cropsIcon from "../../assets/images/icon/crops_banner_icon.png";
 import plantIcon from "../../assets/images/icon/plant_icon-100.png";
 import harvestIcon from "../../assets/images/icon/veggies_banner_icon.png";
 import leafImage from "../../assets/images/resources/leaf.png";
+import expertiseIcon from "../../assets/images/icon/expertise.png";
+import isoIcon from "../../assets/images/icon/iso.png";
+import productRangeIcon from "../../assets/images/icon/product-range.png";
+import rndIcon from "../../assets/images/icon/rnd.png";
+import distributionIcon from "../../assets/images/icon/distribution.png";
+import manufacturingIcon from "../../assets/images/icon/manufacturing.png";
 
-// Create a custom theme with custom breakpoints
-const theme = createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600, // Custom small screen size
-      md: 1040,
-      lg: 1280,
-      xl: 1920,
-    },
+const features = [
+  {
+    icon: expertiseIcon,
+    title: "20+ YEARS",
+    subtitle: "OF EXPERTISE",
   },
-});
+  {
+    icon: isoIcon,
+    title: "ISO 9001 : 2015",
+    subtitle: "CERTIFIED",
+  },
+  {
+    icon: productRangeIcon,
+    title: "100+ PRODUCT",
+    subtitle: "RANGE",
+  },
+  {
+    icon: rndIcon,
+    title: "IN-HOUSE",
+    subtitle: "R&D FACILITY",
+  },
+  {
+    icon: distributionIcon,
+    title: "DISTRIBUTION",
+    subtitle: "NETWORK",
+  },
+  {
+    icon: manufacturingIcon,
+    title: "MANUFACTURING",
+    subtitle: "FACILITIES",
+  },
+];
+
+// Create a custom theme with custom breakpoints merged with outer palette
+const useCustomTheme = () => {
+  const outer = useTheme();
+  return createTheme({
+    ...outer,
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600, // Custom small screen size
+        md: 1040,
+        lg: 1280,
+        xl: 1920,
+      },
+    },
+  });
+};
 
 const Banner = () => {
+  const theme = useCustomTheme();
   return (
     <ThemeProvider theme={theme}>
       <Box
         sx={{
-          py: 20,
+          py: 10,
           width: "100%",
-          backgroundColor: "#f9f9f9",
+          backgroundColor: (theme) => theme.palette.grey[100],
           position: "relative",
         }}
       >
@@ -173,7 +273,8 @@ const Banner = () => {
                     transform: { xs: "translate(-50%, -50%)", md: "none" },
                     height: { xs: "230px", md: "430px" },
                     width: { xs: "230px", md: "430px" },
-                    background: "#f5f0e9",
+                    background: (theme) =>
+                      theme.palette.secondary.light || "#dcecf1",
                     borderRadius: "50%",
                     zIndex: 0,
                     // display: { xs: 'none', md: 'block' }
@@ -199,7 +300,7 @@ const Banner = () => {
                 >
                   <Box
                     sx={{
-                      background: "#1976D2",
+                      background: (theme) => theme.palette.primary.main,
                       width: "115px",
                       height: "115px",
                       borderRadius: "50%",
@@ -252,75 +353,80 @@ const Banner = () => {
               }}
             >
               <Typography variant="h6" color="primary" gutterBottom>
-                About Agriculture
+                About Nivan Chemicals
               </Typography>
               <Typography variant="h4" fontWeight="bold" gutterBottom>
-                We’re leader in <br /> agriculture market
+                Who We Are
               </Typography>
               <Box component="img" src={leafImage} alt="Leaf" sx={{ mb: 2 }} />
               <Typography variant="body1" paragraph>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
-                slightly believable.
+                Nivaan Chemical is a leading Indian manufacturer of premium
+                agrochemical solutions, dedicated to revolutionizing modern
+                agriculture since its establishment in 2009. With a strong focus
+                on increasing both the quantity and quality of agricultural
+                produce, the company offers a full range of crop protection
+                products—including insecticides, fungicides, herbicides, and
+                plant growth regulators—engineered for efficacy, safety, and
+                sustainability.
+                <br /> <br /> Backed by a team of highly qualified experts and
+                led by founder Mr. Mihir Nasit, Nivaan Chemical combines deep
+                field experience with innovative research. The company is
+                committed to ethical business practices, stringent quality
+                assurance, and environmental responsibility—always prioritizing
+                customer satisfaction and farmer welfare. Through continuous R&D
+                and advanced manufacturing techniques, Nivaan Chemical delivers
+                reliable, eco-friendly solutions to support India's farming
+                community and promote sustainable growth in agriculture.
               </Typography>
+
               <Grid
                 container
-                spacing={2}
+                // spacing={2}
                 sx={{
-                  mt: 2,
+                  // mt: 2,
                   display: "flex",
                   justifyContent: "center",
                   flexDirection: { xs: "column", sm: "row", md: "row" },
                 }}
               >
-                <Grid item xs={6}>
-                  <Box display="flex" alignItems="center" gap={2}>
-                    {/*<span className="icon-harvest" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
-                    <img
-                      src={harvestIcon}
-                      alt="Harvest Icon"
-                      style={{
-                        height: 60,
-                        filter:
-                          "brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(500%) hue-rotate(180deg)",
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        fontWeight: 800,
-                        fontSize: { xs: 20, sm: 18, md: 16 },
-                      }}
+                {features.map((feature, idx) => (
+                  <Grid item xs={12} sm={6} md={4} key={idx}>
+                    <Box
+                      display="flex"
+                      flexDirection="column"
+                      alignItems="center"
+                      gap={1}
+                      p={2}
                     >
-                      Growing Fruits and Vegetables
-                    </Typography>
-                  </Box>
-                </Grid>
-                <Grid item xs={6}>
-                  <Box display="flex" alignItems="center" gap={2}>
-                    {/*<span className="icon-temperature" style={{ fontSize: 32, marginRight: 8 }}></span>*/}
-                    <img
-                      src={cropsIcon}
-                      alt="Harvest Icon"
-                      //   style={{ fontSize: 32, marginRight: 8, height: 60 }}
-                      style={{
-                        height: 60,
-                        filter:
-                          "brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(500%) hue-rotate(180deg)",
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        fontWeight: 800,
-                        fontSize: { xs: 20, sm: 18, md: 16 },
-                      }}
-                    >
-                      Tips for Ripening your Fruits
-                    </Typography>
-                  </Box>
-                </Grid>
+                      <img
+                        src={feature.icon}
+                        alt={feature.title}
+                        style={{
+                          height: 50,
+                          marginBottom: 8,
+                          filter:
+                            "brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(500%) hue-rotate(60deg)", // adjust color as needed
+                        }}
+                      />
+                      <Typography
+                        sx={{ fontWeight: 800, fontSize: 16, color: "#225972" }}
+                      >
+                        {feature.title}
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontWeight: 500,
+                          fontSize: 14,
+                          color: "#388597",
+                        }}
+                      >
+                        {feature.subtitle}
+                      </Typography>
+                    </Box>
+                  </Grid>
+                ))}
               </Grid>
-              <Typography variant="body1" paragraph sx={{ mt: 2 }}>
+              {/* <Typography variant="body1" paragraph sx={{ mt: 2 }}>
                 If you are going to use a passage of Lorem Ipsum, you need to be
                 sure there isn't anything embarrassing hidden in the middle of
                 text.
@@ -333,7 +439,7 @@ const Banner = () => {
                 sx={{ mt: 3 }}
               >
                 Learn More
-              </Button>
+              </Button> */}
             </Grid>
           </Grid>
         </Container>

@@ -22,7 +22,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #cc5e26; /* Underline color */
+  background-color: var(--color-primary); /* Underline color */
   transition: width 0.3s ease;
 }
 

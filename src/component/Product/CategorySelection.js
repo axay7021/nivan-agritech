@@ -83,7 +83,7 @@ const CategorySelection = () => {
                 alignItems: "center",
                 flexDirection: "column",
                 p: { xs: 3, md: 4 },
-                backgroundColor: "#f7fafc",
+                backgroundColor: (theme) => theme.palette.grey[100],
                 borderRadius: 2,
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 cursor: "pointer",
@@ -91,7 +91,7 @@ const CategorySelection = () => {
                 "&:hover": {
                   transform: "translateY(-8px)",
                   boxShadow: "0 8px 16px rgba(0, 0, 0, 0.15)",
-                  backgroundColor: "#e0e0e0",
+                  backgroundColor: (theme) => theme.palette.secondary.light,
                 },
               }}
             >
