@@ -1,43 +1,39 @@
 import React from "react";
 import { Box, Typography, Grid, Paper } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import FireExtinguisherTwoToneIcon from "@mui/icons-material/FireExtinguisherTwoTone";
 import PestControlTwoToneIcon from "@mui/icons-material/PestControlTwoTone";
 import MacroOffTwoToneIcon from "@mui/icons-material/MacroOffTwoTone";
 
 const categories = [
   {
-    name: "Corazon",
-    icon: <FireExtinguisherTwoToneIcon fontSize="large" />,
-    products: 983,
-  },
-  {
-    name: "Basali",
+    key: "insecticides",
+    name: "Insecticides",
     icon: <PestControlTwoToneIcon fontSize="large" />,
-    products: 142,
+    products: 120,
   },
   {
-    name: "Monocoto",
+    key: "fungicides",
+    name: "Fungicides",
     icon: <MacroOffTwoToneIcon fontSize="large" />,
-    products: 476,
+    products: 95,
   },
   {
-    name: "Saff",
-    icon: <PestControlTwoToneIcon fontSize="large" />,
-    products: 849,
-  },
-  {
-    name: "Tufan",
+    key: "herbicides",
+    name: "Herbicides",
     icon: <FireExtinguisherTwoToneIcon fontSize="large" />,
-    products: 253,
+    products: 110,
   },
   {
-    name: "Movento",
+    key: "pgr-stimulants",
+    name: "Plant Growth Regulators (PGR) and Crop Stimulants",
     icon: <MacroOffTwoToneIcon fontSize="large" />,
-    products: 94,
+    products: 88,
   },
 ];
 
 const CategorySelection = () => {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -75,7 +71,7 @@ const CategorySelection = () => {
         }}
       >
         {categories.map((category, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item xs={12} sm={6} md={6} lg={3} key={index}>
             <Paper
               elevation={0}
               sx={{
@@ -94,6 +90,7 @@ const CategorySelection = () => {
                   backgroundColor: (theme) => theme.palette.secondary.light,
                 },
               }}
+              onClick={() => navigate(`/products/${category.key}`)}
             >
               <Box sx={{ mb: 1, color: "primary.main" }}>{category.icon}</Box>
               <Typography

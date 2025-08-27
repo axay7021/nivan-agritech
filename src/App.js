@@ -33,9 +33,7 @@
 // export default App;
 
 import React from "react";
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./App.css";
@@ -46,6 +44,7 @@ import Footer from "./component/footer/footer.js";
 import Navbar from "./component/navigation/navbar.js";
 import CategorySelection from "./component/Product/CategorySelection.js";
 import ProductCarousel from "./component/Product/ProductCarousel.js";
+import ProductGalleryPage from "./pages/ProductGalleryPage";
 import ProductionFacilities from "./component/Product/ProductionFacilities.js";
 import ImageSlider from "./component/slider/slider.js";
 
@@ -87,17 +86,23 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Navbar />
-          {/* <MainContent />{" "} */}
-          {/* All content sections are rendered conditionally here */}
-          <ImageSlider />
-          <Banner />
-          <AboutUs />
-          {/* <Component /> */}
-          <ProductionFacilities />
-          <ProductCarousel />
-          {/* <ContactUs /> */}
-          <CategorySelection />
-          <Numbers />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <ImageSlider />
+                  <Banner />
+                  <AboutUs />
+                  <ProductionFacilities />
+                  <CategorySelection />
+                  <Numbers />
+                </>
+              }
+            />
+            <Route path="/products" element={<ProductGalleryPage />} />
+            <Route path="/products/:categoryKey" element={<ProductGalleryPage />} />
+          </Routes>
           <Footer />
         </header>
       </div>
