@@ -1,8 +1,5 @@
-import { Email, Phone } from "@mui/icons-material";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import MenuIcon from "@mui/icons-material/Menu";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   AppBar,
   Box,
@@ -10,51 +7,65 @@ import {
   Drawer,
   IconButton,
   List,
-  ListItem,
+  ListItemButton,
   ListItemText,
   Toolbar,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import { Email, Phone } from "@mui/icons-material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import MenuIcon from "@mui/icons-material/Menu";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import logo from "../../assets/images/resources/logo.png";
 import headerBackgroundImage from "../../assets/images/shapes/header-bg.png";
-
-import React, { useEffect, useState } from "react";
 import "./index.css";
+
+const NAV_ITEMS = [
+  { label: "Home", id: "section-hero" },
+  { label: "About Us", id: "section-banner" },
+  { label: "Products Overview", id: "section-products-overview" },
+  { label: "Facilities", id: "section-facilities" },
+  { label: "Product", id: "section-products" },
+  { label: "Contact", id: "section-contact" },
+];
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  // Keep the useEffect for scroll detection - this is needed!
   useEffect(() => {
     const handleScroll = () => {
-      // We'll set scrolled to true when the page scrolls down beyond the initial header height
-      const headerHeight = isMobile ? 60 : 120; // Approximate header height in pixels
-      if (window.scrollY > headerHeight) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      const headerHeight = isMobile ? 60 : 120;
+      setScrolled(window.scrollY > headerHeight);
     };
-
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobile]);
 
-  const handleDrawerClose = () => {
-    setDrawerOpen(false);
+  const handleDrawerClose = () => setDrawerOpen(false);
+
+  const scrollToId = (id) => {
+    const doScroll = () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(doScroll, 50);
+    } else doScroll();
   };
 
   return (
     <Box>
-      {/* Top Bar - This always stays at the top initially */}
+      {/* Top Bar */}
       <Box
         sx={
           isMobile
@@ -98,42 +109,21 @@ const Navbar = () => {
               />
             </Box>
             <Box sx={{ display: "flex", gap: 1, paddingRight: 5 }}>
-              <IconButton
-                sx={{
-                  "&:hover": {
-                    backgroundColor: "primary.main",
-                    color: "white",
-                  },
-                  backgroundColor: (theme) => theme.palette.secondary.light,
-                  color: "#000000ff",
-                }}
-              >
-                <FacebookIcon />
-              </IconButton>
-              <IconButton
-                sx={{
-                  "&:hover": {
-                    backgroundColor: "primary.main",
-                    color: "white",
-                  },
-                  backgroundColor: (theme) => theme.palette.secondary.light,
-                  color: "#000000ff",
-                }}
-              >
-                <TwitterIcon />
-              </IconButton>
-              <IconButton
-                sx={{
-                  "&:hover": {
-                    backgroundColor: "primary.main",
-                    color: "white",
-                  },
-                  backgroundColor: (theme) => theme.palette.secondary.light,
-                  color: "#000000ff",
-                }}
-              >
-                <InstagramIcon />
-              </IconButton>
+              {[FacebookIcon, TwitterIcon, InstagramIcon].map((Icon, i) => (
+                <IconButton
+                  key={i}
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "primary.main",
+                      color: "white",
+                    },
+                    backgroundColor: (t) => t.palette.secondary.light,
+                    color: "#000000ff",
+                  }}
+                >
+                  <Icon />
+                </IconButton>
+              ))}
             </Box>
           </>
         ) : (
@@ -153,7 +143,7 @@ const Navbar = () => {
       <AppBar
         position={scrolled ? "fixed" : "static"}
         sx={{
-          backgroundColor: (theme) => theme.palette.secondary.light,
+          backgroundColor: (t) => t.palette.secondary.light,
           boxShadow: scrolled ? "0px 2px 4px rgba(0, 0, 0, 0.1)" : "none",
           zIndex: 1000,
           transition: "all 0.3s ease",
@@ -161,7 +151,7 @@ const Navbar = () => {
       >
         <Box
           sx={{
-            backgroundImage: "url(" + headerBackgroundImage + ")",
+            backgroundImage: `url(${headerBackgroundImage})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
@@ -173,22 +163,28 @@ const Navbar = () => {
         {!isMobile ? (
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             <Box sx={{ display: "flex", gap: 2 }}>
-              <Button
-                sx={{
-                  backgroundColor: "primary.main",
-                  borderRadius: "5px",
-                  color: "white",
-                  "&:hover": { backgroundColor: "secondary.main" },
-                }}
-              >
-                Home
-              </Button>
-              <Button>Services</Button>
-              <Button>Our Projects</Button>
-              <Button>Shop</Button>
-              <Button>Pages</Button>
-              <Button>News</Button>
-              <Button>Contact</Button>
+              {NAV_ITEMS.map((item, idx) => (
+                <Button
+                  key={item.id}
+                  sx={
+                    idx === 0
+                      ? {
+                          backgroundColor: "primary.main",
+                          borderRadius: "5px",
+                          color: "white",
+                          "&:hover": { backgroundColor: "secondary.main" },
+                        }
+                      : undefined
+                  }
+                  onClick={() =>
+                    item.id === "section-products"
+                      ? navigate("/products/insecticides")
+                      : scrollToId(item.id)
+                  }
+                >
+                  {item.label}
+                </Button>
+              ))}
             </Box>
           </Toolbar>
         ) : (
@@ -200,10 +196,8 @@ const Navbar = () => {
         )}
       </AppBar>
 
-      {/* Add a placeholder when the navbar becomes fixed to prevent content jump */}
-      {scrolled && (
-        <Box sx={{ height: isMobile ? "56px" : "64px" }} /> // Toolbar height
-      )}
+      {/* Placeholder to prevent jump when fixed */}
+      {scrolled && <Box sx={{ height: isMobile ? "56px" : "64px" }} />}
 
       <Drawer
         anchor="left"
@@ -221,23 +215,25 @@ const Navbar = () => {
         <Box
           sx={{
             height: "100%",
-            backgroundColor: (theme) => theme.palette.secondary.light,
+            backgroundColor: (t) => t.palette.secondary.light,
             overflow: "auto",
           }}
         >
           <List>
-            {[
-              "Home",
-              "Services",
-              "Our Projects",
-              "Shop",
-              "Pages",
-              "News",
-              "Contact",
-            ].map((text) => (
-              <ListItem button key={text} onClick={() => setDrawerOpen(false)}>
-                <ListItemText primary={text} />
-              </ListItem>
+            {NAV_ITEMS.map((item) => (
+              <ListItemButton
+                key={item.id}
+                onClick={() => {
+                  setDrawerOpen(false);
+                  if (item.id === "section-products") {
+                    navigate("/products/insecticides");
+                  } else {
+                    scrollToId(item.id);
+                  }
+                }}
+              >
+                <ListItemText primary={item.label} />
+              </ListItemButton>
             ))}
           </List>
         </Box>

@@ -43,7 +43,6 @@ import Banner from "./component/banner/banner.js";
 import Footer from "./component/footer/footer.js";
 import Navbar from "./component/navigation/navbar.js";
 import CategorySelection from "./component/Product/CategorySelection.js";
-import ProductCarousel from "./component/Product/ProductCarousel.js";
 import ProductGalleryPage from "./pages/ProductGalleryPage";
 import ProductionFacilities from "./component/Product/ProductionFacilities.js";
 import ImageSlider from "./component/slider/slider.js";
@@ -91,17 +90,32 @@ function App() {
               path="/"
               element={
                 <>
-                  <ImageSlider />
-                  <Banner />
-                  <AboutUs />
-                  <ProductionFacilities />
-                  <CategorySelection />
-                  <Numbers />
+                  <div id="section-hero">
+                    <ImageSlider />
+                  </div>
+                  <div id="section-banner">
+                    <Banner />
+                  </div>
+                  <div id="section-products-overview">
+                    <AboutUs />
+                  </div>
+                  <div id="section-facilities">
+                    <ProductionFacilities />
+                  </div>
+                  <div id="section-products">
+                    <CategorySelection />
+                  </div>
+                  <div id="section-contact">
+                    <Numbers />
+                  </div>
                 </>
               }
             />
             <Route path="/products" element={<ProductGalleryPage />} />
-            <Route path="/products/:categoryKey" element={<ProductGalleryPage />} />
+            <Route
+              path="/products/:categoryKey"
+              element={<ProductGalleryPage />}
+            />
           </Routes>
           <Footer />
         </header>
