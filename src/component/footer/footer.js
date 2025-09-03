@@ -60,7 +60,7 @@ const Footer = () => {
             pt: 2,
           }}
         >
-          <Box
+          {/* <Box
             sx={{
               display: "flex",
               flexWrap: "wrap",
@@ -80,7 +80,7 @@ const Footer = () => {
             <Link href="#" color="inherit" underline="hover">
               Support
             </Link>
-          </Box>
+          </Box> */}
           <Typography
             variant="body2"
             sx={{ color: "#888", mt: { xs: 2, sm: 0 } }}
