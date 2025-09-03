@@ -28,7 +28,7 @@ const Footer = () => {
               component="h2"
               sx={{ fontWeight: "bold", lineHeight: 1.2, width: "max-content" }}
             >
-              Nivan Agritech Limited
+              Nivaan Chemical
             </Typography>
           </Grid>
 

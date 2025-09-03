@@ -42,7 +42,7 @@
 //               paddingBottom: "20px",
 //             }}
 //           >
-//             WELCOME TO NIVAN AGRITECH LIMITED
+//             WELCOME TO Nivaan Chemical
 //             <br />
 //             Agro Chemicals Manufacturer
 //           </Typography>
@@ -59,7 +59,7 @@
 //               paddingRight: { md: "20px" },
 //             }}
 //           >
-//             Established in 2015, Nivan Agritech Limited is engaged in the
+//             Established in 2015, Nivaan Chemical is engaged in the
 //             business of manufacturing, distributing, and marketing of a wide
 //             range of agrochemical formulations such as insecticides, fungicides,
 //             herbicides, plant growth regulators, micro fertilizers, and
