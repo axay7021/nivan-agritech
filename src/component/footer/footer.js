@@ -44,7 +44,7 @@ const Footer = () => {
               <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
                 <EmailIcon sx={{ marginRight: 1 }} />
                 <Typography variant="body2">
-                  support@nivanagritech.co.in
+                  nivaanchemical@gmail.com
                 </Typography>
               </Box>
             </Box>
@@ -90,7 +90,7 @@ const Footer = () => {
             Designed by{" "}
             <span style={{ fontWeight: "800", color: "#206f9b" }}>
               {" "}
-              Dharmik Ghevariya
+              Akshay Dobariya
             </span>
           </Typography>
         </Box>

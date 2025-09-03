@@ -97,8 +97,10 @@ const Navbar = () => {
                 <Phone sx={{ color: "primary.main" }} />
               </Box>
               <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-                <Typography variant="body2">needhelp@agrikol.com</Typography>
-                <Typography variant="body2">666 888 0000</Typography>
+                <Typography variant="body2">
+                  nivaanchemical@gmail.com
+                </Typography>
+                <Typography variant="body2">+91 91067 25328</Typography>
               </Box>
             </Box>
             <Box sx={{ width: "150px", height: "auto" }}>
