@@ -13,8 +13,27 @@ code {
 }
 
 :root {
-  /* Brand colors */
-  --color-primary: #225972;
-  --color-secondary: #388597;
-  --color-accent: var(--color-secondary);
+  /* Vibrant agriculture-energy color palette */
+  --color-primary: #4CAF50;        /* Fresh Green - Start */
+  --color-primary-light: #81C784;
+  --color-primary-dark: #388E3C;
+  
+  --color-secondary: #FFC107;      /* Sunlight Yellow - Middle */
+  --color-secondary-light: #FFD54F;
+  --color-secondary-dark: #FFA000;
+  
+  --color-tertiary: #FF9800;       /* Energy Orange - End */
+  --color-tertiary-light: #FFB74D;
+  --color-tertiary-dark: #F57C00;
+  
+  --color-accent: var(--color-tertiary);
+  --color-background: #FAFFFE;     /* Clean neutral background */
+  --color-surface: #ffffff;
+  
+  /* Vibrant energy gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-tertiary) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --gradient-energy: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-tertiary) 100%);
+  --gradient-sunrise: linear-gradient(45deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
 }

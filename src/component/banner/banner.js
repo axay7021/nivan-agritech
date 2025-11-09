@@ -273,7 +273,7 @@ const Banner = () => {
                       theme.palette.secondary.light || "#dcecf1",
                     borderRadius: "50%",
                     zIndex: 0,
-                    // display: { xs: 'none', md: 'block' }
+                    display: { xs: "none", md: "block" },
                   }}
                 />
                 <Box

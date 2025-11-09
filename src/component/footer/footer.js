@@ -8,7 +8,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#1a1a1a",
+        backgroundColor: "primary.dark",
         color: "#ffffff",
         padding: { xs: "20px 10px", sm: "40px 10px" }, // Adjust padding for 10px space around
         // width: "100%", // Make sure it spans full width
@@ -56,7 +56,7 @@ const Footer = () => {
             flexDirection: { xs: "column", sm: "row" }, // Stack links on smaller screens
             justifyContent: "space-between",
             alignItems: "center",
-            borderTop: "1px solid #333",
+            borderTop: "1px solid rgba(255,255,255,0.2)",
             pt: 2,
           }}
         >
@@ -83,12 +83,12 @@ const Footer = () => {
           </Box> */}
           <Typography
             variant="body2"
-            sx={{ color: "#888", mt: { xs: 2, sm: 0 } }}
+            sx={{ color: "rgba(255,255,255,0.7)", mt: { xs: 2, sm: 0 } }}
           >
             © Copyright 2024, All Rights Reserved
             <br></br>
             Designed by{" "}
-            <span style={{ fontWeight: "800", color: "#206f9b" }}>
+            <span style={{ fontWeight: "800", color: "#FFC107" }}>
               {" "}
               Akshay Dobariya
             </span>

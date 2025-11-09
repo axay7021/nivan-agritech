@@ -6,14 +6,37 @@ import reportWebVitals from "./reportWebVitals";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-// Global theme using requested brand colors
+// Global theme using vibrant agriculture colors
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#225972",
+      main: "#4CAF50",
+      light: "#81C784",
+      dark: "#388E3C",
+      contrastText: "#ffffff",
     },
     secondary: {
-      main: "#388597",
+      main: "#FFC107",
+      light: "#FFD54F",
+      dark: "#FFA000",
+      contrastText: "#000000",
+    },
+    // Energy orange accent color
+    tertiary: {
+      main: "#FF9800",
+      light: "#FFB74D",
+      dark: "#F57C00",
+    },
+    background: {
+      default: "#FAFFFE",
+      paper: "#ffffff",
+    },
+    grey: {
+      100: "#F8F9FA",
+      200: "#E9ECEF",
+      300: "#DEE2E6",
+      400: "#CED4DA",
+      500: "#ADB5BD",
     },
   },
 });

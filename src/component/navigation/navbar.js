@@ -120,7 +120,7 @@ const Navbar = () => {
                       color: "white",
                     },
                     backgroundColor: (t) => t.palette.secondary.light,
-                    color: "#000000ff",
+                    color: "text.primary",
                   }}
                 >
                   <Icon />

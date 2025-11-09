@@ -27,7 +27,7 @@ const Numbers = () => {
             sx={{
               mt: 2,
               fontSize: { xs: "1rem", sm: "1.2rem" },
-              color: "#4a5568",
+              color: "text.secondary",
             }}
           >
             We’re driven by a commitment to innovation and quality in every
@@ -57,7 +57,7 @@ const Numbers = () => {
                   component="span"
                   sx={{
                     background:
-                      "linear-gradient(90deg, #D5006D 0%, #0E4C92 100%)",
+                      "linear-gradient(90deg, #4CAF50 0%, #FF9800 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
@@ -67,11 +67,14 @@ const Numbers = () => {
               </Typography>
               <Typography
                 variant="h5"
-                sx={{ mt: 2, fontWeight: "medium", color: "#1a202c" }}
+                sx={{ mt: 2, fontWeight: "medium", color: "primary.main" }}
               >
                 Years in business
               </Typography>
-              <Typography variant="body2" sx={{ mt: 0.5, color: "#a0aec0" }}>
+              <Typography
+                variant="body2"
+                sx={{ mt: 0.5, color: "text.secondary" }}
+              >
                 Creating the successful path
               </Typography>
             </Box>
@@ -91,7 +94,7 @@ const Numbers = () => {
                   component="span"
                   sx={{
                     background:
-                      "linear-gradient(90deg, #D5006D 0%, #0E4C92 100%)",
+                      "linear-gradient(90deg, #FFC107 0%, #FF9800 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
@@ -101,11 +104,14 @@ const Numbers = () => {
               </Typography>
               <Typography
                 variant="h5"
-                sx={{ mt: 2, fontWeight: "medium", color: "#1a202c" }}
+                sx={{ mt: 2, fontWeight: "medium", color: "primary.main" }}
               >
                 Weedicide delivered
               </Typography>
-              <Typography variant="body2" sx={{ mt: 0.5, color: "#a0aec0" }}>
+              <Typography
+                variant="body2"
+                sx={{ mt: 0.5, color: "text.secondary" }}
+              >
                 In last 2 years
               </Typography>
             </Box>
@@ -125,7 +131,7 @@ const Numbers = () => {
                   component="span"
                   sx={{
                     background:
-                      "linear-gradient(90deg, #D5006D 0%, #0E4C92 100%)",
+                      "linear-gradient(90deg, #4CAF50 0%, #FFC107 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
@@ -135,11 +141,14 @@ const Numbers = () => {
               </Typography>
               <Typography
                 variant="h5"
-                sx={{ mt: 2, fontWeight: "medium", color: "#1a202c" }}
+                sx={{ mt: 2, fontWeight: "medium", color: "primary.main" }}
               >
                 Team members
               </Typography>
-              <Typography variant="body2" sx={{ mt: 0.5, color: "#a0aec0" }}>
+              <Typography
+                variant="body2"
+                sx={{ mt: 0.5, color: "text.secondary" }}
+              >
                 Working for our success
               </Typography>
             </Box>

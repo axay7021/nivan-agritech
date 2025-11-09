@@ -16,7 +16,7 @@ const ProductionFacilities = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",
-        height: { xs: "50vh", sm: "60vh", md: "70vh" },
+        // height: { xs: "50vh", sm: "60vh", md: "70vh" },
         zIndex: -1,
         overflow: "hidden",
         backgroundAttachment: { xs: "scroll", md: "fixed" },
@@ -45,7 +45,7 @@ const ProductionFacilities = () => {
           component="h2"
           sx={{
             mb: 2,
-            color: "#333",
+            color: "text.primary",
             textTransform: "uppercase",
             letterSpacing: "1px",
             fontSize: { xs: "1.5rem", md: "2rem" },
@@ -58,7 +58,7 @@ const ProductionFacilities = () => {
           sx={{
             mb: 2,
             fontSize: { xs: "0.875rem", md: "1.125rem" },
-            color: "#333",
+            color: "text.primary",
             lineHeight: 1.6,
           }}
         >
@@ -73,7 +73,7 @@ const ProductionFacilities = () => {
           sx={{
             mb: 2,
             fontSize: { xs: "0.875rem", md: "1.125rem" },
-            color: "#333",
+            color: "text.primary",
             lineHeight: 1.6,
           }}
         >
