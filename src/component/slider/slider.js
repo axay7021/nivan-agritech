@@ -88,7 +88,7 @@ const ImageSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 6000,
     arrows: false,
     beforeChange: (oldIndex, newIndex) => setActiveSlide(newIndex),
     appendDots: (dots) => (
@@ -206,21 +206,7 @@ const ImageSlider = () => {
                         {slide.title}
                       </Typography>
                     </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, y: 50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 2 }}
-                    >
-                      <Button
-                        component={Link}
-                        to={slide.buttonLink}
-                        variant="contained"
-                        color="primary"
-                        sx={{ mt: 3 }}
-                      >
-                        {slide.buttonLabel}
-                      </Button>
-                    </motion.div>
+                    {/* Button hidden as requested */}
                   </>
                 )}
               </Box>

@@ -37,8 +37,8 @@ const Footer = () => {
               <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
                 <LocationOnIcon sx={{ marginRight: 1 }} />
                 <Typography variant="body2">
-                  Nivan Agritech Pvt. Ltd., Plot 132, Himson compond, Ankleshwar
-                  GIDC, Ankleshwar, Gujarat 393001
+                  Nivaan Chemicals, Plot 132, Himson compond, Ankleshwar GIDC,
+                  Ankleshwar, Gujarat 393001
                 </Typography>
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
