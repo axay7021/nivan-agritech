@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Link, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
 
