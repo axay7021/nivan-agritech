@@ -157,7 +157,7 @@ const services = [
     // icon: <AccessAlarmIcon fontSize="large" color="primary" />,
     description:
       "We manufacture a broad spectrum of insecticides designed to protect crops from a variety of harmful insects, ensuring healthier fields and better yields. Our solutions are formulated for efficacy, safety, and sustainability, helping farmers prevent losses due to pest infestations.",
-    link: "/service-detail",
+    link: "/product-details/insecticides",
     serviceImage: serviceImage1,
     delay: 0.3,
   },
@@ -166,7 +166,7 @@ const services = [
     // icon: <AgricultureIcon fontSize="large" color="primary" />,
     description:
       "Our fungicides help protect crops from diseases caused by pathogenic fungi, improving crop quality and yield. Fungicides are essential for preventing and controlling fungal infections that can devastate agricultural production.",
-    link: "/service-detail",
+    link: "/product-details/fungicides",
     serviceImage: serviceImage2,
     delay: 0.6,
   },
@@ -175,7 +175,7 @@ const services = [
     // icon: <SpaIcon fontSize="large" color="primary" />,
     description:
       "Herbicides in our lineup are formulated to control weeds efficiently, reducing the need for manual weeding, conserving water and nutrients, and promoting optimal crop growth. Proper weed management ensures that crops utilize resources to their fullest potential.",
-    link: "/service-detail",
+    link: "/product-details/herbicides",
     serviceImage: serviceImage3,
     delay: 0.9,
   },
@@ -183,8 +183,8 @@ const services = [
     title: "Plant Growth Regulators (PGR) and Crop Stimulants",
     // icon: <SpaIcon fontSize="large" color="primary" />,
     description:
-      "We also manufacture advanced plant growth regulators (PGRs) and stimulants, which enhance crop vigor, yield, and quality. These products also foster better nutrient uptake and overall",
-    link: "/service-detail",
+      "We also manufacture advanced plant growth regulators (PGRs) and stimulants, which enhance crop vigor, yield, and quality. These products also foster better nutrient uptake and overall plant health.",
+    link: "/product-details/pgr-stimulants",
     serviceImage: serviceImage3,
     delay: 0.9,
   },
@@ -210,9 +210,15 @@ const ServiceCard = ({ service }) => {
           height: "100%",
           overflow: "hidden",
           transition: "all 0.3s ease-in-out",
+          cursor: "pointer",
+          "&:hover": {
+            transform: "translateY(-4px)",
+            boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+          },
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={() => (window.location.href = service.link)}
       >
         <Box
           sx={{
@@ -237,9 +243,28 @@ const ServiceCard = ({ service }) => {
             >
               {service.title}
             </Typography>
-            <Typography variant="body2" sx={{ mt: 1 }}>
+            <Typography variant="body2" sx={{ mt: 1, mb: 2 }}>
               {service.description}
             </Typography>
+            {/* Mobile-friendly Learn More button */}
+            <Box sx={{ display: { xs: "block", md: "none" }, mt: 1 }}>
+              <Typography
+                variant="body2"
+                color="primary"
+                sx={{
+                  fontWeight: "bold",
+                  fontSize: "0.9rem",
+                  textDecoration: "underline",
+                  cursor: "pointer",
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.location.href = service.link;
+                }}
+              >
+                Learn More →
+              </Typography>
+            </Box>
           </CardContent>
         </Box>
         <Box
@@ -248,6 +273,11 @@ const ServiceCard = ({ service }) => {
             display: "block",
             width: "100%",
             height: { xs: 180, sm: 200, md: 220 },
+            cursor: "pointer",
+          }}
+          onClick={(e) => {
+            e.stopPropagation();
+            window.location.href = service.link;
           }}
         >
           <img

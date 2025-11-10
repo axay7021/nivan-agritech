@@ -78,12 +78,15 @@ const CategorySelection = () => {
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "column",
+                justifyContent: "center",
                 p: { xs: 3, md: 4 },
                 backgroundColor: (theme) => theme.palette.grey[100],
                 borderRadius: 2,
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 cursor: "pointer",
                 textAlign: "center",
+                minHeight: { xs: 180, md: 200 },
+                height: "100%",
                 "&:hover": {
                   transform: "translateY(-8px)",
                   boxShadow: "0 8px 16px rgba(0, 0, 0, 0.15)",
@@ -96,7 +99,14 @@ const CategorySelection = () => {
               <Typography
                 variant="h6"
                 component="h3"
-                sx={{ mb: 0.5, fontWeight: 600 }}
+                sx={{
+                  mb: 0.5,
+                  fontWeight: 600,
+                  minHeight: { xs: 48, md: 52 },
+                  display: "flex",
+                  alignItems: "center",
+                  lineHeight: 1.3,
+                }}
               >
                 {category.name}
               </Typography>
