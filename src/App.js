@@ -82,8 +82,8 @@ import ErrorBoundary from "./ErrorBoundary.js";
 // };
 
 function App() {
-  console.log('App component rendering...');
-  
+  console.log("App component rendering...");
+
   return (
     <ErrorBoundary>
       <Router>
@@ -91,46 +91,46 @@ function App() {
           <header className="App-header">
             <Navbar />
             <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <div id="section-hero">
-                    <EnhancedHero />
-                  </div>
-                  <div id="section-banner">
-                    <Banner />
-                  </div>
-                  <div id="section-products-overview">
-                    <AboutUs />
-                  </div>
-                  <div id="section-facilities">
-                    <ProductionFacilities />
-                  </div>
-                  <div id="section-products">
-                    <CategorySelection />
-                  </div>
-                  <div id="section-contact">
-                    <Numbers />
-                  </div>
-                </>
-              }
-            />
-            <Route path="/products" element={<ProductGalleryPage />} />
-            <Route
-              path="/products/:categoryKey"
-              element={<ProductGalleryPage />}
-            />
-            <Route
-              path="/product-details/:categoryKey"
-              element={<ProductDetailPage />}
-            />
-          </Routes>
-          <Footer />
-        </header>
-      </div>
-    </Router>
-  </ErrorBoundary>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <div id="section-hero">
+                      <EnhancedHero />
+                    </div>
+                    <div id="section-banner">
+                      <Banner />
+                    </div>
+                    <div id="section-products-overview">
+                      <AboutUs />
+                    </div>
+                    <div id="section-facilities">
+                      <ProductionFacilities />
+                    </div>
+                    <div id="section-products">
+                      <CategorySelection />
+                    </div>
+                    <div id="section-contact">
+                      <Numbers />
+                    </div>
+                  </>
+                }
+              />
+              <Route path="/products" element={<ProductGalleryPage />} />
+              <Route
+                path="/products/:categoryKey"
+                element={<ProductGalleryPage />}
+              />
+              <Route
+                path="/product-details/:categoryKey"
+                element={<ProductDetailPage />}
+              />
+            </Routes>
+            <Footer />
+          </header>
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
 

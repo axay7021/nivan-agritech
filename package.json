@@ -1,7 +1,6 @@
 {
   "name": "nivan-agritech",
   "version": "0.1.0",
-  "homepage": "https://axay7021.github.io/nivan-agritech",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
