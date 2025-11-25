@@ -44,8 +44,11 @@ import Footer from "./component/footer/footer.js";
 import Navbar from "./component/navigation/navbar.js";
 import CategorySelection from "./component/Product/CategorySelection.js";
 import ProductGalleryPage from "./pages/ProductGalleryPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import ProductionFacilities from "./component/Product/ProductionFacilities.js";
 import ImageSlider from "./component/slider/slider.js";
+import ModernHero from "./component/hero/ModernHero.js";
+import EnhancedHero from "./component/hero/EnhancedHero.js";
 
 // const MainContent = () => {
 //   const location = useLocation();
@@ -91,7 +94,7 @@ function App() {
               element={
                 <>
                   <div id="section-hero">
-                    <ImageSlider />
+                    <EnhancedHero />
                   </div>
                   <div id="section-banner">
                     <Banner />
@@ -115,6 +118,10 @@ function App() {
             <Route
               path="/products/:categoryKey"
               element={<ProductGalleryPage />}
+            />
+            <Route
+              path="/product-details/:categoryKey"
+              element={<ProductDetailPage />}
             />
           </Routes>
           <Footer />

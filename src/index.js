@@ -6,37 +6,75 @@ import reportWebVitals from "./reportWebVitals";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-// Global theme using vibrant agriculture colors
+// Modern Professional Blue Theme
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#4CAF50",
-      light: "#81C784",
-      dark: "#388E3C",
+      main: "#0F5477", // Deep Blue
+      light: "#2F8EA3", // Lighter variant of deep blue
+      dark: "#0A3F5C", // Darker variant of deep blue
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "#FFC107",
-      light: "#FFD54F",
-      dark: "#FFA000",
-      contrastText: "#000000",
+      main: "#2F8EA3", // Teal Blue
+      light: "#4AC6D0", // Aqua (accent color)
+      dark: "#1F6B7D", // Darker teal
+      contrastText: "#ffffff",
     },
-    // Energy orange accent color
+    // Accent color for special elements
     tertiary: {
-      main: "#FF9800",
-      light: "#FFB74D",
-      dark: "#F57C00",
+      main: "#4AC6D0", // Aqua
+      light: "#6DD4DE", // Lighter aqua
+      dark: "#359BA6", // Darker aqua
+      contrastText: "#1A1A1A",
     },
     background: {
-      default: "#FAFFFE",
+      default: "#F7F9FA", // Off-White
       paper: "#ffffff",
     },
+    text: {
+      primary: "#1A1A1A", // Charcoal
+      secondary: "#4A4A4A", // Lighter charcoal
+      disabled: "#9E9E9E",
+    },
     grey: {
-      100: "#F8F9FA",
-      200: "#E9ECEF",
-      300: "#DEE2E6",
-      400: "#CED4DA",
-      500: "#ADB5BD",
+      50: "#FAFBFC",
+      100: "#F7F9FA", // Off-White background
+      200: "#E8EAED",
+      300: "#D1D5DB",
+      400: "#9CA3AF",
+      500: "#6B7280",
+      600: "#4B5563",
+      700: "#374151",
+      800: "#1F2937",
+      900: "#1A1A1A", // Charcoal text
+    },
+  },
+  typography: {
+    fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+    h1: {
+      color: "#1A1A1A",
+    },
+    h2: {
+      color: "#1A1A1A",
+    },
+    h3: {
+      color: "#1A1A1A",
+    },
+    h4: {
+      color: "#1A1A1A",
+    },
+    h5: {
+      color: "#1A1A1A",
+    },
+    h6: {
+      color: "#1A1A1A",
+    },
+    body1: {
+      color: "#1A1A1A",
+    },
+    body2: {
+      color: "#4A4A4A",
     },
   },
 });

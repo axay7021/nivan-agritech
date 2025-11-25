@@ -51,7 +51,7 @@ const PRODUCTS_DATA = {
       name: "Cypron-10",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797425/Cypron-10_scssb2.jpg",
-      description: "Dinotefuran 20% SG\nAdvanced insecticide formulation.",
+      description: "Cypermethrin 10% EC\nAdvanced insecticide formulation.",
     },
     {
       id: "insecticides-4",
@@ -59,7 +59,7 @@ const PRODUCTS_DATA = {
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797445/Dahaad_zqnr3r.jpg",
       description:
-        "Thiamethoxam 12.6% + Lambda Cyhalothrin 9.5% ZC\nEffective insecticide for various pests.",
+        "Systemic and Contact Insecticide\nEffective insecticide for various pests.",
     },
     {
       id: "insecticides-5",
@@ -67,50 +67,51 @@ const PRODUCTS_DATA = {
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797419/Flyout-20_rjnoa3.jpg",
       description:
-        "Thiamethoxam 25% WG\nSpecialized insecticide for flying insects.",
+        "Acetamiprid 20% SP\nSpecialized insecticide for flying insects.",
     },
     {
       id: "insecticides-6",
       name: "Larva Out",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797423/Larva_Out_mxqbre.jpg",
-      description: "Acetamiprid 20% SP\nLarvicide for effective pest control.",
+      description:
+        "Emamectin Benzoate 1.9% EC Insecticide\nLarvicide for effective pest control.",
     },
     {
       id: "insecticides-7",
       name: "Niva-Claim-5",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797427/Niva-Claim-5_av88cs.jpg",
-      description: "Emamectin Benzoate 1.9% EC\nPremium insecticide solution.",
+      description: "Emamectin Benzoate 5% SG\nPremium insecticide solution.",
     },
     {
       id: "insecticides-8",
       name: "NivaChlor-50",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797430/NivaChlor-50_ogbt61.jpg",
-      description:
-        "Fipronil 40% + Imidacloprid 40% WG\nHigh concentration insecticide.",
+      description: "Chlorpyriphos 50% EC\nHigh concentration insecticide.",
     },
     {
       id: "insecticides-9",
       name: "Procyper",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797432/Procyper_urcn9m.jpg",
-      description: "Emamectin Benzoate 5% SG\nProfessional grade insecticide.",
+      description:
+        "Profenophos 40% + Cypermethrin 4% EC Insecticide\nProfessional grade insecticide.",
     },
     {
       id: "insecticides-10",
       name: "Protect-30",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797432/Protect-30_etkwni.jpg",
-      description: "Chlorpyriphos 20% EC\nProtective insecticide formula.",
+      description: "Thiamethoxam 30% FS\nProtective insecticide formula.",
     },
     {
       id: "insecticides-11",
       name: "Runner",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797434/Runner_rq0fe3.jpg",
-      description: "Chlorpyriphos 50% EC\nFast-acting insecticide.",
+      description: "Fipronil 5% SC Insecticide\nFast-acting insecticide.",
     },
     {
       id: "insecticides-12",
@@ -118,21 +119,23 @@ const PRODUCTS_DATA = {
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797408/boss-20_h7ph1a.jpg",
       description:
-        "Profenophos 40% + Cypermethrin 4% EC\nSuperior insecticide for pest management.",
+        "Dinotefuran 20% SG systemic insecticide\nSuperior insecticide for pest management.",
     },
     {
       id: "insecticides-13",
       name: "Fimida 40-40",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797416/fimida_40-40_kfa5iv.jpg",
-      description: "Thiamethoxam 30% FS\nDual action insecticide.",
+      description:
+        "Fipronil 40% + Imidacloprid 40% WG\nDual action insecticide.",
     },
     {
       id: "insecticides-14",
       name: "Flykill 25",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797417/flykill_25_v516or.jpg",
-      description: "Fipronil 5% SC\nEffective fly control insecticide.",
+      description:
+        "Thiamethoxam 25% EC Pesticide\nEffective fly control insecticide.",
     },
     {
       id: "insecticides-15",
@@ -140,7 +143,7 @@ const PRODUCTS_DATA = {
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797429/nivachlor-20_o5ymzd.jpg",
       description:
-        "Cypermethrin 25% EC\nReliable insecticide for crop protection.",
+        "Chlorpyriphos 20% EC\nReliable insecticide for crop protection.",
     },
     // Adding new products from Cloudinary
     {
@@ -148,8 +151,7 @@ const PRODUCTS_DATA = {
       name: "Emida-17",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797415/Emida-17_psnbhe.jpg",
-      description:
-        "Emamectin Benzoate 1.7% EC\nAdvanced pest control solution.",
+      description: "Imidacloprid 17% SL\nAdvanced pest control solution.",
     },
     {
       id: "insecticides-17",
@@ -164,14 +166,14 @@ const PRODUCTS_DATA = {
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797409/Alfachlor_wyllq6.jpg",
       description:
-        "Alpha-Cypermethrin 10% EC\nPremium insecticide formulation.",
+        "Chlorpyrifos 16% + Alpha-Cypermethrin 1% EC\nPremium insecticide formulation.",
     },
     {
       id: "insecticides-19",
       name: "Deltra-11",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797480/DELTRA-11_zksbsv.jpg",
-      description: "Deltamethrin 1.1% EC\nHigh-performance insecticide.",
+      description: "Deltamethrin 11% EC\nHigh-performance insecticide.",
     },
   ],
   fungicides: [
@@ -221,7 +223,7 @@ const PRODUCTS_DATA = {
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797413/Corzin-Box_w0phec.jpg",
       description:
-        "Carbendazim 50% WP\nSystemic fungicide for comprehensive disease management.",
+        "Chlorantraniliprole 18.5% W/W SC\nSystemic fungicide for comprehensive disease management.",
     },
   ],
   herbicides: [
@@ -264,7 +266,7 @@ const PRODUCTS_DATA = {
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797425/NIVA_NEEM_kdmbme.jpg",
       description:
-        "Neem seeds kernel based (natural neem)\nNatural neem-based plant growth regulator.",
+        "Azadirachtin 0.3% (3000ppm) Insecticide\nNatural neem-based plant growth regulator.",
     },
     {
       id: "pgr-stimulants-2",

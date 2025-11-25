@@ -73,6 +73,8 @@ const Navbar = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                padding: "10px 16px",
+                position: "relative",
               }
             : {
                 display: "flex",
@@ -103,14 +105,18 @@ const Navbar = () => {
                 <Typography variant="body2">+91 91067 25328</Typography>
               </Box>
             </Box>
-            <Box sx={{ width: "150px", height: "auto" }}>
+            <Box sx={{ width: "50px", height: "auto", marginTop: 2 }}>
               <img
                 src={logo}
                 alt="agrikol-logo"
                 style={{ width: "100%", height: "auto" }}
               />
             </Box>
-            <Box sx={{ display: "flex", gap: 1, paddingRight: 5 }}>
+
+            {/* Spacer to balance the layout */}
+            <Box sx={{ width: "200px" }} />
+
+            {/* <Box sx={{ display: "flex", gap: 1, paddingRight: 5 }}>
               {[FacebookIcon, TwitterIcon, InstagramIcon].map((Icon, i) => (
                 <IconButton
                   key={i}
@@ -126,11 +132,16 @@ const Navbar = () => {
                   <Icon />
                 </IconButton>
               ))}
-            </Box>
+            </Box> */}
           </>
         ) : (
           <Box
-            sx={{ width: "150px", height: "auto", justifyContent: "center" }}
+            sx={{
+              width: "50px",
+              height: "auto",
+              justifyContent: "center",
+              marginTop: 2,
+            }}
           >
             <img
               src={logo}
@@ -188,12 +199,57 @@ const Navbar = () => {
                 </Button>
               ))}
             </Box>
+
+            {/* Always visible social media icons */}
+            <Box sx={{ display: "flex", gap: 1 }}>
+              {[FacebookIcon, TwitterIcon, InstagramIcon].map((Icon, i) => (
+                <IconButton
+                  key={i}
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "primary.main",
+                      color: "white",
+                    },
+                    backgroundColor: scrolled
+                      ? "rgba(255,255,255,0.1)"
+                      : (t) => t.palette.secondary.light,
+                    color: "text.primary",
+                    transition: "all 0.3s ease",
+                  }}
+                >
+                  <Icon />
+                </IconButton>
+              ))}
+            </Box>
           </Toolbar>
         ) : (
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             <IconButton onClick={() => setDrawerOpen(true)}>
               <MenuIcon />
             </IconButton>
+
+            {/* Mobile social media icons in toolbar */}
+            <Box sx={{ display: "flex", gap: 0.5 }}>
+              {[FacebookIcon, TwitterIcon, InstagramIcon].map((Icon, i) => (
+                <IconButton
+                  key={i}
+                  size="small"
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "primary.main",
+                      color: "white",
+                    },
+                    backgroundColor: scrolled
+                      ? "rgba(255,255,255,0.1)"
+                      : (t) => t.palette.secondary.light,
+                    color: "text.primary",
+                    transition: "all 0.3s ease",
+                  }}
+                >
+                  <Icon fontSize="small" />
+                </IconButton>
+              ))}
+            </Box>
           </Toolbar>
         )}
       </AppBar>

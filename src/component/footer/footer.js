@@ -35,15 +35,25 @@ const Footer = () => {
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
               <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                <LocationOnIcon sx={{ marginRight: 1 }} />
-                <Typography variant="body2">
-                  Nivaan Chemicals, Plot 132, Himson compond, Ankleshwar GIDC,
-                  Ankleshwar, Gujarat 393001
+                <LocationOnIcon
+                  sx={{ marginRight: 1, color: "rgba(255,255,255,0.8)" }}
+                />
+                <Typography
+                  variant="body2"
+                  sx={{ color: "rgba(255,255,255,0.8)" }}
+                >
+                  Nivaan Chemicals, Plot No. 8/13, Opp. SunPharma GIDC, Panoli,
+                  Dist. Bharuch. Gujarat - 394116 (INDIA)
                 </Typography>
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                <EmailIcon sx={{ marginRight: 1 }} />
-                <Typography variant="body2">
+                <EmailIcon
+                  sx={{ marginRight: 1, color: "rgba(255,255,255,0.8)" }}
+                />
+                <Typography
+                  variant="body2"
+                  sx={{ color: "rgba(255,255,255,0.8)" }}
+                >
                   nivaanchemical@gmail.com
                 </Typography>
               </Box>
@@ -88,7 +98,7 @@ const Footer = () => {
             © Copyright 2024, All Rights Reserved
             <br></br>
             Designed by{" "}
-            <span style={{ fontWeight: "800", color: "#FFC107" }}>
+            <span style={{ fontWeight: "800", color: "#4AC6D0" }}>
               {" "}
               Akshay Dobariya
             </span>

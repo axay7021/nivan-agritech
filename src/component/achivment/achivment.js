@@ -57,7 +57,7 @@ const Numbers = () => {
                   component="span"
                   sx={{
                     background:
-                      "linear-gradient(90deg, #4CAF50 0%, #FF9800 100%)",
+                      "linear-gradient(90deg, #0F5477 0%, #2F8EA3 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
@@ -94,7 +94,7 @@ const Numbers = () => {
                   component="span"
                   sx={{
                     background:
-                      "linear-gradient(90deg, #FFC107 0%, #FF9800 100%)",
+                      "linear-gradient(90deg, #2F8EA3 0%, #4AC6D0 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
@@ -131,7 +131,7 @@ const Numbers = () => {
                   component="span"
                   sx={{
                     background:
-                      "linear-gradient(90deg, #4CAF50 0%, #FFC107 100%)",
+                      "linear-gradient(90deg, #0F5477 0%, #4AC6D0 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}

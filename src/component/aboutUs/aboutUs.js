@@ -147,9 +147,10 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import leaf from "../../assets/images/resources/leaf.png";
-import serviceImage1 from "../../assets/images/service/service-1-img-5.jpg";
-import serviceImage2 from "../../assets/images/service/service-1-img-6.jpg";
+import serviceImage1 from "../../assets/images/service/service-1-img-9.jpg";
+import serviceImage2 from "../../assets/images/service/service-1-img-8.jpg";
 import serviceImage3 from "../../assets/images/service/service-1-img-7.jpg";
+import serviceImage4 from "../../assets/images/service/service-1-img-10.jpg";
 
 const services = [
   {
@@ -185,7 +186,7 @@ const services = [
     description:
       "We also manufacture advanced plant growth regulators (PGRs) and stimulants, which enhance crop vigor, yield, and quality. These products also foster better nutrient uptake and overall plant health.",
     link: "/product-details/pgr-stimulants",
-    serviceImage: serviceImage3,
+    serviceImage: serviceImage4,
     delay: 0.9,
   },
 ];
