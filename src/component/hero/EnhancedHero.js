@@ -5,8 +5,6 @@ import {
   Button,
   Container,
   Grid,
-  Card,
-  CardContent,
   IconButton,
   Chip,
   useTheme,
@@ -16,17 +14,11 @@ import {
 } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  PlayArrow,
   Agriculture,
   Nature,
   Science,
-  TrendingUp,
   KeyboardArrowDown,
-  BugReport,
-  Grass,
-  LocalFlorist,
   Phone,
-  Email,
   LocationOn,
   EmojiEvents,
   CheckCircle,
@@ -40,41 +32,6 @@ import "./ModernHero.css";
 import heroImage from "../../assets/images/main-slider/slide_v5_1.jpg";
 import farmImage from "../../assets/images/main-slider/slide_v5_2.jpg";
 import cropImage from "../../assets/images/main-slider/slide_v5_3.jpg";
-
-const productCategories = [
-  {
-    name: "Insecticides",
-    key: "insecticides",
-    icon: <BugReport />,
-    count: "120+",
-    color: "#ff6b35",
-    description: "Effective pest control solutions",
-  },
-  {
-    name: "Fungicides",
-    key: "fungicides",
-    icon: <Science />,
-    count: "95+",
-    color: "#4ecdc4",
-    description: "Disease prevention & treatment",
-  },
-  {
-    name: "Herbicides",
-    key: "herbicides",
-    icon: <Grass />,
-    count: "110+",
-    color: "#45b7d1",
-    description: "Weed management solutions",
-  },
-  {
-    name: "PGR & Stimulants",
-    key: "pgr-stimulants",
-    icon: <LocalFlorist />,
-    count: "88+",
-    color: "#96ceb4",
-    description: "Growth enhancement products",
-  },
-];
 
 const stats = [
   {
@@ -113,7 +70,6 @@ const features = [
 const EnhancedHero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const [hoveredCard, setHoveredCard] = useState(null);
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -152,7 +108,7 @@ const EnhancedHero = () => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 7000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   const scrollToProducts = () => {
     const element = document.getElementById("section-products");

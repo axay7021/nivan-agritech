@@ -46,8 +46,6 @@ import CategorySelection from "./component/Product/CategorySelection.js";
 import ProductGalleryPage from "./pages/ProductGalleryPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ProductionFacilities from "./component/Product/ProductionFacilities.js";
-import ImageSlider from "./component/slider/slider.js";
-import ModernHero from "./component/hero/ModernHero.js";
 import EnhancedHero from "./component/hero/EnhancedHero.js";
 
 // const MainContent = () => {

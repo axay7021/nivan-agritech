@@ -16,8 +16,6 @@ import "./ModernHero.css";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   PlayArrow,
-  Agriculture,
-  Eco,
   Science,
   TrendingUp,
   KeyboardArrowDown,
@@ -106,7 +104,7 @@ const ModernHero = () => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   const scrollToProducts = () => {
     const element = document.getElementById("section-products");
