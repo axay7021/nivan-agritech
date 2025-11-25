@@ -33,7 +33,7 @@
 // export default App;
 
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./App.css";
@@ -47,6 +47,7 @@ import ProductGalleryPage from "./pages/ProductGalleryPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ProductionFacilities from "./component/Product/ProductionFacilities.js";
 import EnhancedHero from "./component/hero/EnhancedHero.js";
+import ErrorBoundary from "./ErrorBoundary.js";
 
 // const MainContent = () => {
 //   const location = useLocation();
@@ -81,12 +82,15 @@ import EnhancedHero from "./component/hero/EnhancedHero.js";
 // };
 
 function App() {
+  console.log('App component rendering...');
+  
   return (
-    <Router>
-      <div className="App">
-        <header className="App-header">
-          <Navbar />
-          <Routes>
+    <ErrorBoundary>
+      <Router>
+        <div className="App">
+          <header className="App-header">
+            <Navbar />
+            <Routes>
             <Route
               path="/"
               element={
@@ -126,6 +130,7 @@ function App() {
         </header>
       </div>
     </Router>
+  </ErrorBoundary>
   );
 }
 
