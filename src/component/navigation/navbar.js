@@ -52,6 +52,21 @@ const Navbar = () => {
 
   const handleDrawerClose = () => setDrawerOpen(false);
 
+  const handleSocialClick = (platform) => {
+    if (platform === "instagram") {
+      window.open(
+        "https://www.instagram.com/nivaanchemical?igsh=MXQ2Y2cyNzBkdjVuNA==",
+        "_blank"
+      );
+    } else if (platform === "facebook") {
+      window.open(
+        "https://www.facebook.com/share/15qorGsZta/?mibextid=wwXIfr",
+        "_blank"
+      );
+    }
+    // Add other social media links here as needed
+  };
+
   const scrollToId = (id) => {
     const doScroll = () => {
       const el = document.getElementById(id);
@@ -75,12 +90,14 @@ const Navbar = () => {
                 alignItems: "center",
                 padding: "10px 16px",
                 position: "relative",
+                backgroundColor: "white",
               }
             : {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
                 padding: "10px 0",
+                backgroundColor: "white",
               }
         }
       >
@@ -202,9 +219,14 @@ const Navbar = () => {
 
             {/* Always visible social media icons */}
             <Box sx={{ display: "flex", gap: 1 }}>
-              {[FacebookIcon, TwitterIcon, InstagramIcon].map((Icon, i) => (
+              {[
+                { Icon: FacebookIcon, platform: "facebook" },
+                // { Icon: TwitterIcon, platform: "twitter" },
+                { Icon: InstagramIcon, platform: "instagram" },
+              ].map(({ Icon, platform }, i) => (
                 <IconButton
                   key={i}
+                  onClick={() => handleSocialClick(platform)}
                   sx={{
                     "&:hover": {
                       backgroundColor: "primary.main",
@@ -230,10 +252,15 @@ const Navbar = () => {
 
             {/* Mobile social media icons in toolbar */}
             <Box sx={{ display: "flex", gap: 0.5 }}>
-              {[FacebookIcon, TwitterIcon, InstagramIcon].map((Icon, i) => (
+              {[
+                { Icon: FacebookIcon, platform: "facebook" },
+                // { Icon: TwitterIcon, platform: "twitter" },
+                { Icon: InstagramIcon, platform: "instagram" },
+              ].map(({ Icon, platform }, i) => (
                 <IconButton
                   key={i}
                   size="small"
+                  onClick={() => handleSocialClick(platform)}
                   sx={{
                     "&:hover": {
                       backgroundColor: "primary.main",
