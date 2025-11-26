@@ -18,7 +18,7 @@ import { Email, Phone } from "@mui/icons-material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MenuIcon from "@mui/icons-material/Menu";
-import TwitterIcon from "@mui/icons-material/Twitter";
+// import TwitterIcon from "@mui/icons-material/Twitter";
 import logo from "../../assets/images/resources/logo.png";
 import headerBackgroundImage from "../../assets/images/shapes/header-bg.png";
 import "./index.css";
