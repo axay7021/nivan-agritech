@@ -48,6 +48,7 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import ProductionFacilities from "./component/Product/ProductionFacilities.js";
 import EnhancedHero from "./component/hero/EnhancedHero.js";
 import ErrorBoundary from "./ErrorBoundary.js";
+import NewArrivalManager from "./component/NewArrivalManager/NewArrivalManager.js";
 
 // const MainContent = () => {
 //   const location = useLocation();
@@ -128,6 +129,8 @@ function App() {
             </Routes>
             <Footer />
           </header>
+          {/* New Arrival Manager - Global component */}
+          <NewArrivalManager />
         </div>
       </Router>
     </ErrorBoundary>

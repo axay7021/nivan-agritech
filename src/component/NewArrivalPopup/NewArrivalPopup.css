@@ -1,0 +1,150 @@
+/* Animated border effect */
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+  }
+}
+
+.animated-border {
+  animation: borderGlow 2s ease-in-out infinite;
+  border: 2px solid rgba(76, 175, 80, 0.5);
+  border-radius: 12px;
+}
+
+/* Popup entrance animation */
+@keyframes popupEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.MuiDialog-paper {
+  animation: popupEntrance 0.5s ease-out;
+}
+
+/* Moving text animations */
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Sticker shine animation */
+@keyframes shine {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
+/* Gentle bounce animation for text */
+@keyframes gentleBounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Floating decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(240deg);
+  }
+}
+
+@keyframes bounceUpDown {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-4px);
+  }
+}
+
+.moving-text-container {
+  animation: bounceUpDown 2s ease-in-out infinite;
+}
+
+.moving-text {
+  animation: moveText 8s linear infinite;
+  display: inline-block;
+  padding-left: 100%;
+}
+
+/* Add sparkle effect for the text */
+@keyframes sparkle {
+  0% {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  50% {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(255,255,255,0.8);
+  }
+  100% {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+}
+
+.moving-text {
+  animation: moveText 8s linear infinite, sparkle 3s ease-in-out infinite;
+}
+
+/* Responsive image adjustments */
+@media (max-width: 600px) {
+  .MuiDialog-paper {
+    margin: 16px;
+  }
+  
+  .moving-text {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .MuiDialog-paper {
+    margin: 32px;
+  }
+  
+  .moving-text {
+    font-size: 1.3rem !important;
+  }
+}
