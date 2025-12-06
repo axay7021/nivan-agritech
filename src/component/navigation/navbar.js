@@ -29,6 +29,7 @@ const NAV_ITEMS = [
   { label: "Products Overview", id: "section-products-overview" },
   { label: "Facilities", id: "section-facilities" },
   { label: "Product", id: "section-products" },
+  { label: "Quality & Certifications", id: "quality-certification" },
   { label: "Contact", id: "section-contact" },
 ];
 
@@ -206,11 +207,15 @@ const Navbar = () => {
                         }
                       : undefined
                   }
-                  onClick={() =>
-                    item.id === "section-products"
-                      ? navigate("/products/insecticides")
-                      : scrollToId(item.id)
-                  }
+                  onClick={() => {
+                    if (item.id === "section-products") {
+                      navigate("/products/insecticides");
+                    } else if (item.id === "quality-certification") {
+                      navigate("/quality-certification");
+                    } else {
+                      scrollToId(item.id);
+                    }
+                  }}
                 >
                   {item.label}
                 </Button>
@@ -312,6 +317,8 @@ const Navbar = () => {
                   setDrawerOpen(false);
                   if (item.id === "section-products") {
                     navigate("/products/insecticides");
+                  } else if (item.id === "quality-certification") {
+                    navigate("/quality-certification");
                   } else {
                     scrollToId(item.id);
                   }

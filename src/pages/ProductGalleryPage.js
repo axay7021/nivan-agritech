@@ -175,6 +175,15 @@ const PRODUCTS_DATA = {
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797480/DELTRA-11_zksbsv.jpg",
       description: "Deltamethrin 11% EC\nHigh-performance insecticide.",
     },
+    // Adding new fungicide from Cloudinary
+    {
+      id: "fungicides-6",
+      name: "Corzin-Box",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797413/Corzin-Box_w0phec.jpg",
+      description:
+        "Chlorantraniliprole 18.5% W/W SC\nSystemic fungicide for comprehensive disease management.",
+    },
   ],
   fungicides: [
     {
@@ -215,15 +224,6 @@ const PRODUCTS_DATA = {
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797437/TebuSulf_peniee.jpg",
       description:
         "Tebuconazole 10% + Sulphur 65% WG\nProfessional fungicide solution.",
-    },
-    // Adding new fungicide from Cloudinary
-    {
-      id: "fungicides-6",
-      name: "Corzin-Box",
-      image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797413/Corzin-Box_w0phec.jpg",
-      description:
-        "Chlorantraniliprole 18.5% W/W SC\nSystemic fungicide for comprehensive disease management.",
     },
   ],
   herbicides: [
