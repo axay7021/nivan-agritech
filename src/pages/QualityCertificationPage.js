@@ -148,7 +148,7 @@ const QualityCertificationPage = () => {
               mb: 4,
             }}
           >
-            At Nivan Chemicals, delivering consistently superior agrochemical
+            At Nivaan Chemical, delivering consistently superior agrochemical
             products is the cornerstone of our business philosophy. Quality
             assurance is seamlessly integrated throughout every stage of our
             production process—from meticulous sourcing of premium raw materials
@@ -216,7 +216,7 @@ const QualityCertificationPage = () => {
             variant="body1"
             sx={{ fontSize: "1.2rem", lineHeight: 1.8, textAlign: "justify" }}
           >
-            Beyond maintaining our ISO certification, Nivan Chemicals actively
+            Beyond maintaining our ISO certification, Nivaan Chemical actively
             invests in next-generation laboratory equipment and continuously
             expands our Research & Development capabilities to drive innovation
             and maintain our position as a quality leader. We are committed to
@@ -321,7 +321,7 @@ const QualityCertificationPage = () => {
                 </CardContent>
                 <StyledCardMedia
                   image="https://res.cloudinary.com/dxhih7kwi/image/upload/v1765025123/soft_NIVAAN_CHEMICAL_9001_page-0001_qq8aqy.jpg"
-                  title="Nivan Chemicals ISO 9001:2015 Certificate"
+                  title="Nivaan Chemical ISO 9001:2015 Certificate"
                 />
                 <CardContent>
                   <Typography
@@ -363,8 +363,8 @@ const QualityCertificationPage = () => {
             sx={{ fontSize: "1.1rem", maxWidth: "800px", margin: "0 auto" }}
           >
             Our certifications and quality commitments serve as a testament to
-            our reliability and trustworthiness. When you choose Nivan
-            Chemicals, you're partnering with a company that prioritizes
+            our reliability and trustworthiness. When you choose Nivaan
+            Chemical, you're partnering with a company that prioritizes
             excellence, safety, and sustainable agricultural solutions for a
             better tomorrow.
           </Typography>

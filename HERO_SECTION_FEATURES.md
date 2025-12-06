@@ -1,4 +1,4 @@
-# 🌾 Revolutionary Hero Section for Nivan Agritech
+# 🌾 Revolutionary Hero Section for Nivaan Chemical
 
 ## 🎯 **Complete Transformation Summary**
 
@@ -193,4 +193,4 @@ Your enhanced hero section is now live! You can:
 - 📝 **Update content** by editing the component files
 - 🔄 **Switch versions** using the development switcher (top-right corner)
 
-**This is not just a hero section - it's a complete digital experience that represents the innovation and quality of Nivan Agritech!** 🌱
+**This is not just a hero section - it's a complete digital experience that represents the innovation and quality of Nivaan Chemical!** 🌱

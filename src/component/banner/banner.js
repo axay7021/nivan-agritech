@@ -349,7 +349,7 @@ const Banner = () => {
               }}
             >
               <Typography variant="h6" color="primary" gutterBottom>
-                About Nivan Chemicals
+                About Nivaan Chemicals
               </Typography>
               <Typography variant="h4" fontWeight="bold" gutterBottom>
                 Who We Are
