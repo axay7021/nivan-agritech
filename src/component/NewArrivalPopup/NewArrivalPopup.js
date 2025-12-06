@@ -37,10 +37,10 @@ const NewArrivalPopup = ({ open, onClose }) => {
       };
     } else {
       return {
-        maxWidth: "35vw",
-        maxHeight: "55vh",
-        width: "35vw",
-        height: "55vh",
+        maxWidth: "45vw",
+        maxHeight: "70vh",
+        width: "45vw",
+        height: "70vh",
       };
     }
   };
@@ -110,12 +110,15 @@ const NewArrivalPopup = ({ open, onClose }) => {
             left: 0,
             right: 0,
             zIndex: 5,
-            height: isMobile ? "30px" : "40px",
+            height: isMobile ? "60px" : "50px",
             backgroundColor: "transparent",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            overflow: "hidden",
+            overflow: "visible",
+            paddingTop: "20px",
+            paddingBottom: "5px",
+            paddingX: isMobile ? "5px" : "10px",
           }}
         >
           <Typography
@@ -123,14 +126,19 @@ const NewArrivalPopup = ({ open, onClose }) => {
             sx={{
               color: "#4CAF50",
               fontWeight: "bold",
-              fontSize: isMobile ? "1rem" : "1.2rem",
-              whiteSpace: "nowrap",
+              fontSize: isMobile ? "1.1rem" : "1.1rem",
+              whiteSpace: isMobile ? "pre-line" : "normal",
               textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
               animation: "gentleBounce 2s ease-in-out infinite",
               textAlign: "center",
+              lineHeight: isMobile ? 1.2 : 1.3,
+              maxWidth: "100%",
+              wordBreak: "break-word",
             }}
           >
-            🎉 New Arrivals - Special Offers Available! 🌟
+            {isMobile
+              ? "🎉 New Arrivals \n Special Offers Available! 🌟"
+              : "🎉 New Arrivals - Special Offers Available! 🌟"}
           </Typography>
         </Box>
 
@@ -145,7 +153,7 @@ const NewArrivalPopup = ({ open, onClose }) => {
             backgroundColor: "transparent",
             position: "relative",
             overflow: "hidden",
-            paddingTop: isMobile ? "30px" : "40px", // Space for the moving text
+            paddingTop: isMobile ? "30px" : "35px", // Space for the moving text
           }}
         >
           <img
@@ -153,11 +161,11 @@ const NewArrivalPopup = ({ open, onClose }) => {
             alt="New Arrival"
             style={{
               width: "100%",
-              height: isMobile ? "calc(100% - 40px)" : "calc(100% - 50px)",
+              height: isMobile ? "calc(100% - 40px)" : "calc(100% - 45px)",
               objectFit: "contain",
               maxHeight: isMobile
                 ? `calc(${dimensions.maxHeight} - 40px)`
-                : `calc(${dimensions.maxHeight} - 50px)`,
+                : `calc(${dimensions.maxHeight} - 45px)`,
             }}
           />
         </Box>
