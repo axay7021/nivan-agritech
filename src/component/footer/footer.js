@@ -42,7 +42,7 @@ const Footer = () => {
                   variant="body2"
                   sx={{ color: "rgba(255,255,255,0.8)" }}
                 >
-                  Nivaan Chemicals, Plot No. 8/13, Opp. SunPharma GIDC, Panoli,
+                  Nivaan Chemical, Plot No. 8/13, Opp. SunPharma Panoli GIDC,
                   Dist. Bharuch. Gujarat - 394116 (INDIA)
                 </Typography>
               </Box>

@@ -18,8 +18,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { InfoOutlined } from "@mui/icons-material";
 
 const CATEGORY_LIST = [
-  { key: "insecticides", name: "Insecticides" },
-  { key: "fungicides", name: "Fungicides" },
+  { key: "insecticides", name: "Mix micronutrients" },
+  { key: "fungicides", name: "Water soluble fertiliser" },
   { key: "herbicides", name: "Herbicides" },
   {
     key: "pgr-stimulants",
