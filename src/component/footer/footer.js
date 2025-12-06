@@ -1,9 +1,31 @@
 import React from "react";
-import { Box, Container, Typography, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid, IconButton } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
+import { Phone } from "@mui/icons-material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import CopyableContactItem from "../CopyableContactItem";
 
 const Footer = () => {
+  const handleSocialClick = (platform) => {
+    if (platform === "instagram") {
+      window.open(
+        "https://www.instagram.com/nivaanchemical?igsh=MXQ2Y2cyNzBkdjVuNA==",
+        "_blank"
+      );
+    } else if (platform === "facebook") {
+      window.open(
+        "https://www.facebook.com/share/15qorGsZta/?mibextid=wwXIfr",
+        "_blank"
+      );
+    } else if (platform === "whatsapp") {
+      const phoneNumber = "919106725328";
+      window.open(`https://wa.me/${phoneNumber}`, "_blank");
+    }
+  };
+
   return (
     <Box
       component="footer"
@@ -46,16 +68,24 @@ const Footer = () => {
                   Dist. Bharuch. Gujarat - 394116 (INDIA)
                 </Typography>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                <EmailIcon
-                  sx={{ marginRight: 1, color: "rgba(255,255,255,0.8)" }}
+              <Box sx={{ mb: 1 }}>
+                <CopyableContactItem
+                  icon={<EmailIcon />}
+                  text="nivaanchemical@gmail.com"
+                  type="email"
+                  iconColor="rgba(255,255,255,0.8)"
+                  textVariant="body2"
+                  textColor="rgba(255,255,255,0.8)"
+                  sx={{ mb: 1 }}
                 />
-                <Typography
-                  variant="body2"
-                  sx={{ color: "rgba(255,255,255,0.8)" }}
-                >
-                  nivaanchemical@gmail.com
-                </Typography>
+                <CopyableContactItem
+                  icon={<Phone />}
+                  text="+91 91067 25328"
+                  type="phone"
+                  iconColor="rgba(255,255,255,0.8)"
+                  textVariant="body2"
+                  textColor="rgba(255,255,255,0.8)"
+                />
               </Box>
             </Box>
           </Grid>
@@ -63,37 +93,47 @@ const Footer = () => {
         <Box
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", sm: "row" }, // Stack links on smaller screens
+            flexDirection: { xs: "column", sm: "row" },
             justifyContent: "space-between",
             alignItems: "center",
             borderTop: "1px solid rgba(255,255,255,0.2)",
             pt: 2,
           }}
         >
-          {/* <Box
+          <Box
             sx={{
               display: "flex",
-              flexWrap: "wrap",
-              gap: 2,
-              justifyContent: "center",
+              gap: 1,
+              mb: { xs: 2, sm: 0 },
             }}
           >
-            <Link href="#" color="inherit" underline="hover">
-              About
-            </Link>
-            <Link href="#" color="inherit" underline="hover">
-              Features
-            </Link>
-            <Link href="#" color="inherit" underline="hover">
-              Works
-            </Link>
-            <Link href="#" color="inherit" underline="hover">
-              Support
-            </Link>
-          </Box> */}
+            {[
+              { Icon: FacebookIcon, platform: "facebook" },
+              { Icon: InstagramIcon, platform: "instagram" },
+              { Icon: WhatsAppIcon, platform: "whatsapp" },
+            ].map(({ Icon, platform }, i) => (
+              <IconButton
+                key={i}
+                onClick={() => handleSocialClick(platform)}
+                sx={{
+                  "&:hover": {
+                    backgroundColor: "rgba(255,255,255,0.1)",
+                    transform: "scale(1.1)",
+                  },
+                  color: "rgba(255,255,255,0.8)",
+                  transition: "all 0.3s ease",
+                }}
+              >
+                <Icon />
+              </IconButton>
+            ))}
+          </Box>
           <Typography
             variant="body2"
-            sx={{ color: "rgba(255,255,255,0.7)", mt: { xs: 2, sm: 0 } }}
+            sx={{
+              color: "rgba(255,255,255,0.7)",
+              textAlign: { xs: "center", sm: "right" },
+            }}
           >
             © Copyright 2024, All Rights Reserved
             <br></br>

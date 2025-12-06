@@ -10,14 +10,15 @@ import {
   ListItemButton,
   ListItemText,
   Toolbar,
-  Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { Email, Phone } from "@mui/icons-material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import MenuIcon from "@mui/icons-material/Menu";
+import CopyableContactItem from "../CopyableContactItem";
 // import TwitterIcon from "@mui/icons-material/Twitter";
 import logo from "../../assets/images/resources/logo.png";
 import headerBackgroundImage from "../../assets/images/shapes/header-bg.png";
@@ -64,6 +65,9 @@ const Navbar = () => {
         "https://www.facebook.com/share/15qorGsZta/?mibextid=wwXIfr",
         "_blank"
       );
+    } else if (platform === "whatsapp") {
+      const phoneNumber = "919106725328"; // Phone number without spaces or special characters
+      window.open(`https://wa.me/${phoneNumber}`, "_blank");
     }
     // Add other social media links here as needed
   };
@@ -106,22 +110,28 @@ const Navbar = () => {
           <>
             <Box
               sx={{
-                paddingLeft: 5,
                 display: "flex",
-                gap: 2,
-                alignItems: "center",
+                flexDirection: "column",
+                gap: 1,
+                minWidth: "280px",
+                ml: 3, // Add left margin for spacing
+                pl: 1, // Add a little padding for visual balance
               }}
             >
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-                <Email sx={{ color: "primary.main" }} />
-                <Phone sx={{ color: "primary.main" }} />
-              </Box>
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-                <Typography variant="body2">
-                  nivaanchemical@gmail.com
-                </Typography>
-                <Typography variant="body2">+91 91067 25328</Typography>
-              </Box>
+              <CopyableContactItem
+                icon={<Email />}
+                text="nivaanchemical@gmail.com"
+                type="email"
+                iconColor="primary.main"
+                textVariant="body2"
+              />
+              <CopyableContactItem
+                icon={<Phone />}
+                text="+91 91067 25328"
+                type="phone"
+                iconColor="primary.main"
+                textVariant="body2"
+              />
             </Box>
             <Box sx={{ width: "50px", height: "auto", marginTop: 2 }}>
               <img
@@ -226,8 +236,8 @@ const Navbar = () => {
             <Box sx={{ display: "flex", gap: 1 }}>
               {[
                 { Icon: FacebookIcon, platform: "facebook" },
-                // { Icon: TwitterIcon, platform: "twitter" },
                 { Icon: InstagramIcon, platform: "instagram" },
+                { Icon: WhatsAppIcon, platform: "whatsapp" },
               ].map(({ Icon, platform }, i) => (
                 <IconButton
                   key={i}
@@ -259,8 +269,8 @@ const Navbar = () => {
             <Box sx={{ display: "flex", gap: 0.5 }}>
               {[
                 { Icon: FacebookIcon, platform: "facebook" },
-                // { Icon: TwitterIcon, platform: "twitter" },
                 { Icon: InstagramIcon, platform: "instagram" },
+                { Icon: WhatsAppIcon, platform: "whatsapp" },
               ].map(({ Icon, platform }, i) => (
                 <IconButton
                   key={i}
