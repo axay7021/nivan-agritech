@@ -17,18 +17,40 @@ import FactoryIcon from "@mui/icons-material/Factory";
 import ScienceIcon from "@mui/icons-material/Science";
 
 const StyledContainer = styled(Container)(({ theme }) => ({
-  paddingTop: theme.spacing(8),
-  paddingBottom: theme.spacing(8),
+  paddingTop: theme.spacing(4),
+  paddingBottom: theme.spacing(4),
   minHeight: "100vh",
+  paddingLeft: theme.spacing(2),
+  paddingRight: theme.spacing(2),
+  [theme.breakpoints.up("sm")]: {
+    paddingTop: theme.spacing(6),
+    paddingBottom: theme.spacing(6),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
+  },
+  [theme.breakpoints.up("md")]: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
+  },
 }));
 
 const HeroSection = styled(Box)(({ theme }) => ({
   background: "linear-gradient(135deg, #0F5477 0%, #2F8EA3 50%, #4AC6D0 100%)",
   color: "white",
-  padding: theme.spacing(8, 0),
+  padding: theme.spacing(4, 2),
   textAlign: "center",
-  marginBottom: theme.spacing(6),
+  marginBottom: theme.spacing(4),
   borderRadius: theme.spacing(2),
+  [theme.breakpoints.up("sm")]: {
+    padding: theme.spacing(6, 3),
+    marginBottom: theme.spacing(5),
+  },
+  [theme.breakpoints.up("md")]: {
+    padding: theme.spacing(8, 0),
+    marginBottom: theme.spacing(6),
+  },
 }));
 
 const CertificationCard = styled(Card)(({ theme }) => ({
@@ -43,37 +65,47 @@ const CertificationCard = styled(Card)(({ theme }) => ({
 }));
 
 const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
-  height: 400,
+  height: 250,
   backgroundSize: "contain",
   backgroundPosition: "center",
   border: `2px solid ${theme.palette.divider}`,
   borderRadius: theme.spacing(1),
-  margin: theme.spacing(2),
+  margin: theme.spacing(1),
+  [theme.breakpoints.up("sm")]: {
+    height: 300,
+    margin: theme.spacing(1.5),
+  },
+  [theme.breakpoints.up("md")]: {
+    height: 400,
+    margin: theme.spacing(2),
+  },
 }));
 
 const FeatureBox = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(3),
+  padding: theme.spacing(2),
   borderRadius: theme.spacing(2),
   backgroundColor: theme.palette.background.paper,
   boxShadow: theme.shadows[2],
   textAlign: "center",
   transition: "transform 0.2s ease-in-out",
   height: "100%",
-  minHeight: "280px", // Ensures consistent minimum height
+  minHeight: "200px",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
+  justifyContent: "flex-start",
   alignItems: "center",
   "&:hover": {
     transform: "translateY(-4px)",
     boxShadow: theme.shadows[6],
   },
-  [theme.breakpoints.down("sm")]: {
-    minHeight: "240px", // Slightly smaller on mobile
-    padding: theme.spacing(2),
+  [theme.breakpoints.up("sm")]: {
+    minHeight: "220px",
+    padding: theme.spacing(2.5),
   },
   [theme.breakpoints.up("md")]: {
-    minHeight: "300px", // Consistent height on larger screens
+    minHeight: "260px",
+    padding: theme.spacing(3),
+    justifyContent: "center",
   },
 }));
 
@@ -110,16 +142,28 @@ const QualityCertificationPage = () => {
       <Fade in timeout={1000}>
         <HeroSection>
           <Typography
-            variant="h2"
+            variant="h3"
             component="h1"
             gutterBottom
             fontWeight="bold"
+            sx={{
+              fontSize: { xs: "1.8rem", sm: "2.5rem", md: "3rem" },
+              lineHeight: { xs: 1.2, sm: 1.3, md: 1.4 },
+              px: 1,
+            }}
           >
             Quality Assurance & Certifications
           </Typography>
           <Typography
-            variant="h5"
-            sx={{ opacity: 0.9, maxWidth: "800px", margin: "0 auto" }}
+            variant="h6"
+            sx={{
+              opacity: 0.9,
+              maxWidth: "800px",
+              margin: "0 auto",
+              fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" },
+              lineHeight: { xs: 1.4, sm: 1.5, md: 1.6 },
+              px: 2,
+            }}
           >
             Building Trust Through Excellence and Certified Quality Standards
           </Typography>
@@ -135,6 +179,10 @@ const QualityCertificationPage = () => {
             textAlign="center"
             color="primary.main"
             fontWeight="bold"
+            sx={{
+              fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2rem" },
+              px: 2,
+            }}
           >
             Our Commitment to Quality
           </Typography>
@@ -142,10 +190,11 @@ const QualityCertificationPage = () => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: "1.2rem",
-              lineHeight: 1.8,
-              textAlign: "justify",
-              mb: 4,
+              fontSize: { xs: "0.95rem", sm: "1.05rem", md: "1.2rem" },
+              lineHeight: { xs: 1.6, sm: 1.7, md: 1.8 },
+              textAlign: { xs: "left", md: "justify" },
+              mb: { xs: 3, md: 4 },
+              px: { xs: 1, sm: 0 },
             }}
           >
             At Nivaan Chemical, delivering consistently superior agrochemical
@@ -160,10 +209,11 @@ const QualityCertificationPage = () => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: "1.2rem",
-              lineHeight: 1.8,
-              textAlign: "justify",
-              mb: 4,
+              fontSize: { xs: "0.95rem", sm: "1.05rem", md: "1.2rem" },
+              lineHeight: { xs: 1.6, sm: 1.7, md: 1.8 },
+              textAlign: { xs: "left", md: "justify" },
+              mb: { xs: 3, md: 4 },
+              px: { xs: 1, sm: 0 },
             }}
           >
             Our state-of-the-art manufacturing facilities proudly maintain ISO
@@ -178,10 +228,11 @@ const QualityCertificationPage = () => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: "1.2rem",
-              lineHeight: 1.8,
-              textAlign: "justify",
-              mb: 4,
+              fontSize: { xs: "0.95rem", sm: "1.05rem", md: "1.2rem" },
+              lineHeight: { xs: 1.6, sm: 1.7, md: 1.8 },
+              textAlign: { xs: "left", md: "justify" },
+              mb: { xs: 3, md: 4 },
+              px: { xs: 1, sm: 0 },
             }}
           >
             To ensure unwavering product integrity and performance, we implement
@@ -195,10 +246,11 @@ const QualityCertificationPage = () => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: "1.2rem",
-              lineHeight: 1.8,
-              textAlign: "justify",
-              mb: 4,
+              fontSize: { xs: "0.95rem", sm: "1.05rem", md: "1.2rem" },
+              lineHeight: { xs: 1.6, sm: 1.7, md: 1.8 },
+              textAlign: { xs: "left", md: "justify" },
+              mb: { xs: 3, md: 4 },
+              px: { xs: 1, sm: 0 },
             }}
           >
             Our quality assurance laboratory is equipped with cutting-edge
@@ -214,7 +266,12 @@ const QualityCertificationPage = () => {
 
           <Typography
             variant="body1"
-            sx={{ fontSize: "1.2rem", lineHeight: 1.8, textAlign: "justify" }}
+            sx={{
+              fontSize: { xs: "0.95rem", sm: "1.05rem", md: "1.2rem" },
+              lineHeight: { xs: 1.6, sm: 1.7, md: 1.8 },
+              textAlign: { xs: "left", md: "justify" },
+              px: { xs: 1, sm: 0 },
+            }}
           >
             Beyond maintaining our ISO certification, Nivaan Chemical actively
             invests in next-generation laboratory equipment and continuously
@@ -239,17 +296,20 @@ const QualityCertificationPage = () => {
               sx={{ display: "flex" }}
             >
               <FeatureBox>
-                <Box sx={{ mb: 2 }}>{feature.icon}</Box>
+                <Box sx={{ mb: { xs: 1, md: 2 } }}>{feature.icon}</Box>
                 <Typography
                   variant="h6"
                   component="h3"
                   sx={{
                     fontWeight: "bold",
-                    mb: 2,
-                    minHeight: "48px", // Ensures consistent title height
+                    mb: { xs: 1, md: 2 },
+                    minHeight: { xs: "auto", md: "48px" },
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
+                    fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" },
+                    textAlign: "center",
+                    lineHeight: 1.3,
                   }}
                 >
                   {feature.title}
@@ -258,10 +318,12 @@ const QualityCertificationPage = () => {
                   variant="body2"
                   color="text.secondary"
                   sx={{
-                    lineHeight: 1.6,
+                    lineHeight: { xs: 1.4, md: 1.6 },
                     flexGrow: 1,
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: { xs: "flex-start", md: "center" },
+                    fontSize: { xs: "0.85rem", sm: "0.9rem", md: "0.875rem" },
+                    textAlign: "center",
                   }}
                 >
                   {feature.description}
@@ -281,6 +343,10 @@ const QualityCertificationPage = () => {
             textAlign="center"
             color="primary.main"
             fontWeight="bold"
+            sx={{
+              fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2rem" },
+              px: 2,
+            }}
           >
             Our Certifications
           </Typography>
@@ -288,7 +354,14 @@ const QualityCertificationPage = () => {
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} md={8}>
               <CertificationCard>
-                <CardContent sx={{ textAlign: "center", pb: 2 }}>
+                <CardContent
+                  sx={{
+                    textAlign: "center",
+                    pb: 2,
+                    px: { xs: 2, sm: 3, md: 4 },
+                    pt: { xs: 2, md: 3 },
+                  }}
+                >
                   <Box
                     sx={{ display: "flex", justifyContent: "center", mb: 2 }}
                   >
@@ -297,7 +370,10 @@ const QualityCertificationPage = () => {
                       color="primary"
                       size="large"
                       icon={<VerifiedUserIcon />}
-                      sx={{ fontSize: "1rem", padding: "8px" }}
+                      sx={{
+                        fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" },
+                        padding: { xs: "4px", md: "8px" },
+                      }}
                     />
                   </Box>
                   <Typography
@@ -306,13 +382,20 @@ const QualityCertificationPage = () => {
                     gutterBottom
                     color="primary.main"
                     fontWeight="bold"
+                    sx={{
+                      fontSize: { xs: "1.3rem", sm: "1.4rem", md: "1.5rem" },
+                    }}
                   >
                     Certificate of Registration
                   </Typography>
                   <Typography
                     variant="body1"
                     color="text.secondary"
-                    sx={{ mb: 2 }}
+                    sx={{
+                      mb: 2,
+                      fontSize: { xs: "0.9rem", sm: "1rem", md: "1rem" },
+                      lineHeight: { xs: 1.5, md: 1.6 },
+                    }}
                   >
                     This certification validates our commitment to maintaining
                     the highest quality management standards in the development
@@ -323,11 +406,20 @@ const QualityCertificationPage = () => {
                   image="https://res.cloudinary.com/dxhih7kwi/image/upload/v1765025123/soft_NIVAAN_CHEMICAL_9001_page-0001_qq8aqy.jpg"
                   title="Nivaan Chemical ISO 9001:2015 Certificate"
                 />
-                <CardContent>
+                <CardContent
+                  sx={{
+                    px: { xs: 2, sm: 3, md: 4 },
+                    pb: { xs: 2, md: 3 },
+                  }}
+                >
                   <Typography
                     variant="body2"
                     color="text.secondary"
                     textAlign="center"
+                    sx={{
+                      fontSize: { xs: "0.85rem", sm: "0.9rem", md: "0.875rem" },
+                      lineHeight: { xs: 1.4, md: 1.5 },
+                    }}
                   >
                     This certificate demonstrates our adherence to international
                     quality management standards and our dedication to
@@ -344,9 +436,10 @@ const QualityCertificationPage = () => {
         <Box
           sx={{
             background: "linear-gradient(135deg, #E3F2FD 0%, #E0F7F7 100%)",
-            padding: 4,
+            padding: { xs: 3, sm: 4, md: 4 },
             borderRadius: 2,
             textAlign: "center",
+            mx: { xs: 1, sm: 0 },
           }}
         >
           <Typography
@@ -355,12 +448,21 @@ const QualityCertificationPage = () => {
             gutterBottom
             color="primary.main"
             fontWeight="bold"
+            sx={{
+              fontSize: { xs: "1.3rem", sm: "1.4rem", md: "1.5rem" },
+            }}
           >
             Trust Through Transparency
           </Typography>
           <Typography
             variant="body1"
-            sx={{ fontSize: "1.1rem", maxWidth: "800px", margin: "0 auto" }}
+            sx={{
+              fontSize: { xs: "0.95rem", sm: "1rem", md: "1.1rem" },
+              maxWidth: "800px",
+              margin: "0 auto",
+              lineHeight: { xs: 1.5, md: 1.6 },
+              px: { xs: 1, sm: 2 },
+            }}
           >
             Our certifications and quality commitments serve as a testament to
             our reliability and trustworthiness. When you choose Nivaan
