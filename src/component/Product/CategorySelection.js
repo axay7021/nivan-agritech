@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import FireExtinguisherTwoToneIcon from "@mui/icons-material/FireExtinguisherTwoTone";
 import PestControlTwoToneIcon from "@mui/icons-material/PestControlTwoTone";
 import MacroOffTwoToneIcon from "@mui/icons-material/MacroOffTwoTone";
+import ScienceTwoToneIcon from "@mui/icons-material/ScienceTwoTone";
+import WaterDropTwoToneIcon from "@mui/icons-material/WaterDropTwoTone";
 
 const categories = [
   {
@@ -29,6 +31,18 @@ const categories = [
     name: "Plant Growth Regulators (PGR) and Crop Stimulants",
     icon: <MacroOffTwoToneIcon fontSize="large" />,
     products: 88,
+  },
+  {
+    key: "mix-micro-nutrients",
+    name: "Mix Micro Nutrients",
+    icon: <ScienceTwoToneIcon fontSize="large" />,
+    products: 6,
+  },
+  {
+    key: "water-soluble-fertilizers",
+    name: "Water Soluble Fertilizers",
+    icon: <WaterDropTwoToneIcon fontSize="large" />,
+    products: 8,
   },
 ];
 
@@ -73,7 +87,7 @@ const CategorySelection = () => {
         {categories.map((category, index) => (
           <Grid item xs={12} sm={6} md={6} lg={3} key={index}>
             <Paper
-              elevation={0}
+              elevation={3}
               sx={{
                 display: "flex",
                 alignItems: "center",
@@ -81,7 +95,8 @@ const CategorySelection = () => {
                 justifyContent: "center",
                 p: { xs: 3, md: 4 },
                 backgroundColor: (theme) => theme.palette.grey[100],
-                borderRadius: 2,
+                borderRadius: 3,
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 cursor: "pointer",
                 textAlign: "center",
@@ -89,7 +104,7 @@ const CategorySelection = () => {
                 height: "100%",
                 "&:hover": {
                   transform: "translateY(-8px)",
-                  boxShadow: "0 8px 16px rgba(0, 0, 0, 0.15)",
+                  boxShadow: "0 12px 24px rgba(0, 0, 0, 0.2)",
                   backgroundColor: (theme) => theme.palette.secondary.light,
                 },
               }}

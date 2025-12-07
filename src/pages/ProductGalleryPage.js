@@ -18,12 +18,20 @@ import { useNavigate, useParams } from "react-router-dom";
 import { InfoOutlined } from "@mui/icons-material";
 
 const CATEGORY_LIST = [
-  { key: "insecticides", name: "Mix micronutrients" },
-  { key: "fungicides", name: "Water soluble fertiliser" },
+  { key: "insecticides", name: "Pesticides" },
+  { key: "fungicides", name: "Fungicides" },
   { key: "herbicides", name: "Herbicides" },
   {
     key: "pgr-stimulants",
     name: "Plant Growth Regulators (PGR) and Crop Stimulants",
+  },
+  {
+    key: "mix-micro-nutrients",
+    name: "Mix Micro Nutrients",
+  },
+  {
+    key: "water-soluble-fertilizers",
+    name: "Water Soluble Fertilizers",
   },
 ];
 
@@ -281,6 +289,122 @@ const PRODUCTS_DATA = {
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797434/Raftar_chtte7.jpg",
       description: "Plant growth regulator\nFast-acting growth stimulant.",
+    },
+  ],
+  "mix-micro-nutrients": [
+    {
+      id: "mix-micro-nutrients-1",
+      name: "Niva Multi-Mix",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797440/Niva_Multi-Mix_placeholder.jpg",
+      description:
+        "Complete micronutrient blend\nEssential trace elements for optimal plant growth.",
+    },
+    {
+      id: "mix-micro-nutrients-2",
+      name: "Zinc Supreme",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797441/Zinc_Supreme_placeholder.jpg",
+      description:
+        "Zinc Sulphate 33% + EDTA Chelated\nHigh-quality zinc supplementation for crops.",
+    },
+    {
+      id: "mix-micro-nutrients-3",
+      name: "Iron Power",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797442/Iron_Power_placeholder.jpg",
+      description:
+        "Chelated Iron 12%\nPrevents and corrects iron deficiency in plants.",
+    },
+    {
+      id: "mix-micro-nutrients-4",
+      name: "Boron Plus",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797443/Boron_Plus_placeholder.jpg",
+      description:
+        "Boric Acid 17%\nEssential boron nutrition for flowering and fruiting.",
+    },
+    {
+      id: "mix-micro-nutrients-5",
+      name: "Manganese Master",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797444/Manganese_Master_placeholder.jpg",
+      description:
+        "Manganese Sulphate 32%\nVital manganese for enzyme activation and chlorophyll formation.",
+    },
+    {
+      id: "mix-micro-nutrients-6",
+      name: "Copper Care",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797445/Copper_Care_placeholder.jpg",
+      description:
+        "Copper Sulphate 25%\nCopper supplementation for disease resistance and metabolism.",
+    },
+  ],
+  "water-soluble-fertilizers": [
+    {
+      id: "water-soluble-fertilizers-1",
+      name: "NPK 19:19:19",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797450/NPK_19-19-19_placeholder.jpg",
+      description:
+        "Balanced NPK 19:19:19\nComplete nutrition for all growth stages.",
+    },
+    {
+      id: "water-soluble-fertilizers-2",
+      name: "NPK 20:20:20",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797451/NPK_20-20-20_placeholder.jpg",
+      description:
+        "High concentration NPK 20:20:20\nPremium balanced fertilizer for maximum yield.",
+    },
+    {
+      id: "water-soluble-fertilizers-3",
+      name: "NPK 13:40:13",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797452/NPK_13-40-13_placeholder.jpg",
+      description:
+        "High Phosphorus NPK 13:40:13\nSpecialized for root development and flowering.",
+    },
+    {
+      id: "water-soluble-fertilizers-4",
+      name: "NPK 00:52:34",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797453/NPK_00-52-34_placeholder.jpg",
+      description:
+        "Phosphorus Potassium 00:52:34\nIdeal for bloom enhancement and fruit development.",
+    },
+    {
+      id: "water-soluble-fertilizers-5",
+      name: "Calcium Nitrate",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797454/Calcium_Nitrate_placeholder.jpg",
+      description:
+        "Calcium Nitrate 15.5:0:0 + 26.5% Ca\nPrevents blossom end rot and strengthens cell walls.",
+    },
+    {
+      id: "water-soluble-fertilizers-6",
+      name: "Potassium Sulphate",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797455/Potassium_Sulphate_placeholder.jpg",
+      description:
+        "Sulphate of Potash 50% K2O\nChloride-free potassium for quality improvement.",
+    },
+    {
+      id: "water-soluble-fertilizers-7",
+      name: "Magnesium Sulphate",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797456/Magnesium_Sulphate_placeholder.jpg",
+      description:
+        "Epsom Salt 16% MgO + 13% S\nEssential for chlorophyll synthesis and enzyme activation.",
+    },
+    {
+      id: "water-soluble-fertilizers-8",
+      name: "Multi-K Premium",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797457/Multi-K_Premium_placeholder.jpg",
+      description:
+        "Potassium Nitrate 13:0:45\nHigh-quality potassium and nitrogen combination.",
     },
   ],
 };

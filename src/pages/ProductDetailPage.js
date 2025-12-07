@@ -340,6 +340,164 @@ const PRODUCT_DETAILS = {
     icon: <AgricultureIcon fontSize="large" color="primary" />,
     color: "#fff3e0",
   },
+
+  "mix-micro-nutrients": {
+    title: "Mix Micro Nutrients",
+    subtitle: "Essential Trace Elements for Optimal Plant Growth",
+    description:
+      "Our micronutrient formulations provide plants with essential trace elements required for optimal growth, development, and productivity. These products are scientifically designed to correct micronutrient deficiencies and enhance overall plant health and vigor.",
+
+    detailedDescription:
+      "Micronutrients, though required in small quantities, play crucial roles in plant metabolism, enzyme activation, and physiological processes. Deficiencies can significantly impact crop yield and quality. Our micronutrient products are formulated using chelated forms for better absorption and availability, ensuring plants receive the essential elements they need for optimal performance.",
+
+    examples: [
+      {
+        name: "Niva Multi-Mix (Complete Micronutrient Blend)",
+        description:
+          "Comprehensive micronutrient formula with all essential trace elements",
+        activeIngredient: "Zn, Fe, Mn, Cu, B, Mo in chelated form",
+      },
+      {
+        name: "Zinc Supreme (Zinc Sulphate 33% + EDTA Chelated)",
+        description:
+          "High-quality zinc supplementation for improved enzyme function",
+        activeIngredient: "Zinc Sulphate + EDTA",
+      },
+      {
+        name: "Iron Power (Chelated Iron 12%)",
+        description: "Prevents and corrects iron chlorosis in crops",
+        activeIngredient: "EDTA Chelated Iron",
+      },
+    ],
+
+    usage: [
+      "Apply during active growth periods for maximum uptake",
+      "Use soil application or foliar spray as recommended",
+      "Ensure adequate soil moisture for better absorption",
+      "Monitor plant tissue analysis for nutrient status",
+      "Apply based on crop requirements and deficiency symptoms",
+      "Consider soil pH for optimal nutrient availability",
+    ],
+
+    effects: [
+      "Enhanced chlorophyll synthesis and photosynthesis",
+      "Improved enzyme activation and metabolism",
+      "Better root development and nutrient uptake",
+      "Enhanced disease resistance and stress tolerance",
+      "Increased protein synthesis and quality",
+    ],
+
+    benefits: [
+      "Correction of micronutrient deficiencies",
+      "Improved crop yield and quality parameters",
+      "Enhanced plant vigor and stress tolerance",
+      "Better seed set and fruit development",
+      "Increased nutritional value of produce",
+      "Reduced susceptibility to diseases",
+      "Optimal utilization of macronutrients",
+    ],
+
+    cautions: [
+      "Avoid over-application to prevent toxicity",
+      "Test soil and plant tissue before application",
+      "Consider interactions with other nutrients",
+      "Apply during appropriate weather conditions",
+      "Store in dry conditions to prevent caking",
+      "Use recommended application rates and timing",
+      "Monitor for signs of nutrient imbalance",
+      "Ensure compatibility when tank mixing",
+    ],
+
+    safetyMeasures: [
+      "Wear protective equipment during handling",
+      "Store away from moisture and direct sunlight",
+      "Keep containers properly sealed",
+      "Follow good agricultural practices",
+      "Dispose of empty containers responsibly",
+    ],
+
+    icon: <ScienceIcon fontSize="large" color="primary" />,
+    color: "#e1f5fe",
+  },
+
+  "water-soluble-fertilizers": {
+    title: "Water Soluble Fertilizers",
+    subtitle: "High-Efficiency Nutrient Delivery Systems",
+    description:
+      "Our water-soluble fertilizers provide rapid and efficient nutrient delivery to plants through irrigation systems and foliar applications. These premium formulations ensure maximum nutrient uptake and utilization for enhanced crop productivity.",
+
+    detailedDescription:
+      "Water-soluble fertilizers offer superior nutrient availability and uptake efficiency compared to conventional fertilizers. They are ideal for fertigation systems, foliar feeding, and precision agriculture applications. Our products are formulated with high-quality, pure ingredients that dissolve completely in water, providing uniform nutrient distribution and minimizing salt accumulation.",
+
+    examples: [
+      {
+        name: "NPK 19:19:19 (Balanced Complete Nutrition)",
+        description: "Balanced NPK formula suitable for all growth stages",
+        activeIngredient: "Nitrogen 19%, Phosphorus 19%, Potassium 19%",
+      },
+      {
+        name: "NPK 13:40:13 (High Phosphorus)",
+        description:
+          "Specialized for root development and flowering initiation",
+        activeIngredient: "Nitrogen 13%, Phosphorus 40%, Potassium 13%",
+      },
+      {
+        name: "Calcium Nitrate (15.5:0:0 + 26.5% Ca)",
+        description: "Prevents calcium deficiency and strengthens cell walls",
+        activeIngredient: "Calcium Nitrate with 26.5% Calcium",
+      },
+    ],
+
+    usage: [
+      "Dissolve completely in clean water before application",
+      "Apply through drip irrigation or foliar spray",
+      "Use during cooler parts of the day for foliar application",
+      "Ensure proper pH of spray solution (5.5-6.5)",
+      "Apply at regular intervals based on crop requirements",
+      "Monitor electrical conductivity of nutrient solution",
+    ],
+
+    effects: [
+      "Rapid nutrient absorption and translocation",
+      "Immediate availability of nutrients to plants",
+      "Enhanced photosynthesis and metabolic activities",
+      "Improved root development and shoot growth",
+      "Better flowering, fruit set, and quality",
+    ],
+
+    benefits: [
+      "100% water solubility for complete utilization",
+      "Reduced nutrient losses and environmental impact",
+      "Precise nutrient application and control",
+      "Compatible with modern irrigation systems",
+      "Enhanced nutrient use efficiency",
+      "Faster plant response and recovery",
+      "Improved crop quality and shelf life",
+      "Reduced labor costs compared to solid fertilizers",
+    ],
+
+    cautions: [
+      "Ensure complete dissolution to avoid clogging",
+      "Check water quality and pH before mixing",
+      "Avoid mixing incompatible fertilizers",
+      "Do not apply during hot sunny conditions (foliar)",
+      "Store in dry conditions to prevent caking",
+      "Use within recommended timeframe after mixing",
+      "Clean application equipment after use",
+      "Monitor for salt accumulation in soil",
+    ],
+
+    safetyMeasures: [
+      "Use clean water for mixing solutions",
+      "Store in original packaging with labels",
+      "Keep away from moisture and humidity",
+      "Maintain proper storage temperature",
+      "Follow calibration procedures for equipment",
+    ],
+
+    icon: <AgricultureIcon fontSize="large" color="primary" />,
+    color: "#f1f8e9",
+  },
 };
 
 const ProductDetailPage = () => {

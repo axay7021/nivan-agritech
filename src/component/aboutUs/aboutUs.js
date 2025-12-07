@@ -145,7 +145,7 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import leaf from "../../assets/images/resources/leaf.png";
 import serviceImage1 from "../../assets/images/service/service-1-img-9.jpg";
 import serviceImage2 from "../../assets/images/service/service-1-img-8.jpg";
@@ -189,10 +189,29 @@ const services = [
     serviceImage: serviceImage4,
     delay: 0.9,
   },
+  {
+    title: "Mix Micro Nutrients",
+    // icon: <ScienceIcon fontSize="large" color="primary" />,
+    description:
+      "Our micronutrient formulations provide plants with essential trace elements required for optimal growth, development, and productivity. These products are scientifically designed to correct micronutrient deficiencies and enhance overall plant health.",
+    link: "/product-details/mix-micro-nutrients",
+    serviceImage: serviceImage1,
+    delay: 1.2,
+  },
+  {
+    title: "Water Soluble Fertilizers",
+    // icon: <WaterDropIcon fontSize="large" color="primary" />,
+    description:
+      "Our water-soluble fertilizers provide rapid and efficient nutrient delivery to plants through irrigation systems and foliar applications. These premium formulations ensure maximum nutrient uptake and utilization for enhanced crop productivity.",
+    link: "/product-details/water-soluble-fertilizers",
+    serviceImage: serviceImage2,
+    delay: 1.5,
+  },
 ];
 
 const ServiceCard = ({ service }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <motion.div
@@ -219,7 +238,7 @@ const ServiceCard = ({ service }) => {
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onClick={() => (window.location.href = service.link)}
+        onClick={() => navigate(service.link)}
       >
         <Box
           sx={{
@@ -260,7 +279,7 @@ const ServiceCard = ({ service }) => {
                 }}
                 onClick={(e) => {
                   e.stopPropagation();
-                  window.location.href = service.link;
+                  navigate(service.link);
                 }}
               >
                 Learn More →
@@ -278,7 +297,7 @@ const ServiceCard = ({ service }) => {
           }}
           onClick={(e) => {
             e.stopPropagation();
-            window.location.href = service.link;
+            navigate(service.link);
           }}
         >
           <img
