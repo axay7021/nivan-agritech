@@ -143,7 +143,7 @@ const PRODUCTS_DATA = {
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797417/flykill_25_v516or.jpg",
       description:
-        "Thiamethoxam 25% EC Pesticide\nEffective fly control insecticide.",
+        "Thiamethoxam 25% WG Pesticide\nEffective fly control insecticide.",
     },
     {
       id: "insecticides-15",

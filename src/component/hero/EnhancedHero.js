@@ -11,6 +11,8 @@ import {
   useMediaQuery,
   Avatar,
   Tooltip,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -23,10 +25,14 @@ import {
   EmojiEvents,
   CheckCircle,
   FlashOn,
+  Download,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import FloatingParticles from "./FloatingParticles";
 import "./ModernHero.css";
+
+// Import the catalog PDF
+import catalogPDF from "../../assets/fiels/Catalog/Niavan-Chemical - Brochure.pdf";
 
 // Import your existing images
 import heroImage from "../../assets/images/main-slider/slide_v5_1.jpg";
@@ -70,6 +76,7 @@ const features = [
 const EnhancedHero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -114,6 +121,41 @@ const EnhancedHero = () => {
     const element = document.getElementById("section-products");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const downloadCatalog = () => {
+    const link = document.createElement("a");
+    link.href = catalogPDF;
+    link.download = "Nivan-Chemical-Brochure.pdf";
+    link.click();
+  };
+
+  const copyContactNumber = () => {
+    const contactNumber = "+91 91067 25328"; // Replace with actual contact number
+    navigator.clipboard
+      .writeText(contactNumber)
+      .then(() => {
+        setSnackbarOpen(true);
+      })
+      .catch((err) => {
+        console.error("Failed to copy contact number: ", err);
+      });
+  };
+
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnackbarOpen(false);
+  };
+
+  const handleSecondaryAction = () => {
+    if (currentHeroText.secondaryAction === "Download Catalog") {
+      downloadCatalog();
+    } else {
+      // Handle other secondary actions (Contact Expert, Get Quote)
+      copyContactNumber();
     }
   };
 
@@ -398,7 +440,15 @@ const EnhancedHero = () => {
                     <Button
                       variant="outlined"
                       size={isMobile ? "medium" : "large"}
-                      startIcon={<Phone />}
+                      startIcon={
+                        currentHeroText.secondaryAction ===
+                        "Download Catalog" ? (
+                          <Download />
+                        ) : (
+                          <Phone />
+                        )
+                      }
+                      onClick={handleSecondaryAction}
                       sx={{
                         color: "white",
                         borderColor: "white",
@@ -569,6 +619,29 @@ const EnhancedHero = () => {
           </motion.div>
         ))}
       </Box>
+
+      {/* Snackbar for contact number copy notification */}
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={3000}
+        onClose={handleSnackbarClose}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleSnackbarClose}
+          severity="success"
+          sx={{
+            width: "100%",
+            backgroundColor: theme.palette.secondary.main,
+            color: "white",
+            "& .MuiAlert-icon": {
+              color: "white",
+            },
+          }}
+        >
+          Contact number copied to clipboard!
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };

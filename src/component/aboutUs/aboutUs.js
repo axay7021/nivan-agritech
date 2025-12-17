@@ -195,7 +195,8 @@ const services = [
     description:
       "Our micronutrient formulations provide plants with essential trace elements required for optimal growth, development, and productivity. These products are scientifically designed to correct micronutrient deficiencies and enhance overall plant health.",
     link: "/product-details/mix-micro-nutrients",
-    serviceImage: serviceImage1,
+    serviceImage:
+      "https://res.cloudinary.com/dxhih7kwi/image/upload/v1765992060/Mix_Micro_Nutrients_fitvyb.jpg",
     delay: 1.2,
   },
   {
@@ -204,7 +205,8 @@ const services = [
     description:
       "Our water-soluble fertilizers provide rapid and efficient nutrient delivery to plants through irrigation systems and foliar applications. These premium formulations ensure maximum nutrient uptake and utilization for enhanced crop productivity.",
     link: "/product-details/water-soluble-fertilizers",
-    serviceImage: serviceImage2,
+    serviceImage:
+      "https://res.cloudinary.com/dxhih7kwi/image/upload/v1765991817/Water_Soluble_Fertilizers_gdwcjx.jpg",
     delay: 1.5,
   },
 ];
