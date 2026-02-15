@@ -308,6 +308,38 @@ const PRODUCTS_DATA = {
       description:
         "Complete Mix Micronutrient Formula\nBalanced blend of zinc, iron, manganese, boron, copper, and molybdenum.",
     },
+    {
+      id: "mix-micro-nutrients-3",
+      name: "Mix Micro Grade 5",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137065/Grade_5_zvytss.jpg",
+      description:
+        "Mix Micro Grade 5\nPremium-grade micronutrient blend for superior crop performance.",
+    },
+    {
+      id: "mix-micro-nutrients-4",
+      name: "Mix Micro Grade 4",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137063/Grade_4_cd9n4h.jpg",
+      description:
+        "Mix Micro Grade 4\nBalanced micronutrient formulation for consistent growth.",
+    },
+    {
+      id: "mix-micro-nutrients-5",
+      name: "Mix Micro Grade 3",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137061/Grade_3_ucxhb2.jpg",
+      description:
+        "Mix Micro Grade 3\nReliable micronutrient support for healthier plants.",
+    },
+    {
+      id: "mix-micro-nutrients-6",
+      name: "Mix Micro Grade 2",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137061/Grade_2_yezb9f.jpg",
+      description:
+        "Mix Micro Grade 2\nEveryday micronutrient blend for steady crop development.",
+    },
   ],
   "water-soluble-fertilizers": [
     {
@@ -407,44 +439,12 @@ const PRODUCTS_DATA = {
         "Zinc Sulphate 33%\nHigh-quality zinc for enzyme activation and growth.",
     },
     {
-      id: "water-soluble-fertilizers-13",
-      name: "Fertilizer Grade 4",
-      image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137063/Grade_4_cd9n4h.jpg",
-      description:
-        "Premium Grade 4 Fertilizer\nSpecialized formulation for demanding crops.",
-    },
-    {
-      id: "water-soluble-fertilizers-14",
-      name: "Fertilizer Grade 3",
-      image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137061/Grade_3_ucxhb2.jpg",
-      description:
-        "High-Quality Grade 3 Fertilizer\nBalanced nutrients for consistent crop performance.",
-    },
-    {
-      id: "water-soluble-fertilizers-15",
-      name: "Fertilizer Grade 2",
-      image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137061/Grade_2_yezb9f.jpg",
-      description:
-        "Superior Grade 2 Fertilizer\nOptimized nutrient composition for maximum yield.",
-    },
-    {
       id: "water-soluble-fertilizers-16",
       name: "Sulphur Granules",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137061/SULPHUR_GRENULES_doiduy.jpg",
       description:
         "Sulfur Granules 100%\nPure sulfur for soil acidification and nutrient availability.",
-    },
-    {
-      id: "water-soluble-fertilizers-17",
-      name: "Fertilizer Grade 5",
-      image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137065/Grade_5_zvytss.jpg",
-      description:
-        "Premium Grade 5 Fertilizer\nProfessional-grade formulation for superior results.",
     },
   ],
 };
