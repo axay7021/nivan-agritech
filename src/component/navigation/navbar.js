@@ -28,10 +28,10 @@ const NAV_ITEMS = [
   { label: "Home", id: "section-hero" },
   { label: "About Us", id: "section-banner" },
   { label: "Products Overview", id: "section-products-overview" },
-  { label: "Facilities", id: "section-facilities" },
+  { label: "Facilities", id: "section-facilities", route: "/facilities" },
   { label: "Product", id: "section-products" },
   { label: "Quality & Certifications", id: "quality-certification" },
-  { label: "Contact", id: "section-contact" },
+  { label: "Contact", id: "contact-us", route: "/contact-us" },
 ];
 
 const Navbar = () => {
@@ -58,12 +58,12 @@ const Navbar = () => {
     if (platform === "instagram") {
       window.open(
         "https://www.instagram.com/nivaanchemical?igsh=MXQ2Y2cyNzBkdjVuNA==",
-        "_blank"
+        "_blank",
       );
     } else if (platform === "facebook") {
       window.open(
         "https://www.facebook.com/share/15qorGsZta/?mibextid=wwXIfr",
-        "_blank"
+        "_blank",
       );
     } else if (platform === "whatsapp") {
       const phoneNumber = "919106725328"; // Phone number without spaces or special characters
@@ -218,7 +218,9 @@ const Navbar = () => {
                       : undefined
                   }
                   onClick={() => {
-                    if (item.id === "section-products") {
+                    if (item.route) {
+                      navigate(item.route);
+                    } else if (item.id === "section-products") {
                       navigate("/products/insecticides");
                     } else if (item.id === "quality-certification") {
                       navigate("/quality-certification");
@@ -325,7 +327,9 @@ const Navbar = () => {
                 key={item.id}
                 onClick={() => {
                   setDrawerOpen(false);
-                  if (item.id === "section-products") {
+                  if (item.route) {
+                    navigate(item.route);
+                  } else if (item.id === "section-products") {
                     navigate("/products/insecticides");
                   } else if (item.id === "quality-certification") {
                     navigate("/quality-certification");

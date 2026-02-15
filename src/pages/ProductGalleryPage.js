@@ -300,46 +300,14 @@ const PRODUCTS_DATA = {
       description:
         "Complete micronutrient blend\nEssential trace elements for optimal plant growth.",
     },
-    // {
-    //   id: "mix-micro-nutrients-2",
-    //   name: "Zinc Supreme",
-    //   image:
-    //     "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797441/Zinc_Supreme_placeholder.jpg",
-    //   description:
-    //     "Zinc Sulphate 33% + EDTA Chelated\nHigh-quality zinc supplementation for crops.",
-    // },
-    // {
-    //   id: "mix-micro-nutrients-3",
-    //   name: "Iron Power",
-    //   image:
-    //     "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797442/Iron_Power_placeholder.jpg",
-    //   description:
-    //     "Chelated Iron 12%\nPrevents and corrects iron deficiency in plants.",
-    // },
-    // {
-    //   id: "mix-micro-nutrients-4",
-    //   name: "Boron Plus",
-    //   image:
-    //     "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797443/Boron_Plus_placeholder.jpg",
-    //   description:
-    //     "Boric Acid 17%\nEssential boron nutrition for flowering and fruiting.",
-    // },
-    // {
-    //   id: "mix-micro-nutrients-5",
-    //   name: "Manganese Master",
-    //   image:
-    //     "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797444/Manganese_Master_placeholder.jpg",
-    //   description:
-    //     "Manganese Sulphate 32%\nVital manganese for enzyme activation and chlorophyll formation.",
-    // },
-    // {
-    //   id: "mix-micro-nutrients-6",
-    //   name: "Copper Care",
-    //   image:
-    //     "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797445/Copper_Care_placeholder.jpg",
-    //   description:
-    //     "Copper Sulphate 25%\nCopper supplementation for disease resistance and metabolism.",
-    // },
+    {
+      id: "mix-micro-nutrients-2",
+      name: "Mix Micro Premium",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137065/MIX_MICRO_ky3j33.jpg",
+      description:
+        "Complete Mix Micronutrient Formula\nBalanced blend of zinc, iron, manganese, boron, copper, and molybdenum.",
+    },
   ],
   "water-soluble-fertilizers": [
     {
@@ -398,22 +366,86 @@ const PRODUCTS_DATA = {
       description:
         "Boron 20% - Imported\nHigh-quality boron for improved flowering and fruit set.",
     },
-    // {
-    //   id: "water-soluble-fertilizers-7",
-    //   name: "Magnesium Sulphate",
-    //   image:
-    //     "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797456/Magnesium_Sulphate_placeholder.jpg",
-    //   description:
-    //     "Epsom Salt 16% MgO + 13% S\nEssential for chlorophyll synthesis and enzyme activation.",
-    // },
-    // {
-    //   id: "water-soluble-fertilizers-8",
-    //   name: "Multi-K Premium",
-    //   image:
-    //     "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797457/Multi-K_Premium_placeholder.jpg",
-    //   description:
-    //     "Potassium Nitrate 13:0:45\nHigh-quality potassium and nitrogen combination.",
-    // },
+    {
+      id: "water-soluble-fertilizers-8",
+      name: "Magnesium Sulphate",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137064/MAGNACIUM_SULPHATE_ivmaqn.jpg",
+      description:
+        "Epsom Salt 16% MgO + 13% S\nEssential for chlorophyll synthesis and enzyme activation.",
+    },
+    {
+      id: "water-soluble-fertilizers-9",
+      name: "Bentonite Sulphate",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137064/BENTONITE_SULPH_dnnxad.jpg",
+      description:
+        "Bentonite Sulphate Premium\nImproves soil structure and nutrient retention.",
+    },
+    {
+      id: "water-soluble-fertilizers-10",
+      name: "Boronated Calcium",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137063/BORONATED_CALCIUM_pf4vin.jpg",
+      description:
+        "Boronated Calcium Nitrate\nCombined calcium and boron for comprehensive nutrition.",
+    },
+    {
+      id: "water-soluble-fertilizers-11",
+      name: "Calcium Nitrate",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137063/CALCIUM_NITRATE_kxs6tl.jpg",
+      description:
+        "Calcium Nitrate 15.5% N + 26% CaO\nEssential calcium and nitrogen for strong plant development.",
+    },
+    {
+      id: "water-soluble-fertilizers-12",
+      name: "Zinc Sulphate",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137062/ZINK_SULPH_gdwrij.jpg",
+      description:
+        "Zinc Sulphate 33%\nHigh-quality zinc for enzyme activation and growth.",
+    },
+    {
+      id: "water-soluble-fertilizers-13",
+      name: "Fertilizer Grade 4",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137063/Grade_4_cd9n4h.jpg",
+      description:
+        "Premium Grade 4 Fertilizer\nSpecialized formulation for demanding crops.",
+    },
+    {
+      id: "water-soluble-fertilizers-14",
+      name: "Fertilizer Grade 3",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137061/Grade_3_ucxhb2.jpg",
+      description:
+        "High-Quality Grade 3 Fertilizer\nBalanced nutrients for consistent crop performance.",
+    },
+    {
+      id: "water-soluble-fertilizers-15",
+      name: "Fertilizer Grade 2",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137061/Grade_2_yezb9f.jpg",
+      description:
+        "Superior Grade 2 Fertilizer\nOptimized nutrient composition for maximum yield.",
+    },
+    {
+      id: "water-soluble-fertilizers-16",
+      name: "Sulphur Granules",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137061/SULPHUR_GRENULES_doiduy.jpg",
+      description:
+        "Sulfur Granules 100%\nPure sulfur for soil acidification and nutrient availability.",
+    },
+    {
+      id: "water-soluble-fertilizers-17",
+      name: "Fertilizer Grade 5",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137065/Grade_5_zvytss.jpg",
+      description:
+        "Premium Grade 5 Fertilizer\nProfessional-grade formulation for superior results.",
+    },
   ],
 };
 
