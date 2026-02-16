@@ -3,39 +3,43 @@
 .navbar {
   display: flex;
   align-items: center;
-  margin-right: auto; /* Pushes items to the left */
+  margin-right: auto;
 }
 
 .navbar-item {
   color: inherit;
-  font-weight: bolder;
-  margin-right: 20px; /* Adjust spacing between items */
+  font-weight: 500;
+  margin-right: 16px;
   position: relative;
   cursor: pointer;
   padding: 8px 16px;
+  transition: color 0.25s ease;
 }
 
 .navbar-item::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: var(--color-primary); /* Underline color */
+  background-color: #F9A825;
   transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
 .navbar-item:hover::after {
-  width: 100%;
+  width: 60%;
 }
 
 .navbar-dropdown-icon {
   margin-left: 8px;
 }
 
-.ubuntu-regular {
-  font-family: "Ubuntu", serif;
+/* DM Sans body, Playfair Display headings */
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }

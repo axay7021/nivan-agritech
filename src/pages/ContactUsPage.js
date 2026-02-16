@@ -29,15 +29,23 @@ const PageContainer = styled.div`
 `;
 
 const HeroBanner = styled(motion.div)`
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  padding: 100px 20px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(27, 94, 32, 0.85) 0%,
+      rgba(46, 125, 50, 0.8) 50%,
+      rgba(27, 94, 32, 0.9) 100%
+    ),
+    url("https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1920&q=80")
+      center / cover no-repeat;
+  padding: 120px 20px 100px;
   text-align: center;
   color: white;
   position: relative;
   overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 60px 20px;
+    padding: 80px 20px 60px;
   }
 
   &::before {
@@ -50,15 +58,25 @@ const HeroBanner = styled(motion.div)`
     background:
       radial-gradient(
         circle at 20% 50%,
-        rgba(42, 82, 152, 0.3) 0%,
+        rgba(46, 125, 50, 0.2) 0%,
         transparent 50%
       ),
       radial-gradient(
         circle at 80% 80%,
-        rgba(30, 60, 114, 0.3) 0%,
+        rgba(27, 94, 32, 0.2) 0%,
         transparent 50%
       );
     pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2e7d32, #f9a825, #e65100);
   }
 `;
 
@@ -108,7 +126,7 @@ const Section = styled(motion.div)`
 const SectionTitle = styled.h2`
   font-size: 42px;
   font-weight: 700;
-  color: #1e3c72;
+  color: #1b5e20;
   text-align: center;
   margin: 0 0 50px 0;
 
@@ -189,18 +207,18 @@ const ContactCard = styled(motion.div)`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: all 0.3s ease;
-  border-top: 4px solid #2a5298;
+  border-top: 4px solid #2e7d32;
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(42, 82, 152, 0.15);
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.15);
   }
 `;
 
 const ContactCardIcon = styled.div`
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -213,7 +231,7 @@ const ContactCardIcon = styled.div`
 const ContactCardTitle = styled.h3`
   font-size: 18px;
   font-weight: 600;
-  color: #1e3c72;
+  color: #1b5e20;
   margin: 0 0 12px 0;
 `;
 
@@ -253,10 +271,10 @@ const FormRow = styled.div`
 const StyledTextField = styled(TextField)`
   .MuiOutlinedInput-root {
     &:hover fieldset {
-      border-color: #2a5298;
+      border-color: #2e7d32;
     }
     &.Mui-focused fieldset {
-      border-color: #2a5298;
+      border-color: #2e7d32;
     }
   }
   .MuiInputBase-input {
@@ -272,7 +290,7 @@ const StyledTextField = styled(TextField)`
     color: #666;
 
     &.Mui-focused {
-      color: #1e3c72;
+      color: #1b5e20;
     }
   }
 `;
@@ -280,16 +298,16 @@ const StyledTextField = styled(TextField)`
 const StyledSelect = styled(Select)`
   .MuiOutlinedInput-root {
     &:hover fieldset {
-      border-color: #2a5298;
+      border-color: #2e7d32;
     }
     &.Mui-focused fieldset {
-      border-color: #2a5298;
+      border-color: #2e7d32;
     }
   }
 `;
 
 const SubmitButton = styled(Button)`
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%) !important;
   color: white !important;
   padding: 12px 40px !important;
   font-size: 16px !important;
@@ -302,7 +320,7 @@ const SubmitButton = styled(Button)`
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(42, 82, 152, 0.4) !important;
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.4) !important;
   }
 
   &:disabled {
@@ -332,24 +350,24 @@ const BenefitCard = styled(motion.div)`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: all 0.3s ease;
-  border-bottom: 4px solid #2a5298;
+  border-bottom: 4px solid #2e7d32;
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(42, 82, 152, 0.15);
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.15);
   }
 `;
 
 const BenefitIcon = styled.div`
   font-size: 48px;
-  color: #2a5298;
+  color: #2e7d32;
   margin-bottom: 20px;
 `;
 
 const BenefitTitle = styled.h3`
   font-size: 20px;
   font-weight: 700;
-  color: #1e3c72;
+  color: #1b5e20;
   margin: 0 0 15px 0;
 `;
 
