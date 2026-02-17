@@ -320,7 +320,7 @@ const Navbar = () => {
             }}
           >
             <Box sx={{ display: "flex", gap: 0.5, alignItems: "center" }}>
-              {scrolled && (
+              {/* {scrolled && (
                 <Box
                   sx={{
                     display: "flex",
@@ -338,7 +338,7 @@ const Navbar = () => {
                     }}
                   />
                 </Box>
-              )}
+              )} */}
               {NAV_ITEMS.map((item) => {
                 const isActive =
                   location.pathname === "/" && activeSection === item.id;
