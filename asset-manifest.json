@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "./static/css/main.dd9a7aa8.css",
-    "main.js": "./static/js/main.11ad2ddd.js",
+    "main.css": "./static/css/main.a0c2ae93.css",
+    "main.js": "./static/js/main.ee5680d8.js",
     "static/js/453.d3e44fd9.chunk.js": "./static/js/453.d3e44fd9.chunk.js",
     "static/media/Niavan-Chemical - Brochure.pdf": "./static/media/Niavan-Chemical - Brochure.4a795840109588544ce7.pdf",
     "static/media/infastructure-home.jpg": "./static/media/infastructure-home.cf70633ce79454f0fc8c.jpg",
     "static/media/service-1-img-9.jpg": "./static/media/service-1-img-9.13751481a1805c208112.jpg",
-    "static/media/service-1-img-7.jpg": "./static/media/service-1-img-7.fb52918845f86c7d4773.jpg",
+    "static/media/service-1-img-7.jpg": "./static/media/service-1-img-7.d78b7894c87fc3ae5c1b.jpg",
     "static/media/slide_v5_3.jpg": "./static/media/slide_v5_3.c07e3b40c1d1281bd604.jpg",
     "static/media/slide_v5_1.jpg": "./static/media/slide_v5_1.41f9fc23e4f92797b20e.jpg",
     "static/media/service-1-img-10.jpg": "./static/media/service-1-img-10.fbfbd77da763b1026d79.jpg",
+    "static/media/service-1-img-12.jpg": "./static/media/service-1-img-12.d1d9c1deb558f7bb378f.jpg",
+    "static/media/service-1-img-11.jpg": "./static/media/service-1-img-11.660573089b2a52c747a5.jpg",
     "static/media/slide_v5_2.jpg": "./static/media/slide_v5_2.04d50962f411c5ed0c4b.jpg",
+    "static/media/logo.png": "./static/media/logo.2c07caa27a63c1fd0b83.png",
     "static/media/service-1-img-8.jpg": "./static/media/service-1-img-8.2587c5daa3a5268e48d3.jpg",
     "static/media/about-1-img-4.jpg": "./static/media/about-1-img-4.feb54a4e6cf460cf3c68.jpg",
     "static/media/about-1-img-3.jpg": "./static/media/about-1-img-3.f49ae42112fda708d51b.jpg",
     "static/media/expertise.png": "./static/media/expertise.e9f8e279e896cd8511ee.png",
     "static/media/iso.png": "./static/media/iso.ee69eb2e85ff39f26d62.png",
     "static/media/product-range.png": "./static/media/product-range.172cc2a5f294522cc663.png",
-    "static/media/logo.png": "./static/media/logo.d7d09e68d1a878786670.png",
     "static/media/manufacturing.png": "./static/media/manufacturing.6217b52d1ee07436e57b.png",
     "static/media/rnd.png": "./static/media/rnd.cbc56887a27f65708e21.png",
     "static/media/distribution.png": "./static/media/distribution.62c13709f6a6c8f447b1.png",
@@ -26,12 +28,12 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "./index.html",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
-    "main.dd9a7aa8.css.map": "./static/css/main.dd9a7aa8.css.map",
-    "main.11ad2ddd.js.map": "./static/js/main.11ad2ddd.js.map",
+    "main.a0c2ae93.css.map": "./static/css/main.a0c2ae93.css.map",
+    "main.ee5680d8.js.map": "./static/js/main.ee5680d8.js.map",
     "453.d3e44fd9.chunk.js.map": "./static/js/453.d3e44fd9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd9a7aa8.css",
-    "static/js/main.11ad2ddd.js"
+    "static/css/main.a0c2ae93.css",
+    "static/js/main.ee5680d8.js"
   ]
 }
