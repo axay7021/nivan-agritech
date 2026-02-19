@@ -20,6 +20,7 @@ import {
   ElectricBolt,
   Group,
 } from "@mui/icons-material";
+import emailjs from "@emailjs/browser";
 
 // ==================== Styled Components ====================
 const PageContainer = styled.div`
@@ -520,6 +521,7 @@ const ContactUsPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("🔥 FORM SUBMITTED!");
 
     if (!validateForm()) {
       setSnackbar({
@@ -532,8 +534,35 @@ const ContactUsPage = () => {
 
     setLoading(true);
 
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      // EmailJS Configuration from environment variables
+      const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+      const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+      const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+      // Prepare email parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        company: formData.company || "Not provided",
+        subject: formData.topic,
+        message: formData.message,
+        to_email: process.env.REACT_APP_TO_EMAIL,
+      };
+
+      console.log("Sending email with params:", templateParams);
+
+      // Send email via EmailJS
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY,
+      );
+
+      console.log("EmailJS Response:", response);
+
       setLoading(false);
       setSnackbar({
         open: true,
@@ -551,7 +580,17 @@ const ContactUsPage = () => {
         topic: "General Inquiry",
         message: "",
       });
-    }, 1500);
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      console.error("Error details:", error.text, error.status);
+      setLoading(false);
+      setSnackbar({
+        open: true,
+        message:
+          "Failed to send your message. Please try again or contact us via WhatsApp at +91 91067 25328.",
+        severity: "error",
+      });
+    }
   };
 
   const handleCloseSnackbar = () => {
