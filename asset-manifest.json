@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.a0c2ae93.css",
-    "main.js": "./static/js/main.ee5680d8.js",
+    "main.js": "./static/js/main.24471742.js",
     "static/js/453.d3e44fd9.chunk.js": "./static/js/453.d3e44fd9.chunk.js",
     "static/media/Niavan-Chemical - Brochure.pdf": "./static/media/Niavan-Chemical - Brochure.4a795840109588544ce7.pdf",
     "static/media/infastructure-home.jpg": "./static/media/infastructure-home.cf70633ce79454f0fc8c.jpg",
@@ -29,11 +29,11 @@
     "index.html": "./index.html",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "main.a0c2ae93.css.map": "./static/css/main.a0c2ae93.css.map",
-    "main.ee5680d8.js.map": "./static/js/main.ee5680d8.js.map",
+    "main.24471742.js.map": "./static/js/main.24471742.js.map",
     "453.d3e44fd9.chunk.js.map": "./static/js/453.d3e44fd9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a0c2ae93.css",
-    "static/js/main.ee5680d8.js"
+    "static/js/main.24471742.js"
   ]
 }
