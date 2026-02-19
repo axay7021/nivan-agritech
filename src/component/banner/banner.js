@@ -164,7 +164,6 @@ import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
 import aboutImageTwo from "../../assets/images/about/about-1-img-3.jpg";
 import aboutImageOne from "../../assets/images/about/about-1-img-4.jpg";
 import plantIcon from "../../assets/images/icon/plant_icon-100.png";
-import leafImage from "../../assets/images/resources/leaf.png";
 import expertiseIcon from "../../assets/images/icon/expertise.png";
 import isoIcon from "../../assets/images/icon/iso.png";
 import productRangeIcon from "../../assets/images/icon/product-range.png";
@@ -228,10 +227,37 @@ const Banner = () => {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
-          py: 10,
+          py: { xs: 6, sm: 8, md: 10 },
           width: "100%",
-          backgroundColor: (theme) => theme.palette.grey[100],
           position: "relative",
+          overflow: "hidden",
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundImage:
+              'url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1920&q=80")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: { md: "fixed" },
+            opacity: 0.08,
+            zIndex: 0,
+          },
+          "&::after": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            height: "1px",
+            background:
+              "linear-gradient(90deg, transparent, rgba(46,125,50,0.12), transparent)",
+            zIndex: 1,
+          },
+          backgroundColor: "#FAFDF7",
         }}
       >
         <Container>
@@ -348,14 +374,47 @@ const Banner = () => {
                 mt: { xs: 10, md: 0 },
               }}
             >
-              <Typography variant="h6" color="primary" gutterBottom>
+              <Typography
+                variant="overline"
+                sx={{
+                  color: "#2E7D32",
+                  fontWeight: 600,
+                  letterSpacing: "3px",
+                  fontSize: "0.8rem",
+                  display: "block",
+                  mb: 1,
+                }}
+              >
                 About Nivaan Chemicals
               </Typography>
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: 700,
+                  color: "#1a2e1a",
+                  fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2.25rem" },
+                  mb: 1,
+                }}
+              >
                 Who We Are
               </Typography>
-              <Box component="img" src={leafImage} alt="Leaf" sx={{ mb: 2 }} />
-              <Typography variant="body1" paragraph>
+              <Box
+                sx={{
+                  width: 50,
+                  height: 3,
+                  background: "linear-gradient(90deg, #2E7D32, #F9A825)",
+                  borderRadius: 2,
+                  mb: 2.5,
+                }}
+              />
+              <Typography
+                variant="body1"
+                sx={{
+                  lineHeight: 1.8,
+                  color: "#4a5e4a",
+                  fontSize: { xs: "0.9rem", sm: "0.95rem", md: "1rem" },
+                }}
+              >
                 Nivaan Chemical is a leading Indian manufacturer of premium
                 agrochemical solutions, dedicated to revolutionizing modern
                 agriculture since its establishment in 2009. With a strong focus
@@ -364,15 +423,22 @@ const Banner = () => {
                 products—including insecticides, fungicides, herbicides, and
                 plant growth regulators—engineered for efficacy, safety, and
                 sustainability.
-                <br /> <br /> Backed by a team of highly qualified experts and
-                led by founder Mr. Mihir Nasit, Nivaan Chemical combines deep
-                field experience with innovative research. The company is
-                committed to ethical business practices, stringent quality
-                assurance, and environmental responsibility—always prioritizing
-                customer satisfaction and farmer welfare. Through continuous R&D
-                and advanced manufacturing techniques, Nivaan Chemical delivers
-                reliable, eco-friendly solutions to support India's farming
-                community and promote sustainable growth in agriculture.
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  lineHeight: 1.8,
+                  color: "#4a5e4a",
+                  fontSize: { xs: "0.9rem", sm: "0.95rem", md: "1rem" },
+                  mt: 2,
+                }}
+              >
+                Backed by a team of highly qualified experts and led by founder
+                Mr. Mihir Nasit, Nivaan Chemical combines deep field experience
+                with innovative research. The company is committed to ethical
+                business practices, stringent quality assurance, and
+                environmental responsibility—always prioritizing customer
+                satisfaction and farmer welfare.
               </Typography>
 
               <Grid
@@ -391,29 +457,43 @@ const Banner = () => {
                       display="flex"
                       flexDirection="column"
                       alignItems="center"
-                      gap={1}
-                      p={2}
+                      gap={0.5}
+                      p={1.5}
+                      sx={{
+                        borderRadius: "12px",
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          backgroundColor: "rgba(46, 125, 50, 0.05)",
+                          transform: "translateY(-2px)",
+                        },
+                      }}
                     >
                       <img
                         src={feature.icon}
                         alt={feature.title}
                         style={{
-                          height: 50,
-                          marginBottom: 8,
+                          height: 44,
+                          marginBottom: 6,
                           filter:
-                            "brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(500%) hue-rotate(60deg)", // adjust color as needed
+                            "brightness(0) saturate(100%) invert(31%) sepia(80%) saturate(600%) hue-rotate(85deg)",
                         }}
                       />
                       <Typography
-                        sx={{ fontWeight: 800, fontSize: 16, color: "#225972" }}
+                        sx={{
+                          fontWeight: 700,
+                          fontSize: 14,
+                          color: "#1b5e20",
+                          textAlign: "center",
+                        }}
                       >
                         {feature.title}
                       </Typography>
                       <Typography
                         sx={{
                           fontWeight: 500,
-                          fontSize: 14,
-                          color: "#388597",
+                          fontSize: 12,
+                          color: "#4a5e4a",
+                          textAlign: "center",
                         }}
                       >
                         {feature.subtitle}

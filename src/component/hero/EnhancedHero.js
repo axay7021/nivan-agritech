@@ -39,6 +39,13 @@ import heroImage from "../../assets/images/main-slider/slide_v5_1.jpg";
 import farmImage from "../../assets/images/main-slider/slide_v5_2.jpg";
 import cropImage from "../../assets/images/main-slider/slide_v5_3.jpg";
 
+// High-quality online agricultural images for hero backgrounds
+const onlineImages = [
+  "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80",
+];
+
 const stats = [
   {
     number: "25+",
@@ -81,7 +88,7 @@ const EnhancedHero = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const images = [heroImage, farmImage, cropImage];
+  const images = [...onlineImages, heroImage, farmImage, cropImage];
   const heroTexts = [
     {
       title: "Nourishing Growth, Protecting Harvests",
@@ -159,7 +166,7 @@ const EnhancedHero = () => {
     }
   };
 
-  const currentHeroText = heroTexts[currentImage];
+  const currentHeroText = heroTexts[currentImage % heroTexts.length];
 
   return (
     <Box
@@ -167,27 +174,25 @@ const EnhancedHero = () => {
       sx={{
         position: "relative",
         height: {
-          xs: "calc(100vh - 180px)",
-          sm: "calc(100vh - 160px)",
+          xs: "auto",
           md: "100vh",
         },
-        maxHeight: { xs: "500px", sm: "600px", md: "100vh" },
+        minHeight: { xs: "580px", sm: "650px", md: "100vh" },
+        maxHeight: { md: "100vh" },
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        py: { xs: 1, sm: 2, md: 4 },
-        background: `linear-gradient(135deg, ${theme.palette.primary.main}15 0%, ${theme.palette.secondary.main}25 100%)`,
       }}
     >
-      {/* Animated Background Images */}
+      {/* Animated Background Images — full opacity, cinematic */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentImage}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 0.25, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 2.5 }}
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 2 }}
           style={{
             position: "absolute",
             top: 0,
@@ -197,15 +202,12 @@ const EnhancedHero = () => {
             backgroundImage: `url(${images[currentImage]})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            zIndex: -2,
+            zIndex: 0,
           }}
         />
       </AnimatePresence>
 
-      {/* Floating Particles */}
-      <FloatingParticles />
-
-      {/* Enhanced Overlay */}
+      {/* Dark dramatic overlay for text readability */}
       <Box
         sx={{
           position: "absolute",
@@ -213,96 +215,78 @@ const EnhancedHero = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: `linear-gradient(45deg, ${theme.palette.primary.main}85 0%, ${theme.palette.primary.main}35 50%, transparent 100%)`,
-          zIndex: -1,
+          background: `linear-gradient(
+            to bottom,
+            rgba(10, 30, 10, 0.65) 0%,
+            rgba(15, 45, 15, 0.55) 30%,
+            rgba(10, 35, 10, 0.6) 60%,
+            rgba(5, 20, 5, 0.8) 100%
+          )`,
+          zIndex: 1,
         }}
       />
 
+      {/* Floating Particles */}
+      <FloatingParticles />
+
       <Container
-        maxWidth="xl"
+        maxWidth="lg"
         sx={{
           position: "relative",
-          zIndex: 1,
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          py: { xs: 0.5, sm: 1, md: 2 },
-          px: { xs: 1, sm: 1.5, md: 2 },
+          zIndex: 2,
+          py: { xs: 6, sm: 8, md: 0 },
+          px: { xs: 2.5, sm: 3, md: 4 },
         }}
       >
-        <Grid
-          container
-          spacing={{ xs: 1, sm: 2, md: 3 }}
-          alignItems="center"
-          sx={{
-            height: "100%",
-            maxHeight: { xs: "480px", sm: "580px", md: "calc(100vh - 200px)" },
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <Grid container spacing={{ xs: 3, md: 6 }} alignItems="center">
           {/* Main Content */}
-          <Grid item xs={12} md={8} lg={7}>
+          <Grid item xs={12} md={7}>
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={isVisible ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              style={{ maxWidth: "100%" }}
+              initial={{ opacity: 0, y: 40 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.9, delay: 0.2 }}
             >
-              <Box
-                sx={{
-                  maxWidth: { xs: "100%", md: "600px", lg: "700px" },
-                  textAlign: "left",
-                }}
-              >
-                {/* Features Tags */}
-                <Box
-                  sx={{
-                    display: "flex",
-                    gap: { xs: 0.5, sm: 1 },
-                    mb: { xs: 1, sm: 2, md: 3 },
-                    flexWrap: "wrap",
-                  }}
+              <Box>
+                {/* Trusted badge */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isVisible ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                  {features.map((feature, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                      transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                  <Box
+                    sx={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 1,
+                      mb: { xs: 2, md: 3 },
+                      px: 2,
+                      py: 0.75,
+                      borderRadius: "24px",
+                      border: "1px solid rgba(249, 168, 37, 0.4)",
+                      backgroundColor: "rgba(249, 168, 37, 0.1)",
+                      backdropFilter: "blur(8px)",
+                    }}
+                  >
+                    <CheckCircle sx={{ fontSize: 16, color: "#F9A825" }} />
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: "#F9A825",
+                        fontWeight: 600,
+                        fontSize: "0.75rem",
+                        letterSpacing: "1px",
+                        textTransform: "uppercase",
+                      }}
                     >
-                      <Chip
-                        icon={feature.icon}
-                        label={feature.text}
-                        sx={{
-                          backgroundColor: "rgba(255,255,255,0.9)",
-                          color: theme.palette.primary.main,
-                          fontWeight: 600,
-                          fontSize: { xs: "0.65rem", sm: "0.75rem" },
-                          height: { xs: "24px", sm: "32px" },
-                          backdropFilter: "blur(10px)",
-                          display: {
-                            xs: index > 1 ? "none" : "flex",
-                            sm: "flex",
-                          },
-                          "&:hover": {
-                            backgroundColor: "white",
-                            transform: "translateY(-2px)",
-                          },
-                          transition: "all 0.3s ease",
-                        }}
-                      />
-                    </motion.div>
-                  ))}
-                </Box>
+                      ISO 9001:2015 Certified
+                    </Typography>
+                  </Box>
+                </motion.div>
 
                 {/* Main Title with Animation */}
                 <Box
                   sx={{
-                    minHeight: { xs: "60px", sm: "80px", md: "120px" },
-                    display: "flex",
-                    alignItems: "center",
-                    mb: { xs: 0.5, sm: 1, md: 1.5 },
+                    mb: { xs: 1.5, md: 2 },
                   }}
                 >
                   <AnimatePresence mode="wait">
@@ -314,18 +298,19 @@ const EnhancedHero = () => {
                       transition={{ duration: 1 }}
                     >
                       <Typography
-                        variant={isMobile ? "h3" : "h1"}
+                        variant="h1"
                         component="h1"
                         sx={{
                           fontWeight: 800,
                           color: "white",
-                          textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
-                          lineHeight: 1.2,
+                          textShadow: "0 4px 30px rgba(0,0,0,0.4)",
+                          lineHeight: 1.1,
+                          letterSpacing: "-0.02em",
                           fontSize: {
-                            xs: "1.75rem",
-                            sm: "2.5rem",
-                            md: "3rem",
-                            lg: "3.5rem",
+                            xs: "2rem",
+                            sm: "2.75rem",
+                            md: "3.25rem",
+                            lg: "3.75rem",
                           },
                         }}
                       >
@@ -335,29 +320,24 @@ const EnhancedHero = () => {
                   </AnimatePresence>
                 </Box>
 
-                <Box
-                  sx={{
-                    minHeight: { xs: "25px", sm: "35px", md: "45px" },
-                    display: "flex",
-                    alignItems: "center",
-                    mb: { xs: 0.5, sm: 1, md: 2 },
-                  }}
-                >
+                {/* Subtitle */}
+                <Box sx={{ mb: { xs: 1.5, md: 2 } }}>
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={`subtitle-${currentImage}`}
-                      initial={{ opacity: 0, x: -30 }}
+                      initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 30 }}
+                      exit={{ opacity: 0, x: 20 }}
                       transition={{ duration: 0.8, delay: 0.3 }}
                     >
                       <Typography
-                        variant={isMobile ? "h6" : "h5"}
+                        variant="h5"
                         sx={{
-                          color: theme.palette.secondary.light,
-                          fontWeight: 500,
-                          textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
+                          color: "#F9A825",
+                          fontWeight: 600,
+                          textShadow: "0 2px 8px rgba(0,0,0,0.3)",
                           fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
+                          letterSpacing: "0.5px",
                         }}
                       >
                         {currentHeroText.subtitle}
@@ -366,14 +346,8 @@ const EnhancedHero = () => {
                   </AnimatePresence>
                 </Box>
 
-                <Box
-                  sx={{
-                    minHeight: { xs: "45px", sm: "55px", md: "70px" },
-                    display: "flex",
-                    alignItems: "flex-start",
-                    mb: { xs: 1, sm: 2, md: 3 },
-                  }}
-                >
+                {/* Description */}
+                <Box sx={{ mb: { xs: 2.5, md: 3.5 } }}>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -382,10 +356,14 @@ const EnhancedHero = () => {
                     <Typography
                       variant="body1"
                       sx={{
-                        color: "rgba(255,255,255,0.9)",
-                        fontSize: { xs: "0.95rem", sm: "1rem", md: "1.1rem" },
-                        lineHeight: 1.6,
-                        maxWidth: 600,
+                        color: "rgba(255,255,255,0.85)",
+                        fontSize: {
+                          xs: "0.95rem",
+                          sm: "1.05rem",
+                          md: "1.15rem",
+                        },
+                        lineHeight: 1.7,
+                        maxWidth: 560,
                       }}
                     >
                       {currentHeroText.description}
@@ -393,37 +371,39 @@ const EnhancedHero = () => {
                   </motion.div>
                 </Box>
 
-                {/* Dynamic Action Buttons */}
+                {/* CTA Buttons */}
                 <Box
                   sx={{
                     display: "flex",
-                    gap: { xs: 1, sm: 2 },
-                    mb: { xs: 1, sm: 2, md: 3 },
+                    gap: { xs: 1.5, sm: 2 },
+                    mb: { xs: 3, md: 4 },
                     flexWrap: "wrap",
                   }}
                 >
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isVisible ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.8 }}
                   >
                     <Button
                       variant="contained"
-                      size={isMobile ? "medium" : "large"}
+                      size="large"
                       onClick={() => navigate("/products")}
-                      className="cta-button"
                       sx={{
-                        backgroundColor: theme.palette.secondary.main,
-                        color: "white",
-                        px: { xs: 2.5, sm: 4 },
-                        py: { xs: 1, sm: 1.5 },
-                        borderRadius: "30px",
-                        fontWeight: 600,
-                        fontSize: { xs: "0.875rem", sm: "1rem" },
+                        backgroundColor: "#F9A825",
+                        color: "#1b5e20",
+                        px: { xs: 4, sm: 5 },
+                        py: { xs: 1.4, sm: 1.6 },
+                        borderRadius: "12px",
+                        fontWeight: 700,
+                        fontSize: { xs: "0.9rem", sm: "1rem" },
+                        textTransform: "none",
+                        letterSpacing: "0.3px",
+                        boxShadow: "0 6px 20px rgba(249, 168, 37, 0.35)",
                         "&:hover": {
-                          backgroundColor: theme.palette.secondary.dark,
-                          transform: "translateY(-3px) scale(1.05)",
-                          boxShadow: "0 10px 20px rgba(0,0,0,0.2)",
+                          backgroundColor: "#fdd835",
+                          transform: "translateY(-3px)",
+                          boxShadow: "0 10px 30px rgba(249, 168, 37, 0.45)",
                         },
                         transition: "all 0.3s ease",
                       }}
@@ -433,13 +413,13 @@ const EnhancedHero = () => {
                   </motion.div>
 
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isVisible ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 1 }}
                   >
                     <Button
                       variant="outlined"
-                      size={isMobile ? "medium" : "large"}
+                      size="large"
                       startIcon={
                         currentHeroText.secondaryAction ===
                         "Download Catalog" ? (
@@ -451,16 +431,21 @@ const EnhancedHero = () => {
                       onClick={handleSecondaryAction}
                       sx={{
                         color: "white",
-                        borderColor: "white",
-                        px: { xs: 2.5, sm: 4 },
-                        py: { xs: 1, sm: 1.5 },
-                        borderRadius: "30px",
+                        borderColor: "rgba(255,255,255,0.5)",
+                        borderWidth: "2px",
+                        px: { xs: 3, sm: 4 },
+                        py: { xs: 1.3, sm: 1.5 },
+                        borderRadius: "12px",
                         fontWeight: 600,
-                        fontSize: { xs: "0.875rem", sm: "1rem" },
+                        fontSize: { xs: "0.9rem", sm: "1rem" },
+                        textTransform: "none",
+                        backdropFilter: "blur(8px)",
+                        backgroundColor: "rgba(255,255,255,0.06)",
                         "&:hover": {
                           backgroundColor: "rgba(255,255,255,0.15)",
                           borderColor: "white",
-                          transform: "translateY(-2px)",
+                          borderWidth: "2px",
+                          transform: "translateY(-3px)",
                         },
                         transition: "all 0.3s ease",
                       }}
@@ -470,155 +455,193 @@ const EnhancedHero = () => {
                   </motion.div>
                 </Box>
 
-                {/* Enhanced Stats */}
-                <Grid
-                  container
-                  spacing={{ xs: 1, sm: 2, md: 3 }}
-                  sx={{ mb: { xs: 1, sm: 2, md: 4 } }}
+                {/* Feature Tags */}
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    flexWrap: "wrap",
+                  }}
                 >
-                  {stats.map((stat, index) => (
-                    <Grid item xs={6} sm={3} key={index}>
-                      <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-                      >
-                        <Tooltip title={stat.description} arrow>
-                          <Box
-                            sx={{
-                              textAlign: "center",
-                              cursor: "pointer",
-                              "&:hover": {
-                                transform: "translateY(-5px)",
-                              },
-                              transition: "all 0.3s ease",
-                            }}
-                          >
-                            <Avatar
-                              sx={{
-                                backgroundColor: theme.palette.secondary.main,
-                                mb: 1,
-                                mx: "auto",
-                              }}
-                            >
-                              {stat.icon}
-                            </Avatar>
-                            <Typography
-                              variant="h4"
-                              sx={{
-                                fontWeight: 800,
-                                color: theme.palette.secondary.main,
-                                textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
-                              }}
-                            >
-                              {stat.number}
-                            </Typography>
-                            <Typography
-                              variant="body2"
-                              sx={{
-                                color: "rgba(255,255,255,0.8)",
-                                fontWeight: 500,
-                                fontSize: "0.85rem",
-                              }}
-                            >
-                              {stat.label}
-                            </Typography>
-                          </Box>
-                        </Tooltip>
-                      </motion.div>
-                    </Grid>
+                  {features.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                      transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
+                    >
+                      <Chip
+                        icon={feature.icon}
+                        label={feature.text}
+                        size="small"
+                        sx={{
+                          backgroundColor: "rgba(255,255,255,0.08)",
+                          color: "rgba(255,255,255,0.85)",
+                          fontWeight: 500,
+                          fontSize: "0.72rem",
+                          height: "30px",
+                          backdropFilter: "blur(12px)",
+                          border: "1px solid rgba(255,255,255,0.12)",
+                          display: {
+                            xs: index > 1 ? "none" : "flex",
+                            sm: "flex",
+                          },
+                          "& .MuiChip-icon": {
+                            color: "#F9A825",
+                            fontSize: "16px",
+                          },
+                          transition: "all 0.3s ease",
+                        }}
+                      />
+                    </motion.div>
                   ))}
-                </Grid>
+                </Box>
               </Box>
             </motion.div>
+          </Grid>
+
+          {/* Right Side — Stats Cards */}
+          <Grid item xs={12} md={5}>
+            <Grid container spacing={{ xs: 1.5, md: 2 }}>
+              {stats.map((stat, index) => (
+                <Grid item xs={6} key={index}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 1 + index * 0.15 }}
+                  >
+                    <Tooltip title={stat.description} arrow>
+                      <Box
+                        sx={{
+                          textAlign: "center",
+                          cursor: "pointer",
+                          p: { xs: 2, md: 2.5 },
+                          borderRadius: "16px",
+                          backgroundColor: "rgba(255,255,255,0.08)",
+                          backdropFilter: "blur(16px)",
+                          border: "1px solid rgba(255,255,255,0.12)",
+                          "&:hover": {
+                            transform: "translateY(-6px)",
+                            backgroundColor: "rgba(255,255,255,0.14)",
+                            border: "1px solid rgba(249, 168, 37, 0.3)",
+                          },
+                          transition: "all 0.35s ease",
+                        }}
+                      >
+                        <Avatar
+                          sx={{
+                            backgroundColor: "rgba(249, 168, 37, 0.15)",
+                            color: "#F9A825",
+                            mb: 1,
+                            mx: "auto",
+                            width: { xs: 40, md: 48 },
+                            height: { xs: 40, md: 48 },
+                          }}
+                        >
+                          {stat.icon}
+                        </Avatar>
+                        <Typography
+                          variant="h4"
+                          sx={{
+                            fontWeight: 800,
+                            color: "white",
+                            textShadow: "0 2px 8px rgba(0,0,0,0.2)",
+                            fontSize: {
+                              xs: "1.5rem",
+                              sm: "1.75rem",
+                              md: "2.25rem",
+                            },
+                            lineHeight: 1.2,
+                          }}
+                        >
+                          {stat.number}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: "rgba(255,255,255,0.65)",
+                            fontWeight: 500,
+                            fontSize: { xs: "0.72rem", sm: "0.8rem" },
+                            letterSpacing: "0.5px",
+                            mt: 0.5,
+                          }}
+                        >
+                          {stat.label}
+                        </Typography>
+                      </Box>
+                    </Tooltip>
+                  </motion.div>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
       </Container>
 
-      {/* Enhanced Scroll Indicator */}
+      {/* Image Indicators — bottom center dots */}
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: { xs: 20, md: 35 },
+          left: "50%",
+          transform: "translateX(-50%)",
+          display: "flex",
+          gap: 1.5,
+          zIndex: 3,
+        }}
+      >
+        {images.map((_, index) => (
+          <Box
+            key={index}
+            onClick={() => setCurrentImage(index)}
+            sx={{
+              width: currentImage === index ? 32 : 10,
+              height: 10,
+              borderRadius: "5px",
+              backgroundColor:
+                currentImage === index ? "#F9A825" : "rgba(255,255,255,0.4)",
+              cursor: "pointer",
+              transition: "all 0.4s ease",
+              "&:hover": {
+                backgroundColor:
+                  currentImage === index ? "#F9A825" : "rgba(255,255,255,0.7)",
+              },
+            }}
+          />
+        ))}
+      </Box>
+
+      {/* Scroll Down Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3 }}
         style={{
           position: "absolute",
-          bottom: isMobile ? 10 : 30,
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 2,
-          textAlign: "center",
+          bottom: isMobile ? 15 : 30,
+          right: isMobile ? 20 : 40,
+          zIndex: 3,
         }}
       >
-        <Typography
-          variant="caption"
-          sx={{
-            color: "rgba(255,255,255,0.8)",
-            display: { xs: "none", sm: "block" },
-            mb: 1,
-            fontWeight: 600,
-          }}
-        >
-          Scroll to explore
-        </Typography>
         <IconButton
           onClick={scrollToProducts}
-          className="scroll-indicator"
           sx={{
             color: "white",
-            backgroundColor: "rgba(255,255,255,0.1)",
-            border: "2px solid rgba(255,255,255,0.3)",
-            "&:hover": {
-              backgroundColor: "rgba(255,255,255,0.2)",
-              transform: "translateY(-3px)",
+            backgroundColor: "rgba(255,255,255,0.08)",
+            border: "2px solid rgba(255,255,255,0.2)",
+            animation: "bounce 2s infinite",
+            "@keyframes bounce": {
+              "0%, 100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-8px)" },
             },
-            transition: "all 0.3s ease",
+            "&:hover": {
+              backgroundColor: "rgba(255,255,255,0.15)",
+            },
           }}
         >
-          <KeyboardArrowDown sx={{ fontSize: "2rem" }} />
+          <KeyboardArrowDown />
         </IconButton>
       </motion.div>
-
-      {/* Enhanced Image Indicators */}
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: { xs: 60, sm: 100, md: 120 },
-          right: { xs: 20, sm: 30, md: 40 },
-          display: "flex",
-          flexDirection: "column",
-          gap: { xs: 1, sm: 1.5 },
-          zIndex: 2,
-        }}
-      >
-        {images.map((_, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.3 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Box
-              onClick={() => setCurrentImage(index)}
-              sx={{
-                width: { xs: 10, sm: 14 },
-                height: { xs: 10, sm: 14 },
-                borderRadius: "50%",
-                backgroundColor:
-                  currentImage === index ? "white" : "rgba(255,255,255,0.4)",
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-                border: {
-                  xs: "1px solid rgba(255,255,255,0.6)",
-                  sm: "2px solid rgba(255,255,255,0.6)",
-                },
-                "&:hover": {
-                  backgroundColor: "white",
-                  transform: "scale(1.2)",
-                },
-              }}
-            />
-          </motion.div>
-        ))}
-      </Box>
 
       {/* Snackbar for contact number copy notification */}
       <Snackbar

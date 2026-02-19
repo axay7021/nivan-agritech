@@ -8,35 +8,67 @@ import {
   IconButton,
   List,
   ListItemButton,
+  ListItemIcon,
   ListItemText,
   Toolbar,
   useMediaQuery,
   useTheme,
+  Divider,
 } from "@mui/material";
 import { Email, Phone } from "@mui/icons-material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info";
+import InventoryIcon from "@mui/icons-material/Inventory";
+import FactoryIcon from "@mui/icons-material/Factory";
+import CategoryIcon from "@mui/icons-material/Category";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
 import CopyableContactItem from "../CopyableContactItem";
-// import TwitterIcon from "@mui/icons-material/Twitter";
 import logo from "../../assets/images/resources/logo.png";
-import headerBackgroundImage from "../../assets/images/shapes/header-bg.png";
 import "./index.css";
 
 const NAV_ITEMS = [
-  { label: "Home", id: "section-hero" },
-  { label: "About Us", id: "section-banner" },
-  { label: "Products Overview", id: "section-products-overview" },
-  { label: "Facilities", id: "section-facilities", route: "/facilities" },
-  { label: "Product", id: "section-products" },
-  { label: "Quality & Certifications", id: "quality-certification" },
-  { label: "Contact", id: "contact-us", route: "/contact-us" },
+  { label: "Home", id: "section-hero", icon: <HomeIcon /> },
+  {
+    label: "About Us",
+    id: "section-banner",
+    route: "/about",
+    icon: <InfoIcon />,
+  },
+  {
+    label: "Products Overview",
+    id: "section-products-overview",
+    icon: <InventoryIcon />,
+  },
+  {
+    label: "Facilities",
+    id: "section-facilities",
+    route: "/facilities",
+    icon: <FactoryIcon />,
+  },
+  { label: "Product", id: "section-products", icon: <CategoryIcon /> },
+  {
+    label: "Quality & Certifications",
+    id: "quality-certification",
+    icon: <VerifiedIcon />,
+  },
+  {
+    label: "Contact",
+    id: "contact-us",
+    route: "/contact-us",
+    icon: <ContactMailIcon />,
+  },
 ];
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("section-hero");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -45,12 +77,32 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const headerHeight = isMobile ? 60 : 120;
+      const headerHeight = isMobile ? 60 : 100;
       setScrolled(window.scrollY > headerHeight);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobile]);
+
+  // Track active section on scroll
+  useEffect(() => {
+    if (location.pathname !== "/") return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -60% 0px" },
+    );
+    NAV_ITEMS.forEach((item) => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [location.pathname]);
 
   const handleDrawerClose = () => setDrawerOpen(false);
 
@@ -66,10 +118,9 @@ const Navbar = () => {
         "_blank",
       );
     } else if (platform === "whatsapp") {
-      const phoneNumber = "919106725328"; // Phone number without spaces or special characters
+      const phoneNumber = "919106725328";
       window.open(`https://wa.me/${phoneNumber}`, "_blank");
     }
-    // Add other social media links here as needed
   };
 
   const scrollToId = (id) => {
@@ -79,103 +130,169 @@ const Navbar = () => {
     };
     if (location.pathname !== "/") {
       navigate("/");
-      setTimeout(doScroll, 50);
+      setTimeout(doScroll, 100);
     } else doScroll();
   };
+
+  const handleNavClick = (item) => {
+    if (item.route) {
+      navigate(item.route);
+    } else if (item.id === "section-products") {
+      navigate("/products/insecticides");
+    } else if (item.id === "quality-certification") {
+      navigate("/quality-certification");
+    } else {
+      scrollToId(item.id);
+    }
+  };
+
+  const socialButtons = [
+    { Icon: FacebookIcon, platform: "facebook", color: "#1877F2" },
+    { Icon: InstagramIcon, platform: "instagram", color: "#E4405F" },
+    { Icon: WhatsAppIcon, platform: "whatsapp", color: "#25D366" },
+  ];
 
   return (
     <Box>
       {/* Top Bar */}
       <Box
-        sx={
-          isMobile
-            ? {
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                padding: "10px 16px",
-                position: "relative",
-                backgroundColor: "white",
-              }
-            : {
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                padding: "10px 0",
-                backgroundColor: "white",
-              }
-        }
+        sx={{
+          display: "flex",
+          justifyContent: isMobile ? "center" : "space-between",
+          alignItems: "center",
+          padding: isMobile ? "10px 16px" : "12px 40px",
+          backgroundColor: "white",
+          borderBottom: "1px solid rgba(0,0,0,0.06)",
+          position: "relative",
+          minHeight: isMobile ? "60px" : "72px",
+        }}
       >
         {!isMobile ? (
           <>
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "column",
-                gap: 1,
-                minWidth: "280px",
-                ml: 3, // Add left margin for spacing
-                pl: 1, // Add a little padding for visual balance
+                flexDirection: "row",
+                gap: 3,
+                alignItems: "center",
               }}
             >
               <CopyableContactItem
-                icon={<Email />}
+                icon={<Email sx={{ fontSize: 18 }} />}
                 text="nivaanchemical@gmail.com"
                 type="email"
-                iconColor="primary.main"
+                iconColor="#2E7D32"
                 textVariant="body2"
               />
               <CopyableContactItem
-                icon={<Phone />}
+                icon={<Phone sx={{ fontSize: 18 }} />}
                 text="+91 91067 25328"
                 type="phone"
-                iconColor="primary.main"
+                iconColor="#2E7D32"
                 textVariant="body2"
               />
             </Box>
-            <Box sx={{ width: "50px", height: "auto", marginTop: 2 }}>
+            <Box
+              sx={{
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+                display: "flex",
+                alignItems: "center",
+                gap: 1.5,
+              }}
+            >
               <img
                 src={logo}
-                alt="agrikol-logo"
-                style={{ width: "100%", height: "auto" }}
+                alt="Nivaan Chemical"
+                style={{
+                  width: 56,
+                  height: 56,
+                  objectFit: "contain",
+                  flexShrink: 0,
+                }}
               />
-            </Box>
-
-            {/* Spacer to balance the layout */}
-            <Box sx={{ width: "200px" }} />
-
-            {/* <Box sx={{ display: "flex", gap: 1, paddingRight: 5 }}>
-              {[FacebookIcon, TwitterIcon, InstagramIcon].map((Icon, i) => (
-                <IconButton
-                  key={i}
+              <Box>
+                <Box
+                  component="span"
                   sx={{
-                    "&:hover": {
-                      backgroundColor: "primary.main",
-                      color: "white",
-                    },
-                    backgroundColor: (t) => t.palette.secondary.light,
-                    color: "text.primary",
+                    fontFamily: "'Playfair Display', serif !important",
+                    fontWeight: 700,
+                    fontSize: "1.2rem",
+                    color: "#1b5e20",
+                    letterSpacing: "0.5px",
+                    display: "block",
+                    lineHeight: 1.2,
                   }}
                 >
-                  <Icon />
+                  Nivaan Chemical
+                </Box>
+                <Box
+                  component="span"
+                  sx={{
+                    fontSize: "0.65rem",
+                    color: "#4a5e4a",
+                    letterSpacing: "1.5px",
+                    textTransform: "uppercase",
+                    fontWeight: 500,
+                  }}
+                >
+                  Agro Solutions
+                </Box>
+              </Box>
+            </Box>
+
+            {/* Social Icons */}
+            <Box sx={{ display: "flex", gap: 0.5 }}>
+              {socialButtons.map(({ Icon, platform, color }, i) => (
+                <IconButton
+                  key={i}
+                  onClick={() => handleSocialClick(platform)}
+                  size="small"
+                  sx={{
+                    color: "#666",
+                    transition: "all 0.25s ease",
+                    "&:hover": {
+                      color: color,
+                      backgroundColor: `${color}10`,
+                      transform: "translateY(-2px)",
+                    },
+                  }}
+                >
+                  <Icon fontSize="small" />
                 </IconButton>
               ))}
-            </Box> */}
+            </Box>
           </>
         ) : (
           <Box
             sx={{
-              width: "50px",
-              height: "auto",
-              justifyContent: "center",
-              marginTop: 2,
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
             }}
           >
             <img
               src={logo}
-              alt="agrikol-logo"
-              style={{ width: "100%", height: "auto" }}
+              alt="Nivaan Chemical"
+              style={{
+                width: 44,
+                height: 44,
+                objectFit: "contain",
+                flexShrink: 0,
+              }}
             />
+            <Box
+              component="span"
+              sx={{
+                fontFamily: "'Playfair Display', serif !important",
+                fontWeight: 700,
+                fontSize: "1rem",
+                color: "#1b5e20",
+              }}
+            >
+              Nivaan Chemical
+            </Box>
           </Box>
         )}
       </Box>
@@ -183,111 +300,122 @@ const Navbar = () => {
       {/* Main Navigation Bar */}
       <AppBar
         position={scrolled ? "fixed" : "static"}
+        elevation={0}
         sx={{
-          backgroundColor: (t) => t.palette.secondary.light,
-          boxShadow: scrolled ? "0px 2px 4px rgba(0, 0, 0, 0.1)" : "none",
-          zIndex: 1000,
-          transition: "all 0.3s ease",
+          backgroundColor: scrolled ? "rgba(27, 94, 32, 0.97)" : "#1b5e20",
+          backdropFilter: scrolled ? "blur(12px)" : "none",
+          boxShadow: scrolled ? "0 4px 20px rgba(0,0,0,0.12)" : "none",
+          zIndex: 1100,
+          transition: "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
-        <Box
-          sx={{
-            backgroundImage: `url(${headerBackgroundImage})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            padding: "10px 0",
-            display: scrolled ? "none" : "flex",
-          }}
-        />
-
         {!isMobile ? (
-          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Box sx={{ display: "flex", gap: 2 }}>
-              {NAV_ITEMS.map((item, idx) => (
-                <Button
-                  key={item.id}
-                  sx={
-                    idx === 0
-                      ? {
-                          backgroundColor: "primary.main",
-                          borderRadius: "5px",
-                          color: "white",
-                          "&:hover": { backgroundColor: "secondary.main" },
-                        }
-                      : undefined
-                  }
-                  onClick={() => {
-                    if (item.route) {
-                      navigate(item.route);
-                    } else if (item.id === "section-products") {
-                      navigate("/products/insecticides");
-                    } else if (item.id === "quality-certification") {
-                      navigate("/quality-certification");
-                    } else {
-                      scrollToId(item.id);
-                    }
-                  }}
-                >
-                  {item.label}
-                </Button>
-              ))}
-            </Box>
-
-            {/* Always visible social media icons */}
-            <Box sx={{ display: "flex", gap: 1 }}>
-              {[
-                { Icon: FacebookIcon, platform: "facebook" },
-                { Icon: InstagramIcon, platform: "instagram" },
-                { Icon: WhatsAppIcon, platform: "whatsapp" },
-              ].map(({ Icon, platform }, i) => (
-                <IconButton
-                  key={i}
-                  onClick={() => handleSocialClick(platform)}
+          <Toolbar
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              minHeight: { md: scrolled ? "56px" : "62px" },
+              transition: "min-height 0.3s ease",
+              px: 3,
+            }}
+          >
+            <Box sx={{ display: "flex", gap: 0.5, alignItems: "center" }}>
+              {/* {scrolled && (
+                <Box
                   sx={{
-                    "&:hover": {
-                      backgroundColor: "primary.main",
-                      color: "white",
-                    },
-                    backgroundColor: scrolled
-                      ? "rgba(255,255,255,0.1)"
-                      : (t) => t.palette.secondary.light,
-                    color: "text.primary",
-                    transition: "all 0.3s ease",
+                    display: "flex",
+                    alignItems: "center",
+                    mr: 2,
                   }}
                 >
-                  <Icon />
-                </IconButton>
-              ))}
+                  <img
+                    src={logo}
+                    alt="Nivaan"
+                    style={{
+                      width: 36,
+                      height: 36,
+                      objectFit: "contain",
+                    }}
+                  />
+                </Box>
+              )} */}
+              {NAV_ITEMS.map((item) => {
+                const isActive =
+                  location.pathname === "/" && activeSection === item.id;
+                return (
+                  <Button
+                    key={item.id}
+                    onClick={() => handleNavClick(item)}
+                    sx={{
+                      color: "rgba(255,255,255,0.88)",
+                      fontSize: "0.84rem",
+                      fontWeight: 500,
+                      letterSpacing: "0.3px",
+                      px: 2.2,
+                      py: 1,
+                      borderRadius: "8px",
+                      position: "relative",
+                      textTransform: "none",
+                      transition: "all 0.25s ease",
+                      "&::after": {
+                        content: '""',
+                        position: "absolute",
+                        bottom: 2,
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                        width: isActive ? "60%" : "0%",
+                        height: "2px",
+                        backgroundColor: "#F9A825",
+                        borderRadius: "2px",
+                        transition: "width 0.3s ease",
+                      },
+                      "&:hover": {
+                        backgroundColor: "rgba(255,255,255,0.1)",
+                        color: "white",
+                        "&::after": {
+                          width: "60%",
+                        },
+                      },
+                      ...(isActive && {
+                        color: "white",
+                        fontWeight: 600,
+                      }),
+                    }}
+                  >
+                    {item.label}
+                  </Button>
+                );
+              })}
             </Box>
           </Toolbar>
         ) : (
-          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-            <IconButton onClick={() => setDrawerOpen(true)}>
+          <Toolbar
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              minHeight: "56px",
+            }}
+          >
+            <IconButton
+              onClick={() => setDrawerOpen(true)}
+              sx={{ color: "white" }}
+            >
               <MenuIcon />
             </IconButton>
 
-            {/* Mobile social media icons in toolbar */}
             <Box sx={{ display: "flex", gap: 0.5 }}>
-              {[
-                { Icon: FacebookIcon, platform: "facebook" },
-                { Icon: InstagramIcon, platform: "instagram" },
-                { Icon: WhatsAppIcon, platform: "whatsapp" },
-              ].map(({ Icon, platform }, i) => (
+              {socialButtons.map(({ Icon, platform }, i) => (
                 <IconButton
                   key={i}
                   size="small"
                   onClick={() => handleSocialClick(platform)}
                   sx={{
+                    color: "rgba(255,255,255,0.8)",
+                    transition: "all 0.25s ease",
                     "&:hover": {
-                      backgroundColor: "primary.main",
+                      backgroundColor: "rgba(255,255,255,0.15)",
                       color: "white",
                     },
-                    backgroundColor: scrolled
-                      ? "rgba(255,255,255,0.1)"
-                      : (t) => t.palette.secondary.light,
-                    color: "text.primary",
-                    transition: "all 0.3s ease",
                   }}
                 >
                   <Icon fontSize="small" />
@@ -298,50 +426,118 @@ const Navbar = () => {
         )}
       </AppBar>
 
-      {/* Placeholder to prevent jump when fixed */}
-      {scrolled && <Box sx={{ height: isMobile ? "56px" : "64px" }} />}
+      {/* Placeholder to prevent jump when nav becomes fixed */}
+      {scrolled && <Box sx={{ height: isMobile ? "56px" : "62px" }} />}
 
+      {/* Mobile Drawer */}
       <Drawer
         anchor="left"
         open={drawerOpen}
         onClose={handleDrawerClose}
         PaperProps={{
           sx: {
-            height: "100%",
-            top: scrolled ? 0 : 184,
-            width: 250,
-            borderRadius: "0 10px 10px 0",
+            width: 280,
+            borderRadius: "0 20px 20px 0",
+            backgroundColor: "#FAFDF7",
+            boxShadow: "4px 0 24px rgba(0,0,0,0.12)",
           },
         }}
       >
-        <Box
-          sx={{
-            height: "100%",
-            backgroundColor: (t) => t.palette.secondary.light,
-            overflow: "auto",
-          }}
-        >
-          <List>
+        <Box sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+          {/* Drawer Header */}
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              p: 2,
+              pb: 1.5,
+              borderBottom: "1px solid rgba(0,0,0,0.06)",
+            }}
+          >
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <img
+                src={logo}
+                alt="Nivaan"
+                style={{ width: 36, height: "auto" }}
+              />
+              <Box
+                sx={{
+                  fontFamily: "'Playfair Display', serif !important",
+                  fontWeight: 700,
+                  fontSize: "0.95rem",
+                  color: "#1b5e20",
+                }}
+              >
+                Nivaan Chemical
+              </Box>
+            </Box>
+            <IconButton onClick={handleDrawerClose} size="small">
+              <CloseIcon fontSize="small" />
+            </IconButton>
+          </Box>
+
+          {/* Nav Items */}
+          <List sx={{ flex: 1, pt: 1, px: 1 }}>
             {NAV_ITEMS.map((item) => (
               <ListItemButton
                 key={item.id}
                 onClick={() => {
-                  setDrawerOpen(false);
-                  if (item.route) {
-                    navigate(item.route);
-                  } else if (item.id === "section-products") {
-                    navigate("/products/insecticides");
-                  } else if (item.id === "quality-certification") {
-                    navigate("/quality-certification");
-                  } else {
-                    scrollToId(item.id);
-                  }
+                  handleDrawerClose();
+                  handleNavClick(item);
+                }}
+                sx={{
+                  borderRadius: "10px",
+                  mb: 0.5,
+                  py: 1.2,
+                  transition: "all 0.2s ease",
+                  "&:hover": {
+                    backgroundColor: "rgba(46, 125, 50, 0.08)",
+                    transform: "translateX(4px)",
+                  },
                 }}
               >
-                <ListItemText primary={item.label} />
+                <ListItemIcon sx={{ minWidth: 40, color: "#2E7D32" }}>
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText
+                  primary={item.label}
+                  primaryTypographyProps={{
+                    fontSize: "0.9rem",
+                    fontWeight: 500,
+                    color: "#1a2e1a",
+                  }}
+                />
               </ListItemButton>
             ))}
           </List>
+
+          {/* Drawer Footer */}
+          <Divider />
+          <Box sx={{ p: 2 }}>
+            <CopyableContactItem
+              icon={<Phone sx={{ fontSize: 16 }} />}
+              text="+91 91067 25328"
+              type="phone"
+              iconColor="#2E7D32"
+              textVariant="caption"
+            />
+            <Box sx={{ display: "flex", gap: 0.5, mt: 1.5 }}>
+              {socialButtons.map(({ Icon, platform, color }, i) => (
+                <IconButton
+                  key={i}
+                  size="small"
+                  onClick={() => handleSocialClick(platform)}
+                  sx={{
+                    color: "#666",
+                    "&:hover": { color: color, bgcolor: `${color}10` },
+                  }}
+                >
+                  <Icon fontSize="small" />
+                </IconButton>
+              ))}
+            </Box>
+          </Box>
         </Box>
       </Drawer>
     </Box>

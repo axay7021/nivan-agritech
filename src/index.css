@@ -1,39 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FAFDF7;
+  color: #1a2e1a;
+  overflow-x: hidden;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #2E7D32;
+  outline-offset: 2px;
+}
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
-  /* Vibrant agriculture-energy color palette */
-  --color-primary: #4CAF50;        /* Fresh Green - Start */
-  --color-primary-light: #81C784;
-  --color-primary-dark: #388E3C;
+  /* Refined agricultural palette — earthy, trustworthy, warm */
+  --color-primary: #2E7D32;
+  --color-primary-light: #60ad5e;
+  --color-primary-dark: #1b5e20;
   
-  --color-secondary: #FFC107;      /* Sunlight Yellow - Middle */
-  --color-secondary-light: #FFD54F;
-  --color-secondary-dark: #FFA000;
+  --color-secondary: #F9A825;
+  --color-secondary-light: #fdd835;
+  --color-secondary-dark: #f57f17;
   
-  --color-tertiary: #FF9800;       /* Energy Orange - End */
-  --color-tertiary-light: #FFB74D;
-  --color-tertiary-dark: #F57C00;
+  --color-tertiary: #E65100;
+  --color-tertiary-light: #ff6d00;
+  --color-tertiary-dark: #bf360c;
   
-  --color-accent: var(--color-tertiary);
-  --color-background: #FAFFFE;     /* Clean neutral background */
+  --color-accent: #00695C;
+  --color-background: #FAFDF7;
   --color-surface: #ffffff;
+  --color-text: #1a2e1a;
+  --color-text-secondary: #4a5e4a;
   
-  /* Vibrant energy gradients */
-  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-tertiary) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  --gradient-energy: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-tertiary) 100%);
-  --gradient-sunrise: linear-gradient(45deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
+  /* Harmonious gradients */
+  --gradient-primary: linear-gradient(135deg, #1b5e20 0%, #2E7D32 50%, #43a047 100%);
+  --gradient-secondary: linear-gradient(135deg, #F9A825 0%, #ff8f00 100%);
+  --gradient-accent: linear-gradient(135deg, #2E7D32 0%, #00695C 100%);
+  --gradient-energy: linear-gradient(90deg, #1b5e20 0%, #2E7D32 40%, #F9A825 100%);
+  --gradient-warm: linear-gradient(135deg, #F9A825 0%, #E65100 100%);
+  
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 50px rgba(0,0,0,0.12);
+  
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Section spacing rhythm */
+section, [id^="section-"] > * {
+  scroll-margin-top: 80px;
+}
+
+/* Improved selection color */
+::selection {
+  background-color: rgba(46, 125, 50, 0.2);
+  color: #1b5e20;
+}
+
+/* Smooth image loading */
+img {
+  max-width: 100%;
+  height: auto;
+  transition: opacity var(--transition-base);
 }

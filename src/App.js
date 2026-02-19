@@ -48,6 +48,7 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import QualityCertificationPage from "./pages/QualityCertificationPage";
 import FacilityPage from "./pages/FacilityPage";
 import ContactUsPage from "./pages/ContactUsPage";
+import AboutUsPage from "./pages/AboutUsPage";
 import ProductionFacilities from "./component/Product/ProductionFacilities.js";
 import EnhancedHero from "./component/hero/EnhancedHero.js";
 import ErrorBoundary from "./ErrorBoundary.js";
@@ -134,6 +135,7 @@ function App() {
                 element={<QualityCertificationPage />}
               />
               <Route path="/facilities" element={<FacilityPage />} />
+              <Route path="/about" element={<AboutUsPage />} />
               <Route path="/contact-us" element={<ContactUsPage />} />
             </Routes>
             <Footer />

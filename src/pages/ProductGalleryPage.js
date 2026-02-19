@@ -192,6 +192,14 @@ const PRODUCTS_DATA = {
       description:
         "Chlorantraniliprole 18.5% W/W SC\nSystemic fungicide for comprehensive disease management.",
     },
+    {
+      id: "pgr-stimulants-1",
+      name: "Niva Neem",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797425/NIVA_NEEM_kdmbme.jpg",
+      description:
+        "Azadirachtin 0.3% (3000ppm) Insecticide\nNatural neem-based plant growth regulator.",
+    },
   ],
   fungicides: [
     {
@@ -268,14 +276,6 @@ const PRODUCTS_DATA = {
     },
   ],
   "pgr-stimulants": [
-    {
-      id: "pgr-stimulants-1",
-      name: "Niva Neem",
-      image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797425/NIVA_NEEM_kdmbme.jpg",
-      description:
-        "Azadirachtin 0.3% (3000ppm) Insecticide\nNatural neem-based plant growth regulator.",
-    },
     {
       id: "pgr-stimulants-2",
       name: "Niva Stick",
