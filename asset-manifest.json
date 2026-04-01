@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.a0c2ae93.css",
-    "main.js": "./static/js/main.24471742.js",
+    "main.css": "./static/css/main.1690ba35.css",
+    "main.js": "./static/js/main.c006b701.js",
     "static/js/453.d3e44fd9.chunk.js": "./static/js/453.d3e44fd9.chunk.js",
     "static/media/Niavan-Chemical - Brochure.pdf": "./static/media/Niavan-Chemical - Brochure.4a795840109588544ce7.pdf",
     "static/media/infastructure-home.jpg": "./static/media/infastructure-home.cf70633ce79454f0fc8c.jpg",
@@ -13,7 +13,7 @@
     "static/media/service-1-img-12.jpg": "./static/media/service-1-img-12.d1d9c1deb558f7bb378f.jpg",
     "static/media/service-1-img-11.jpg": "./static/media/service-1-img-11.660573089b2a52c747a5.jpg",
     "static/media/slide_v5_2.jpg": "./static/media/slide_v5_2.04d50962f411c5ed0c4b.jpg",
-    "static/media/logo.png": "./static/media/logo.2c07caa27a63c1fd0b83.png",
+    "static/media/Nivaan_Chemical_logo.png": "./static/media/Nivaan_Chemical_logo.8fdf91da4fc442db8478.png",
     "static/media/service-1-img-8.jpg": "./static/media/service-1-img-8.2587c5daa3a5268e48d3.jpg",
     "static/media/about-1-img-4.jpg": "./static/media/about-1-img-4.feb54a4e6cf460cf3c68.jpg",
     "static/media/about-1-img-3.jpg": "./static/media/about-1-img-3.f49ae42112fda708d51b.jpg",
@@ -28,12 +28,12 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "./index.html",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
-    "main.a0c2ae93.css.map": "./static/css/main.a0c2ae93.css.map",
-    "main.24471742.js.map": "./static/js/main.24471742.js.map",
+    "main.1690ba35.css.map": "./static/css/main.1690ba35.css.map",
+    "main.c006b701.js.map": "./static/js/main.c006b701.js.map",
     "453.d3e44fd9.chunk.js.map": "./static/js/453.d3e44fd9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0c2ae93.css",
-    "static/js/main.24471742.js"
+    "static/css/main.1690ba35.css",
+    "static/js/main.c006b701.js"
   ]
 }
