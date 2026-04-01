@@ -511,7 +511,7 @@ const overviewItems = [
   {
     title: "Facility Overview",
     description:
-      "Nivan Chemicals operates a cutting-edge manufacturing facility spanning state-of-the-art production units. Our factory is equipped with modern technology and maintains the highest standards of safety and hygiene. We employ over 500 skilled professionals dedicated to delivering premium agricultural chemicals.",
+      "Nivaan Chemicals operates a cutting-edge manufacturing facility spanning state-of-the-art production units. Our factory is equipped with modern technology and maintains the highest standards of safety and hygiene. We employ over 500 skilled professionals dedicated to delivering premium agricultural chemicals.",
   },
   {
     title: "Capabilities",
@@ -729,7 +729,7 @@ const FacilityPage = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Nivan Chemicals Location"
+            title="Nivaan Chemicals Location"
           />
         </MapContainer>
       </MapSection>

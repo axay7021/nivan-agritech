@@ -127,7 +127,7 @@ const Section = styled(motion.div)`
 const SectionTitle = styled.h2`
   font-size: 42px;
   font-weight: 700;
-  color: #1b5e20;
+  color: #0a3f5c;
   text-align: center;
   margin: 0 0 50px 0;
 
@@ -219,7 +219,7 @@ const ContactCard = styled(motion.div)`
 const ContactCardIcon = styled.div`
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  background: linear-gradient(135deg, #0a3f5c 0%, #2e7d32 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -232,7 +232,7 @@ const ContactCardIcon = styled.div`
 const ContactCardTitle = styled.h3`
   font-size: 18px;
   font-weight: 600;
-  color: #1b5e20;
+  color: #0a3f5c;
   margin: 0 0 12px 0;
 `;
 
@@ -291,7 +291,7 @@ const StyledTextField = styled(TextField)`
     color: #666;
 
     &.Mui-focused {
-      color: #1b5e20;
+      color: #0a3f5c;
     }
   }
 `;
@@ -308,7 +308,7 @@ const StyledSelect = styled(Select)`
 `;
 
 const SubmitButton = styled(Button)`
-  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%) !important;
+  background: linear-gradient(135deg, #0a3f5c 0%, #2e7d32 100%) !important;
   color: white !important;
   padding: 12px 40px !important;
   font-size: 16px !important;
@@ -368,7 +368,7 @@ const BenefitIcon = styled.div`
 const BenefitTitle = styled.h3`
   font-size: 20px;
   font-weight: 700;
-  color: #1b5e20;
+  color: #0a3f5c;
   margin: 0 0 15px 0;
 `;
 
@@ -643,7 +643,7 @@ const ContactUsPage = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <CompanyDescriptionText>
-            <strong>Nivan Chemicals</strong> is a leading provider of
+            <strong>Nivaan Chemicals</strong> is a leading provider of
             high-quality agricultural chemical solutions for modern farming.
             With years of expertise in the industry, we are committed to
             supporting farmers and agricultural businesses with innovative
@@ -716,7 +716,7 @@ const ContactUsPage = () => {
               </ContactCardIcon>
               <ContactCardTitle>Address</ContactCardTitle>
               <ContactCardContent>
-                Nivan Chemicals Production Facility, Agricultural Park, India
+                Nivaan Chemicals Production Facility, Agricultural Park, India
               </ContactCardContent>
             </ContactCard>
 
@@ -953,7 +953,7 @@ const ContactUsPage = () => {
         <SectionTitle>Our Location</SectionTitle>
         <MapContainer>
           <iframe
-            title="Nivan Chemicals Location"
+            title="Nivaan Chemicals Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.894509!2d73.0046!3d21.5975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be023817bc17a87%3A0xb6038bb13848963c!2sNIVAAN%20CHEMICAL!5e0!3m2!1sen!2sin!4v1708022400"
             allowFullScreen=""
             loading="lazy"

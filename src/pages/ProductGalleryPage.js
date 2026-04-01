@@ -39,10 +39,26 @@ const CATEGORY_LIST = [
 const PRODUCTS_DATA = {
   insecticides: [
     {
+      id: "pesticides-tolfenza",
+      name: "TOLFENZA",
+      image:
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775059969/TOLFENZA_qq3rlr.jpg",
+      description:
+        "Tolfenpyrad 15% EC\nInsecticide for effective pest control.",
+    },
+    {
+      id: "pesticides-imida-30",
+      name: "IMIDA 30",
+      image:
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775061904/IMIDA-30_zrklcn.jpg",
+      description:
+        "Imidacloprid 30.5% SC\nSystemic insecticide for pest control.",
+    },
+    {
       id: "insecticides-1",
       name: "Abbot 1.9",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797420/Abbot1.9_rriug9.jpg",
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775059175/Abbot_1.9_aqrvlv.jpg",
       description:
         "Abamectin 1.9% EC\nHigh quality insecticide for effective pest control.",
     },
@@ -62,10 +78,17 @@ const PRODUCTS_DATA = {
       description: "Cypermethrin 10% EC\nAdvanced insecticide formulation.",
     },
     {
+      id: "pesticides-cypron-25",
+      name: "CYPRON 25",
+      image:
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775063059/CYPRON-25_b9ekkb.jpg",
+      description: "Cypermethrin 25% EC\nBroad-spectrum insecticide.",
+    },
+    {
       id: "insecticides-4",
       name: "Dahaad",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797445/Dahaad_zqnr3r.jpg",
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775064039/DAHAAD_fqarcn.jpg",
       description:
         "Systemic and Contact Insecticide\nEffective insecticide for various pests.",
     },
@@ -89,7 +112,7 @@ const PRODUCTS_DATA = {
       id: "insecticides-7",
       name: "Niva-Claim-5",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797427/Niva-Claim-5_av88cs.jpg",
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775062814/Niva-Claim-5_b21i67.jpg",
       description: "Emamectin Benzoate 5% SG\nPremium insecticide solution.",
     },
     {
@@ -111,7 +134,7 @@ const PRODUCTS_DATA = {
       id: "insecticides-10",
       name: "Protect-30",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797432/Protect-30_etkwni.jpg",
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775063754/PROTECT-30_o66mwy.jpg",
       description: "Thiamethoxam 30% FS\nProtective insecticide formula.",
     },
     {
@@ -125,7 +148,7 @@ const PRODUCTS_DATA = {
       id: "insecticides-12",
       name: "Boss-20",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797408/boss-20_h7ph1a.jpg",
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775059701/Boss-20_1_ob1dzk.jpg",
       description:
         "Dinotefuran 20% SG systemic insecticide\nSuperior insecticide for pest management.",
     },
@@ -141,7 +164,7 @@ const PRODUCTS_DATA = {
       id: "insecticides-14",
       name: "Flykill 25",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797417/flykill_25_v516or.jpg",
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775060785/FlyKill_fvqoos.jpg",
       description:
         "Thiamethoxam 25% WG Pesticide\nEffective fly control insecticide.",
     },
@@ -180,15 +203,15 @@ const PRODUCTS_DATA = {
       id: "insecticides-19",
       name: "Deltra-11",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797480/DELTRA-11_zksbsv.jpg",
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775062202/DELTRA-11_cwa1ei.jpg",
       description: "Deltamethrin 11% EC\nHigh-performance insecticide.",
     },
     // Adding new fungicide from Cloudinary
     {
       id: "fungicides-6",
-      name: "Corzin-Box",
+      name: "Corzin",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797413/Corzin-Box_w0phec.jpg",
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775062520/CORZIN_tkcrmn.jpg",
       description:
         "Chlorantraniliprole 18.5% W/W SC\nSystemic fungicide for comprehensive disease management.",
     },
@@ -241,6 +264,29 @@ const PRODUCTS_DATA = {
       description:
         "Tebuconazole 10% + Sulphur 65% WG\nProfessional fungicide solution.",
     },
+    {
+      id: "fungicides-7",
+      name: "PRODIFE",
+      image:
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775064755/PRODIFE_eutko3.jpg",
+      description:
+        "Propiconazole 13.9% + Difenoconazole 13.9 w/w EC\nDual-action crop protection formula.",
+    },
+    {
+      id: "fungicides-8",
+      name: "NIVA TEBU-25.9",
+      image:
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775064753/NIVA-TEMU-25.9_z3o7ev.jpg",
+      description: "Tebuconazole 25.9% EC\nSystemic formulation for crop care.",
+    },
+    {
+      id: "fungicides-9",
+      name: "TEBU-TRIFO",
+      image:
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775064755/TEBU-TRIFO_hxllmb.jpg",
+      description:
+        "Tebuconazole 50% + Trifloxystrobin 25 WG\nBroad-spectrum disease management support.",
+    },
   ],
   herbicides: [
     {
@@ -274,13 +320,29 @@ const PRODUCTS_DATA = {
       description:
         "Paraquat Dichloride 24% SL\nQuaternary herbicide formulation.",
     },
+    {
+      id: "herbicides-5",
+      name: "Gulfo-Shield",
+      image:
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775065741/GLUFO-SHIELD_vdedba.jpg",
+      description:
+        "Glufosinate Ammonium 13.5% w/w SL\nEffective post-emergence herbicide for weed control.",
+    },
+    {
+      id: "herbicides-6",
+      name: "Niva-Neem",
+      image:
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775065743/NIVA-NEEM_yyw1ev.jpg",
+      description:
+        "Neem Seeds Karnel Based\nNeem-based botanical formulation for crop care.",
+    },
   ],
   "pgr-stimulants": [
     {
       id: "pgr-stimulants-2",
       name: "Niva Stick",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797429/Niva_Stick_tdjd7r.jpg",
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775065745/NIVA-STICK_jen7hs.jpg",
       description: "Silicone based stimulant\nAdvanced plant growth stimulant.",
     },
     {
@@ -290,13 +352,29 @@ const PRODUCTS_DATA = {
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797434/Raftar_chtte7.jpg",
       description: "Plant growth regulator\nFast-acting growth stimulant.",
     },
+    {
+      id: "pgr-stimulants-4",
+      name: "Raftar-extra-power",
+      image:
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775065746/RAFTAR-EXTRA-POWER_t86wcj.jpg",
+      description:
+        "Gibberellic Acid 40% WSG\nPlant growth regulator for enhanced vigor.",
+    },
+    {
+      id: "pgr-stimulants-5",
+      name: "GATADAR",
+      image:
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775065740/GHATADAR_ywo0lq.jpg",
+      description:
+        "Better Quality Better Yield\nLiquid fermented organic manure for all crops.",
+    },
   ],
   "mix-micro-nutrients": [
     {
       id: "mix-micro-nutrients-1",
       name: "Niva Green",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1764478784/WhatsApp_Image_2025-11-30_at_10.27.12-Photoroom_cqgcj9.png",
+        "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775065743/NIVA-GREEN_lf8sb5.jpg",
       description:
         "Complete micronutrient blend\nEssential trace elements for optimal plant growth.",
     },

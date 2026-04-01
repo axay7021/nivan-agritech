@@ -185,7 +185,7 @@ const ServiceCard = ({ service, index }) => {
               fontSize: { xs: "1rem", md: "1.1rem" },
               mb: 1,
               lineHeight: 1.3,
-              "&:hover": { color: "#2E7D32" },
+              "&:hover": { color: "#0F5477" },
               transition: "color 0.2s ease",
             }}
           >
@@ -221,7 +221,7 @@ const ServiceCard = ({ service, index }) => {
             <Typography
               variant="body2"
               sx={{
-                color: "#2E7D32",
+                color: "#0F5477",
                 fontWeight: 600,
                 fontSize: "0.85rem",
                 cursor: "pointer",
@@ -236,7 +236,7 @@ const ServiceCard = ({ service, index }) => {
             <ArrowForwardIcon
               sx={{
                 fontSize: 16,
-                color: "#2E7D32",
+                color: "#0F5477",
                 transition: "transform 0.3s ease",
                 transform: isHovered ? "translateX(4px)" : "translateX(0)",
               }}
@@ -255,7 +255,7 @@ const AboutUs = () => {
         py: { xs: 6, sm: 8, md: 10 },
         pb: { xs: 8, sm: 12, md: 14 },
         background:
-          "linear-gradient(180deg, #f0f7e6 0%, #e8f5e9 50%, #f1f8e9 100%)",
+          "linear-gradient(180deg, #EAF6FB 0%, #DFF1F8 50%, #EDF8FC 100%)",
         position: "relative",
         "&::before": {
           content: '""',
@@ -274,7 +274,7 @@ const AboutUs = () => {
           <Typography
             variant="overline"
             sx={{
-              color: "#2E7D32",
+              color: "#0F5477",
               fontWeight: 600,
               letterSpacing: "3px",
               fontSize: "0.8rem",
@@ -299,7 +299,7 @@ const AboutUs = () => {
             sx={{
               width: 60,
               height: 3,
-              background: "linear-gradient(90deg, #2E7D32, #F9A825)",
+              background: "linear-gradient(90deg, #0F5477, #4AC6D0)",
               borderRadius: 2,
               mx: "auto",
               mt: 2,

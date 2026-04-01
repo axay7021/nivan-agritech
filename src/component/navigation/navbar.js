@@ -29,7 +29,7 @@ import CategoryIcon from "@mui/icons-material/Category";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import CopyableContactItem from "../CopyableContactItem";
-import logo from "../../assets/images/resources/logo.png";
+import logo from "../../assets/images/resources/Nivaan_Chemical_logo.png";
 import "./index.css";
 
 const NAV_ITEMS = [
@@ -181,14 +181,14 @@ const Navbar = () => {
                 icon={<Email sx={{ fontSize: 18 }} />}
                 text="nivaanchemical@gmail.com"
                 type="email"
-                iconColor="#2E7D32"
+                iconColor="#0F5477"
                 textVariant="body2"
               />
               <CopyableContactItem
                 icon={<Phone sx={{ fontSize: 18 }} />}
                 text="+91 91067 25328"
                 type="phone"
-                iconColor="#2E7D32"
+                iconColor="#0F5477"
                 textVariant="body2"
               />
             </Box>
@@ -199,47 +199,18 @@ const Navbar = () => {
                 transform: "translateX(-50%)",
                 display: "flex",
                 alignItems: "center",
-                gap: 1.5,
               }}
             >
               <img
                 src={logo}
                 alt="Nivaan Chemical"
                 style={{
-                  width: 56,
-                  height: 56,
+                  width: 200,
+                  height: 70,
                   objectFit: "contain",
                   flexShrink: 0,
                 }}
               />
-              <Box>
-                <Box
-                  component="span"
-                  sx={{
-                    fontFamily: "'Playfair Display', serif !important",
-                    fontWeight: 700,
-                    fontSize: "1.2rem",
-                    color: "#1b5e20",
-                    letterSpacing: "0.5px",
-                    display: "block",
-                    lineHeight: 1.2,
-                  }}
-                >
-                  Nivaan Chemical
-                </Box>
-                <Box
-                  component="span"
-                  sx={{
-                    fontSize: "0.65rem",
-                    color: "#4a5e4a",
-                    letterSpacing: "1.5px",
-                    textTransform: "uppercase",
-                    fontWeight: 500,
-                  }}
-                >
-                  Agro Solutions
-                </Box>
-              </Box>
             </Box>
 
             {/* Social Icons */}
@@ -269,30 +240,18 @@ const Navbar = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              gap: 1,
             }}
           >
             <img
               src={logo}
               alt="Nivaan Chemical"
               style={{
-                width: 44,
-                height: 44,
+                width: 200,
+                height: 64,
                 objectFit: "contain",
                 flexShrink: 0,
               }}
             />
-            <Box
-              component="span"
-              sx={{
-                fontFamily: "'Playfair Display', serif !important",
-                fontWeight: 700,
-                fontSize: "1rem",
-                color: "#1b5e20",
-              }}
-            >
-              Nivaan Chemical
-            </Box>
           </Box>
         )}
       </Box>
@@ -302,7 +261,7 @@ const Navbar = () => {
         position={scrolled ? "fixed" : "static"}
         elevation={0}
         sx={{
-          backgroundColor: scrolled ? "rgba(27, 94, 32, 0.97)" : "#1b5e20",
+          backgroundColor: scrolled ? "rgba(8, 59, 88, 0.97)" : "#0A3F5C",
           backdropFilter: scrolled ? "blur(12px)" : "none",
           boxShadow: scrolled ? "0 4px 20px rgba(0,0,0,0.12)" : "none",
           zIndex: 1100,
@@ -365,7 +324,7 @@ const Navbar = () => {
                         transform: "translateX(-50%)",
                         width: isActive ? "60%" : "0%",
                         height: "2px",
-                        backgroundColor: "#F9A825",
+                        backgroundColor: "#4AC6D0",
                         borderRadius: "2px",
                         transition: "width 0.3s ease",
                       },
@@ -438,7 +397,7 @@ const Navbar = () => {
           sx: {
             width: 280,
             borderRadius: "0 20px 20px 0",
-            backgroundColor: "#FAFDF7",
+            backgroundColor: "#F3FAFC",
             boxShadow: "4px 0 24px rgba(0,0,0,0.12)",
           },
         }}
@@ -461,16 +420,6 @@ const Navbar = () => {
                 alt="Nivaan"
                 style={{ width: 36, height: "auto" }}
               />
-              <Box
-                sx={{
-                  fontFamily: "'Playfair Display', serif !important",
-                  fontWeight: 700,
-                  fontSize: "0.95rem",
-                  color: "#1b5e20",
-                }}
-              >
-                Nivaan Chemical
-              </Box>
             </Box>
             <IconButton onClick={handleDrawerClose} size="small">
               <CloseIcon fontSize="small" />
@@ -492,12 +441,12 @@ const Navbar = () => {
                   py: 1.2,
                   transition: "all 0.2s ease",
                   "&:hover": {
-                    backgroundColor: "rgba(46, 125, 50, 0.08)",
+                    backgroundColor: "rgba(15, 84, 119, 0.12)",
                     transform: "translateX(4px)",
                   },
                 }}
               >
-                <ListItemIcon sx={{ minWidth: 40, color: "#2E7D32" }}>
+                <ListItemIcon sx={{ minWidth: 40, color: "#0F5477" }}>
                   {item.icon}
                 </ListItemIcon>
                 <ListItemText
@@ -505,7 +454,7 @@ const Navbar = () => {
                   primaryTypographyProps={{
                     fontSize: "0.9rem",
                     fontWeight: 500,
-                    color: "#1a2e1a",
+                    color: "#12364C",
                   }}
                 />
               </ListItemButton>
@@ -519,7 +468,7 @@ const Navbar = () => {
               icon={<Phone sx={{ fontSize: 16 }} />}
               text="+91 91067 25328"
               type="phone"
-              iconColor="#2E7D32"
+              iconColor="#0F5477"
               textVariant="caption"
             />
             <Box sx={{ display: "flex", gap: 0.5, mt: 1.5 }}>

@@ -58,7 +58,7 @@ const CategorySelection = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "#FAFDF7",
+        backgroundColor: "#F3FAFC",
         position: "relative",
         "&::before": {
           content: '""',
@@ -76,7 +76,7 @@ const CategorySelection = () => {
         <Typography
           variant="overline"
           sx={{
-            color: "#2E7D32",
+            color: "#0F5477",
             fontWeight: 600,
             letterSpacing: "3px",
             fontSize: "0.8rem",
@@ -103,7 +103,7 @@ const CategorySelection = () => {
           sx={{
             width: 60,
             height: 3,
-            background: "linear-gradient(90deg, #2E7D32, #F9A825)",
+            background: "linear-gradient(90deg, #0F5477, #4AC6D0)",
             borderRadius: 2,
             mx: "auto",
           }}
@@ -165,7 +165,7 @@ const CategorySelection = () => {
                     borderColor: "rgba(46, 125, 50, 0.2)",
                     "& .category-icon": {
                       transform: "scale(1.1)",
-                      color: "#F9A825",
+                      color: "#4AC6D0",
                     },
                     "& .category-arrow": {
                       opacity: 1,
@@ -179,7 +179,7 @@ const CategorySelection = () => {
                   className="category-icon"
                   sx={{
                     mb: 1.5,
-                    color: "#2E7D32",
+                    color: "#0F5477",
                     transition: "all 0.3s ease",
                     p: 1.5,
                     borderRadius: "12px",
@@ -226,7 +226,7 @@ const CategorySelection = () => {
                     className="category-arrow"
                     sx={{
                       fontSize: 14,
-                      color: "#2E7D32",
+                      color: "#0F5477",
                       opacity: 0,
                       transform: "translateX(-8px)",
                       transition: "all 0.3s ease",

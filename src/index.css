@@ -5,7 +5,7 @@ body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FAFDF7;
+  background-color: #F3FAFC;
   color: #1a2e1a;
   overflow-x: hidden;
 }
@@ -25,7 +25,7 @@ html {
 
 /* Better focus styles for accessibility */
 :focus-visible {
-  outline: 2px solid #2E7D32;
+  outline: 2px solid #0F5477;
   outline-offset: 2px;
 }
 
@@ -36,30 +36,30 @@ html {
 
 :root {
   /* Refined agricultural palette — earthy, trustworthy, warm */
-  --color-primary: #2E7D32;
+  --color-primary: #0F5477;
   --color-primary-light: #60ad5e;
-  --color-primary-dark: #1b5e20;
+  --color-primary-dark: #0A3F5C;
   
-  --color-secondary: #F9A825;
-  --color-secondary-light: #fdd835;
-  --color-secondary-dark: #f57f17;
+  --color-secondary: #4AC6D0;
+  --color-secondary-light: #6DD4DE;
+  --color-secondary-dark: #359BA6;
   
-  --color-tertiary: #E65100;
+  --color-tertiary: #2F8EA3;
   --color-tertiary-light: #ff6d00;
   --color-tertiary-dark: #bf360c;
   
   --color-accent: #00695C;
-  --color-background: #FAFDF7;
+  --color-background: #F3FAFC;
   --color-surface: #ffffff;
   --color-text: #1a2e1a;
   --color-text-secondary: #4a5e4a;
   
   /* Harmonious gradients */
-  --gradient-primary: linear-gradient(135deg, #1b5e20 0%, #2E7D32 50%, #43a047 100%);
-  --gradient-secondary: linear-gradient(135deg, #F9A825 0%, #ff8f00 100%);
-  --gradient-accent: linear-gradient(135deg, #2E7D32 0%, #00695C 100%);
-  --gradient-energy: linear-gradient(90deg, #1b5e20 0%, #2E7D32 40%, #F9A825 100%);
-  --gradient-warm: linear-gradient(135deg, #F9A825 0%, #E65100 100%);
+  --gradient-primary: linear-gradient(135deg, #0A3F5C 0%, #0F5477 50%, #43a047 100%);
+  --gradient-secondary: linear-gradient(135deg, #4AC6D0 0%, #ff8f00 100%);
+  --gradient-accent: linear-gradient(135deg, #0F5477 0%, #00695C 100%);
+  --gradient-energy: linear-gradient(90deg, #0A3F5C 0%, #0F5477 40%, #4AC6D0 100%);
+  --gradient-warm: linear-gradient(135deg, #4AC6D0 0%, #2F8EA3 100%);
   
   /* Spacing scale */
   --space-xs: 0.25rem;
@@ -96,7 +96,7 @@ section, [id^="section-"] > * {
 /* Improved selection color */
 ::selection {
   background-color: rgba(46, 125, 50, 0.2);
-  color: #1b5e20;
+  color: #0A3F5C;
 }
 
 /* Smooth image loading */

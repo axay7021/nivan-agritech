@@ -82,17 +82,17 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5e9;
+  background: #E4F3FA;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #2E7D32, #1b5e20);
+  background: linear-gradient(180deg, #0F5477, #0A3F5C);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #1b5e20, #0d3d0f);
+  background: linear-gradient(180deg, #0A3F5C, #0d3d0f);
 }
 
 /* Hero text animation classes */
@@ -203,7 +203,7 @@
 }
 
 .animated-gradient {
-  background: linear-gradient(-45deg, #1b5e20, #2E7D32, #F9A825, #E65100);
+  background: linear-gradient(-45deg, #0A3F5C, #0F5477, #4AC6D0, #2F8EA3);
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
 }

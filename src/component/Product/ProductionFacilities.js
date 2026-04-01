@@ -66,7 +66,7 @@ const ProductionFacilities = () => {
               left: 0,
               right: 0,
               height: "4px",
-              background: "linear-gradient(90deg, #1b5e20, #2E7D32, #F9A825)",
+              background: "linear-gradient(90deg, #0A3F5C, #0F5477, #4AC6D0)",
               borderRadius: "20px 20px 0 0",
             },
           }}
@@ -74,7 +74,7 @@ const ProductionFacilities = () => {
           <Typography
             variant="overline"
             sx={{
-              color: "#2E7D32",
+              color: "#0F5477",
               fontWeight: 600,
               letterSpacing: "3px",
               fontSize: "0.75rem",
@@ -133,12 +133,12 @@ const ProductionFacilities = () => {
                 size="small"
                 sx={{
                   backgroundColor: "rgba(46, 125, 50, 0.08)",
-                  color: "#1b5e20",
+                  color: "#0A3F5C",
                   fontWeight: 600,
                   fontSize: "0.75rem",
                   borderRadius: "8px",
                   "& .MuiChip-icon": {
-                    color: "#2E7D32",
+                    color: "#0F5477",
                   },
                 }}
               />

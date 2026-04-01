@@ -7,6 +7,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import CopyableContactItem from "../CopyableContactItem";
+import footerLogo from "../../assets/images/resources/Nivaan_Chemical_logo.png";
 
 const Footer = () => {
   const handleSocialClick = (platform) => {
@@ -37,7 +38,7 @@ const Footer = () => {
       component="footer"
       sx={{
         background:
-          "linear-gradient(135deg, #0d3d0f 0%, #1b5e20 50%, #1a4a1e 100%)",
+          "linear-gradient(135deg, #0d3d0f 0%, #0A3F5C 50%, #1a4a1e 100%)",
         color: "#ffffff",
         padding: { xs: "40px 16px 24px", sm: "60px 24px 32px" },
         position: "relative",
@@ -49,7 +50,7 @@ const Footer = () => {
           left: 0,
           right: 0,
           height: "3px",
-          background: "linear-gradient(90deg, #2E7D32, #F9A825, #E65100)",
+          background: "linear-gradient(90deg, #0F5477, #4AC6D0, #2F8EA3)",
         },
       }}
     >
@@ -61,19 +62,18 @@ const Footer = () => {
         >
           {/* Brand Column */}
           <Grid item xs={12} sm={6} md={5}>
-            <Typography
-              variant="h4"
-              component="h2"
+            <Box
+              component="img"
+              src={footerLogo}
+              alt="Nivaan Chemical"
               sx={{
-                fontWeight: 700,
-                lineHeight: 1.2,
-                fontSize: { xs: "1.5rem", md: "1.75rem" },
+                width: { xs: 180, sm: 210 },
+                maxWidth: "100%",
+                height: "auto",
                 mb: 1.5,
-                letterSpacing: "-0.02em",
+                display: "block",
               }}
-            >
-              Nivaan Chemical
-            </Typography>
+            />
             <Typography
               variant="body2"
               sx={{
@@ -108,7 +108,7 @@ const Footer = () => {
                 <LocationOnIcon
                   sx={{
                     fontSize: 18,
-                    color: "#F9A825",
+                    color: "#4AC6D0",
                     mt: 0.3,
                     flexShrink: 0,
                   }}
@@ -129,7 +129,7 @@ const Footer = () => {
                 icon={<EmailIcon sx={{ fontSize: 18 }} />}
                 text="nivaanchemical@gmail.com"
                 type="email"
-                iconColor="#F9A825"
+                iconColor="#4AC6D0"
                 textVariant="body2"
                 textColor="rgba(255,255,255,0.7)"
               />
@@ -137,7 +137,7 @@ const Footer = () => {
                 icon={<Phone sx={{ fontSize: 18 }} />}
                 text="+91 91067 25328"
                 type="phone"
-                iconColor="#F9A825"
+                iconColor="#4AC6D0"
                 textVariant="body2"
                 textColor="rgba(255,255,255,0.7)"
               />
@@ -218,7 +218,7 @@ const Footer = () => {
               component="span"
               sx={{
                 fontWeight: 600,
-                color: "#F9A825",
+                color: "#4AC6D0",
               }}
             >
               Akshay Dobariya

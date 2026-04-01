@@ -496,7 +496,7 @@ const PRODUCT_DETAILS = {
     ],
 
     icon: <AgricultureIcon fontSize="large" color="primary" />,
-    color: "#f1f8e9",
+    color: "#EDF8FC",
   },
 };
 

@@ -134,7 +134,7 @@ const EnhancedHero = () => {
   const downloadCatalog = () => {
     const link = document.createElement("a");
     link.href = catalogPDF;
-    link.download = "Nivan-Chemical-Brochure.pdf";
+    link.download = "Nivaan-Chemical-Brochure.pdf";
     link.click();
   };
 
@@ -267,11 +267,11 @@ const EnhancedHero = () => {
                       backdropFilter: "blur(8px)",
                     }}
                   >
-                    <CheckCircle sx={{ fontSize: 16, color: "#F9A825" }} />
+                    <CheckCircle sx={{ fontSize: 16, color: "#4AC6D0" }} />
                     <Typography
                       variant="caption"
                       sx={{
-                        color: "#F9A825",
+                        color: "#4AC6D0",
                         fontWeight: 600,
                         fontSize: "0.75rem",
                         letterSpacing: "1px",
@@ -333,7 +333,7 @@ const EnhancedHero = () => {
                       <Typography
                         variant="h5"
                         sx={{
-                          color: "#F9A825",
+                          color: "#4AC6D0",
                           fontWeight: 600,
                           textShadow: "0 2px 8px rgba(0,0,0,0.3)",
                           fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
@@ -390,8 +390,8 @@ const EnhancedHero = () => {
                       size="large"
                       onClick={() => navigate("/products")}
                       sx={{
-                        backgroundColor: "#F9A825",
-                        color: "#1b5e20",
+                        backgroundColor: "#4AC6D0",
+                        color: "#0A3F5C",
                         px: { xs: 4, sm: 5 },
                         py: { xs: 1.4, sm: 1.6 },
                         borderRadius: "12px",
@@ -401,7 +401,7 @@ const EnhancedHero = () => {
                         letterSpacing: "0.3px",
                         boxShadow: "0 6px 20px rgba(249, 168, 37, 0.35)",
                         "&:hover": {
-                          backgroundColor: "#fdd835",
+                          backgroundColor: "#6DD4DE",
                           transform: "translateY(-3px)",
                           boxShadow: "0 10px 30px rgba(249, 168, 37, 0.45)",
                         },
@@ -487,7 +487,7 @@ const EnhancedHero = () => {
                             sm: "flex",
                           },
                           "& .MuiChip-icon": {
-                            color: "#F9A825",
+                            color: "#4AC6D0",
                             fontSize: "16px",
                           },
                           transition: "all 0.3s ease",
@@ -531,7 +531,7 @@ const EnhancedHero = () => {
                         <Avatar
                           sx={{
                             backgroundColor: "rgba(249, 168, 37, 0.15)",
-                            color: "#F9A825",
+                            color: "#4AC6D0",
                             mb: 1,
                             mx: "auto",
                             width: { xs: 40, md: 48 },
@@ -599,12 +599,12 @@ const EnhancedHero = () => {
               height: 10,
               borderRadius: "5px",
               backgroundColor:
-                currentImage === index ? "#F9A825" : "rgba(255,255,255,0.4)",
+                currentImage === index ? "#4AC6D0" : "rgba(255,255,255,0.4)",
               cursor: "pointer",
               transition: "all 0.4s ease",
               "&:hover": {
                 backgroundColor:
-                  currentImage === index ? "#F9A825" : "rgba(255,255,255,0.7)",
+                  currentImage === index ? "#4AC6D0" : "rgba(255,255,255,0.7)",
               },
             }}
           />

@@ -257,7 +257,7 @@ const Banner = () => {
               "linear-gradient(90deg, transparent, rgba(46,125,50,0.12), transparent)",
             zIndex: 1,
           },
-          backgroundColor: "#FAFDF7",
+          backgroundColor: "#F3FAFC",
         }}
       >
         <Container>
@@ -377,7 +377,7 @@ const Banner = () => {
               <Typography
                 variant="overline"
                 sx={{
-                  color: "#2E7D32",
+                  color: "#0F5477",
                   fontWeight: 600,
                   letterSpacing: "3px",
                   fontSize: "0.8rem",
@@ -402,7 +402,7 @@ const Banner = () => {
                 sx={{
                   width: 50,
                   height: 3,
-                  background: "linear-gradient(90deg, #2E7D32, #F9A825)",
+                  background: "linear-gradient(90deg, #0F5477, #4AC6D0)",
                   borderRadius: 2,
                   mb: 2.5,
                 }}
@@ -482,7 +482,7 @@ const Banner = () => {
                         sx={{
                           fontWeight: 700,
                           fontSize: 14,
-                          color: "#1b5e20",
+                          color: "#0A3F5C",
                           textAlign: "center",
                         }}
                       >

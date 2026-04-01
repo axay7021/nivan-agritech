@@ -96,7 +96,7 @@ const milestones = [
 // ==================== Component ====================
 const AboutUsPage = () => {
   return (
-    <Box sx={{ backgroundColor: "#FAFDF7" }}>
+    <Box sx={{ backgroundColor: "#F3FAFC" }}>
       {/* Hero Banner */}
       <Box
         component={motion.div}
@@ -118,7 +118,7 @@ const AboutUsPage = () => {
             left: 0,
             right: 0,
             height: "4px",
-            background: "linear-gradient(90deg, #2E7D32, #F9A825, #E65100)",
+            background: "linear-gradient(90deg, #0F5477, #4AC6D0, #2F8EA3)",
           },
         }}
       >
@@ -131,7 +131,7 @@ const AboutUsPage = () => {
             <Typography
               variant="overline"
               sx={{
-                color: "#F9A825",
+                color: "#4AC6D0",
                 fontWeight: 600,
                 letterSpacing: "4px",
                 fontSize: "0.85rem",
@@ -227,7 +227,7 @@ const AboutUsPage = () => {
               <Typography
                 variant="overline"
                 sx={{
-                  color: "#2E7D32",
+                  color: "#0F5477",
                   fontWeight: 600,
                   letterSpacing: "3px",
                   fontSize: "0.8rem",
@@ -253,7 +253,7 @@ const AboutUsPage = () => {
                 sx={{
                   width: 50,
                   height: 3,
-                  background: "linear-gradient(90deg, #2E7D32, #F9A825)",
+                  background: "linear-gradient(90deg, #0F5477, #4AC6D0)",
                   borderRadius: 2,
                   mb: 3,
                 }}
@@ -329,7 +329,7 @@ const AboutUsPage = () => {
                       mb: 2,
                     }}
                   >
-                    <Flag sx={{ fontSize: 32, color: "#F9A825" }} />
+                    <Flag sx={{ fontSize: 32, color: "#4AC6D0" }} />
                     <Typography
                       variant="h4"
                       sx={{
@@ -382,7 +382,7 @@ const AboutUsPage = () => {
                       mb: 2,
                     }}
                   >
-                    <Visibility sx={{ fontSize: 32, color: "#F9A825" }} />
+                    <Visibility sx={{ fontSize: 32, color: "#4AC6D0" }} />
                     <Typography
                       variant="h4"
                       sx={{
@@ -425,7 +425,7 @@ const AboutUsPage = () => {
             <Typography
               variant="overline"
               sx={{
-                color: "#2E7D32",
+                color: "#0F5477",
                 fontWeight: 600,
                 letterSpacing: "3px",
                 fontSize: "0.8rem",
@@ -450,7 +450,7 @@ const AboutUsPage = () => {
               sx={{
                 width: 60,
                 height: 3,
-                background: "linear-gradient(90deg, #2E7D32, #F9A825)",
+                background: "linear-gradient(90deg, #0F5477, #4AC6D0)",
                 borderRadius: 2,
                 mx: "auto",
                 mt: 2,
@@ -483,7 +483,7 @@ const AboutUsPage = () => {
                         boxShadow: "0 16px 40px rgba(27, 94, 32, 0.1)",
                         borderColor: "rgba(46, 125, 50, 0.15)",
                         "& .value-icon": {
-                          backgroundColor: "#2E7D32",
+                          backgroundColor: "#0F5477",
                           color: "white",
                         },
                       },
@@ -499,7 +499,7 @@ const AboutUsPage = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         backgroundColor: "rgba(46, 125, 50, 0.08)",
-                        color: "#2E7D32",
+                        color: "#0F5477",
                         mb: 2,
                         transition: "all 0.35s ease",
                       }}
@@ -539,7 +539,7 @@ const AboutUsPage = () => {
       <Box
         sx={{
           py: { xs: 6, md: 8 },
-          backgroundColor: "#f0f7e6",
+          backgroundColor: "#EAF6FB",
         }}
       >
         <Container maxWidth="lg">
@@ -554,7 +554,7 @@ const AboutUsPage = () => {
                 <Typography
                   variant="overline"
                   sx={{
-                    color: "#2E7D32",
+                    color: "#0F5477",
                     fontWeight: 600,
                     letterSpacing: "3px",
                     fontSize: "0.8rem",
@@ -580,7 +580,7 @@ const AboutUsPage = () => {
                   sx={{
                     width: 50,
                     height: 3,
-                    background: "linear-gradient(90deg, #2E7D32, #F9A825)",
+                    background: "linear-gradient(90deg, #0F5477, #4AC6D0)",
                     borderRadius: 2,
                     mb: 3,
                   }}
@@ -608,10 +608,10 @@ const AboutUsPage = () => {
                       icon={<Agriculture sx={{ fontSize: 16 }} />}
                       sx={{
                         backgroundColor: "rgba(46, 125, 50, 0.08)",
-                        color: "#1b5e20",
+                        color: "#0A3F5C",
                         fontWeight: 500,
                         fontSize: "0.8rem",
-                        "& .MuiChip-icon": { color: "#2E7D32" },
+                        "& .MuiChip-icon": { color: "#0F5477" },
                         border: "1px solid rgba(46, 125, 50, 0.12)",
                       }}
                     />
@@ -662,7 +662,7 @@ const AboutUsPage = () => {
             <Typography
               variant="overline"
               sx={{
-                color: "#2E7D32",
+                color: "#0F5477",
                 fontWeight: 600,
                 letterSpacing: "3px",
                 fontSize: "0.8rem",
@@ -687,7 +687,7 @@ const AboutUsPage = () => {
               sx={{
                 width: 60,
                 height: 3,
-                background: "linear-gradient(90deg, #2E7D32, #F9A825)",
+                background: "linear-gradient(90deg, #0F5477, #4AC6D0)",
                 borderRadius: 2,
                 mx: "auto",
                 mt: 2,
@@ -706,7 +706,7 @@ const AboutUsPage = () => {
               top: 0,
               bottom: 0,
               width: "2px",
-              background: "linear-gradient(to bottom, #2E7D32, #F9A825)",
+              background: "linear-gradient(to bottom, #0F5477, #4AC6D0)",
               borderRadius: 1,
             }}
           />
@@ -741,8 +741,8 @@ const AboutUsPage = () => {
                     width: 14,
                     height: 14,
                     borderRadius: "50%",
-                    backgroundColor: "#2E7D32",
-                    border: "3px solid #F9A825",
+                    backgroundColor: "#0F5477",
+                    border: "3px solid #4AC6D0",
                     zIndex: 1,
                   }}
                 />
@@ -765,7 +765,7 @@ const AboutUsPage = () => {
                   <Typography
                     variant="subtitle2"
                     sx={{
-                      color: "#F9A825",
+                      color: "#4AC6D0",
                       fontWeight: 700,
                       fontSize: "0.85rem",
                       mb: 0.5,
@@ -794,7 +794,7 @@ const AboutUsPage = () => {
       <Box
         sx={{
           py: { xs: 6, md: 8 },
-          background: "linear-gradient(180deg, #f0f7e6 0%, #FAFDF7 100%)",
+          background: "linear-gradient(180deg, #EAF6FB 0%, #F3FAFC 100%)",
         }}
       >
         <Container maxWidth="md">
@@ -808,7 +808,7 @@ const AboutUsPage = () => {
               <Typography
                 variant="overline"
                 sx={{
-                  color: "#2E7D32",
+                  color: "#0F5477",
                   fontWeight: 600,
                   letterSpacing: "3px",
                   fontSize: "0.8rem",
@@ -834,7 +834,7 @@ const AboutUsPage = () => {
                 sx={{
                   width: 60,
                   height: 3,
-                  background: "linear-gradient(90deg, #2E7D32, #F9A825)",
+                  background: "linear-gradient(90deg, #0F5477, #4AC6D0)",
                   borderRadius: 2,
                   mx: "auto",
                   mt: 2,
@@ -864,7 +864,7 @@ const AboutUsPage = () => {
                     mb: 3,
                   }}
                 >
-                  <EmojiEvents sx={{ fontSize: 40, color: "#F9A825" }} />
+                  <EmojiEvents sx={{ fontSize: 40, color: "#4AC6D0" }} />
                 </Box>
                 <Typography
                   variant="h5"
@@ -879,7 +879,7 @@ const AboutUsPage = () => {
                 <Typography
                   variant="subtitle1"
                   sx={{
-                    color: "#2E7D32",
+                    color: "#0F5477",
                     fontWeight: 600,
                     mb: 2,
                     fontSize: "0.95rem",
