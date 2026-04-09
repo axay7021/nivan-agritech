@@ -55,6 +55,12 @@ const PRODUCT_DETAILS = {
         description: "Dual-action formula for comprehensive pest management",
         activeIngredient: "Thiamethoxam + Lambda Cyhalothrin",
       },
+      {
+        name: "Niva Neem (Natural Neem-based)",
+        description:
+          "Botanical insecticide with neem seed kernel extract for pest deterrence",
+        activeIngredient: "Neem seed kernel extract",
+      },
     ],
 
     usage: [
@@ -270,12 +276,6 @@ const PRODUCT_DETAILS = {
       "Plant growth regulators (PGRs) and stimulants are bioactive compounds that influence various aspects of plant growth and development. They can promote root development, enhance flowering and fruiting, improve stress tolerance, and optimize nutrient uptake. Our products include natural and synthetic compounds that work synergistically with plant hormones to achieve desired agricultural outcomes.",
 
     examples: [
-      {
-        name: "Niva Neem (Natural Neem-based)",
-        description:
-          "Organic plant growth promoter with pest deterrent properties",
-        activeIngredient: "Neem seed kernel extract",
-      },
       {
         name: "Niva Stick (Silicone-based)",
         description:
@@ -844,7 +844,7 @@ const ProductDetailPage = () => {
                 navigate("/");
                 setTimeout(() => {
                   const element = document.getElementById(
-                    "section-products-overview"
+                    "section-products-overview",
                   );
                   if (element) {
                     element.scrollIntoView({ behavior: "smooth" });

@@ -18,7 +18,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { InfoOutlined } from "@mui/icons-material";
 
 const CATEGORY_LIST = [
-  { key: "insecticides", name: "Pesticides" },
+  { key: "insecticides", name: "Insecticides" },
   { key: "fungicides", name: "Fungicides" },
   { key: "herbicides", name: "Herbicides" },
   {
@@ -39,7 +39,7 @@ const CATEGORY_LIST = [
 const PRODUCTS_DATA = {
   insecticides: [
     {
-      id: "pesticides-tolfenza",
+      id: "insecticides-tolfenza",
       name: "TOLFENZA",
       image:
         "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775059969/TOLFENZA_qq3rlr.jpg",
@@ -47,7 +47,7 @@ const PRODUCTS_DATA = {
         "Tolfenpyrad 15% EC\nInsecticide for effective pest control.",
     },
     {
-      id: "pesticides-imida-30",
+      id: "insecticides-imida-30",
       name: "IMIDA 30",
       image:
         "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775061904/IMIDA-30_zrklcn.jpg",
@@ -78,7 +78,7 @@ const PRODUCTS_DATA = {
       description: "Cypermethrin 10% EC\nAdvanced insecticide formulation.",
     },
     {
-      id: "pesticides-cypron-25",
+      id: "insecticides-cypron-25",
       name: "CYPRON 25",
       image:
         "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775063059/CYPRON-25_b9ekkb.jpg",
@@ -166,7 +166,7 @@ const PRODUCTS_DATA = {
       image:
         "https://res.cloudinary.com/dg8eoy4nt/image/upload/v1775060785/FlyKill_fvqoos.jpg",
       description:
-        "Thiamethoxam 25% WG Pesticide\nEffective fly control insecticide.",
+        "Thiamethoxam 25% WG Insecticide\nEffective fly control insecticide.",
     },
     {
       id: "insecticides-15",
@@ -216,12 +216,12 @@ const PRODUCTS_DATA = {
         "Chlorantraniliprole 18.5% W/W SC\nSystemic fungicide for comprehensive disease management.",
     },
     {
-      id: "pgr-stimulants-1",
+      id: "insecticides-20",
       name: "Niva Neem",
       image:
         "https://res.cloudinary.com/dxhih7kwi/image/upload/v1762797425/NIVA_NEEM_kdmbme.jpg",
       description:
-        "Azadirachtin 0.3% (3000ppm) Insecticide\nNatural neem-based plant growth regulator.",
+        "Azadirachtin 0.3% (3000ppm) Insecticide\nNatural neem-based botanical insecticide for crop care.",
     },
   ],
   fungicides: [
