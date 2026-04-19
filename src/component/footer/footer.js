@@ -53,7 +53,7 @@ const Footer = () => {
           background: "linear-gradient(90deg, #2f8ea3, #72d6dd, #2f8ea3)",
         },
         "&::after": {
-          content: '\"\"',
+          content: '""',
           position: "absolute",
           inset: 0,
           background:
@@ -84,17 +84,17 @@ const Footer = () => {
                 boxShadow: "0 10px 26px rgba(0,0,0,0.2)",
               }}
             >
-            <Box
-              component="img"
-              src={footerLogo}
-              alt="Nivaan Chemical"
-              sx={{
-                width: { xs: 170, sm: 200 },
-                maxWidth: "100%",
-                height: "auto",
-                display: "block",
-              }}
-            />
+              <Box
+                component="img"
+                src={footerLogo}
+                alt="Nivaan Chemical"
+                sx={{
+                  width: { xs: 170, sm: 200 },
+                  maxWidth: "100%",
+                  height: "auto",
+                  display: "block",
+                }}
+              />
             </Box>
             <Typography
               variant="body2"
