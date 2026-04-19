@@ -379,28 +379,12 @@ const PRODUCTS_DATA = {
         "Complete micronutrient blend\nEssential trace elements for optimal plant growth.",
     },
     {
-      id: "mix-micro-nutrients-2",
-      name: "Mix Micro Premium",
+      id: "mix-micro-nutrients-6",
+      name: "Mix Micro Grade 2",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137065/MIX_MICRO_ky3j33.jpg",
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137061/Grade_2_yezb9f.jpg",
       description:
-        "Complete Mix Micronutrient Formula\nBalanced blend of zinc, iron, manganese, boron, copper, and molybdenum.",
-    },
-    {
-      id: "mix-micro-nutrients-3",
-      name: "Mix Micro Grade 5",
-      image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137065/Grade_5_zvytss.jpg",
-      description:
-        "Mix Micro Grade 5\nPremium-grade micronutrient blend for superior crop performance.",
-    },
-    {
-      id: "mix-micro-nutrients-4",
-      name: "Mix Micro Grade 4",
-      image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137063/Grade_4_cd9n4h.jpg",
-      description:
-        "Mix Micro Grade 4\nBalanced micronutrient formulation for consistent growth.",
+        "Mix Micro Grade 2\nEveryday micronutrient blend for steady crop development.",
     },
     {
       id: "mix-micro-nutrients-5",
@@ -411,12 +395,28 @@ const PRODUCTS_DATA = {
         "Mix Micro Grade 3\nReliable micronutrient support for healthier plants.",
     },
     {
-      id: "mix-micro-nutrients-6",
-      name: "Mix Micro Grade 2",
+      id: "mix-micro-nutrients-4",
+      name: "Mix Micro Grade 4",
       image:
-        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137061/Grade_2_yezb9f.jpg",
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137063/Grade_4_cd9n4h.jpg",
       description:
-        "Mix Micro Grade 2\nEveryday micronutrient blend for steady crop development.",
+        "Mix Micro Grade 4\nBalanced micronutrient formulation for consistent growth.",
+    },
+    {
+      id: "mix-micro-nutrients-3",
+      name: "Mix Micro Grade 5",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137065/Grade_5_zvytss.jpg",
+      description:
+        "Mix Micro Grade 5\nPremium-grade micronutrient blend for superior crop performance.",
+    },
+    {
+      id: "mix-micro-nutrients-2",
+      name: "Mix Micro Premium",
+      image:
+        "https://res.cloudinary.com/dxhih7kwi/image/upload/v1771137065/MIX_MICRO_ky3j33.jpg",
+      description:
+        "Complete Mix Micronutrient Formula\nBalanced blend of zinc, iron, manganese, boron, copper, and molybdenum.",
     },
   ],
   "water-soluble-fertilizers": [

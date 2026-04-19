@@ -25,14 +25,10 @@ import {
   EmojiEvents,
   CheckCircle,
   FlashOn,
-  Download,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import FloatingParticles from "./FloatingParticles";
 import "./ModernHero.css";
-
-// Import the catalog PDF
-import catalogPDF from "../../assets/fiels/Catalog/Niavan-Chemical - Brochure.pdf";
 
 // Import your existing images
 import heroImage from "../../assets/images/main-slider/slide_v5_1.jpg";
@@ -42,7 +38,7 @@ import cropImage from "../../assets/images/main-slider/slide_v5_3.jpg";
 // High-quality online agricultural images for hero backgrounds
 const onlineImages = [
   "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1622955658214-d05c1c6fcf84?auto=format&fit=crop&w=1920&q=80",
   "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80",
 ];
 
@@ -96,7 +92,7 @@ const EnhancedHero = () => {
       description:
         "Empowering farmers with innovative, sustainable agricultural chemicals that enhance crop yield and protect against pests, diseases, and weeds.",
       primaryAction: "Explore Products",
-      secondaryAction: "Download Catalog",
+      secondaryAction: "Contact Expert",
     },
     {
       title: "Science-Driven Agricultural Excellence",
@@ -131,13 +127,6 @@ const EnhancedHero = () => {
     }
   };
 
-  const downloadCatalog = () => {
-    const link = document.createElement("a");
-    link.href = catalogPDF;
-    link.download = "Nivaan-Chemical-Brochure.pdf";
-    link.click();
-  };
-
   const copyContactNumber = () => {
     const contactNumber = "+91 91067 25328"; // Replace with actual contact number
     navigator.clipboard
@@ -158,12 +147,7 @@ const EnhancedHero = () => {
   };
 
   const handleSecondaryAction = () => {
-    if (currentHeroText.secondaryAction === "Download Catalog") {
-      downloadCatalog();
-    } else {
-      // Handle other secondary actions (Contact Expert, Get Quote)
-      copyContactNumber();
-    }
+    copyContactNumber();
   };
 
   const currentHeroText = heroTexts[currentImage % heroTexts.length];
@@ -420,14 +404,7 @@ const EnhancedHero = () => {
                     <Button
                       variant="outlined"
                       size="large"
-                      startIcon={
-                        currentHeroText.secondaryAction ===
-                        "Download Catalog" ? (
-                          <Download />
-                        ) : (
-                          <Phone />
-                        )
-                      }
+                      startIcon={<Phone />}
                       onClick={handleSecondaryAction}
                       sx={{
                         color: "white",

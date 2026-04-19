@@ -38,7 +38,7 @@ const Footer = () => {
       component="footer"
       sx={{
         background:
-          "linear-gradient(135deg, #0d3d0f 0%, #0A3F5C 50%, #1a4a1e 100%)",
+          "radial-gradient(circle at 15% 20%, rgba(44, 128, 150, 0.22) 0%, transparent 32%), radial-gradient(circle at 85% 90%, rgba(20, 108, 95, 0.2) 0%, transparent 38%), linear-gradient(145deg, #072735 0%, #0a3446 45%, #0c2938 100%)",
         color: "#ffffff",
         padding: { xs: "40px 16px 24px", sm: "60px 24px 32px" },
         position: "relative",
@@ -50,11 +50,20 @@ const Footer = () => {
           left: 0,
           right: 0,
           height: "3px",
-          background: "linear-gradient(90deg, #0F5477, #4AC6D0, #2F8EA3)",
+          background: "linear-gradient(90deg, #2f8ea3, #72d6dd, #2f8ea3)",
+        },
+        "&::after": {
+          content: '\"\"',
+          position: "absolute",
+          inset: 0,
+          background:
+            "linear-gradient(120deg, rgba(255,255,255,0.05) 0%, transparent 35%), repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 14px)",
+          opacity: 0.32,
+          pointerEvents: "none",
         },
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Grid
           container
           spacing={{ xs: 3, md: 5 }}
@@ -63,21 +72,34 @@ const Footer = () => {
           {/* Brand Column */}
           <Grid item xs={12} sm={6} md={5}>
             <Box
+              sx={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "rgba(255,255,255,0.95)",
+                borderRadius: "12px",
+                px: 2,
+                py: 1.5,
+                mb: 2,
+                boxShadow: "0 10px 26px rgba(0,0,0,0.2)",
+              }}
+            >
+            <Box
               component="img"
               src={footerLogo}
               alt="Nivaan Chemical"
               sx={{
-                width: { xs: 180, sm: 210 },
+                width: { xs: 170, sm: 200 },
                 maxWidth: "100%",
                 height: "auto",
-                mb: 1.5,
                 display: "block",
               }}
             />
+            </Box>
             <Typography
               variant="body2"
               sx={{
-                color: "rgba(255,255,255,0.55)",
+                color: "rgba(255,255,255,0.78)",
                 maxWidth: 340,
                 lineHeight: 1.7,
                 fontSize: "0.85rem",
@@ -93,7 +115,7 @@ const Footer = () => {
             <Typography
               variant="subtitle2"
               sx={{
-                color: "rgba(255,255,255,0.5)",
+                color: "rgba(220, 246, 249, 0.78)",
                 textTransform: "uppercase",
                 letterSpacing: "2px",
                 fontSize: "0.7rem",
@@ -116,7 +138,7 @@ const Footer = () => {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: "rgba(255,255,255,0.7)",
+                    color: "rgba(240,255,255,0.82)",
                     fontSize: "0.82rem",
                     lineHeight: 1.6,
                   }}
@@ -131,7 +153,7 @@ const Footer = () => {
                 type="email"
                 iconColor="#4AC6D0"
                 textVariant="body2"
-                textColor="rgba(255,255,255,0.7)"
+                textColor="rgba(240,255,255,0.82)"
               />
               <CopyableContactItem
                 icon={<Phone sx={{ fontSize: 18 }} />}
@@ -139,7 +161,7 @@ const Footer = () => {
                 type="phone"
                 iconColor="#4AC6D0"
                 textVariant="body2"
-                textColor="rgba(255,255,255,0.7)"
+                textColor="rgba(240,255,255,0.82)"
               />
             </Box>
           </Grid>
@@ -149,7 +171,7 @@ const Footer = () => {
             <Typography
               variant="subtitle2"
               sx={{
-                color: "rgba(255,255,255,0.5)",
+                color: "rgba(220, 246, 249, 0.78)",
                 textTransform: "uppercase",
                 letterSpacing: "2px",
                 fontSize: "0.7rem",
@@ -165,8 +187,9 @@ const Footer = () => {
                   key={i}
                   onClick={() => handleSocialClick(platform)}
                   sx={{
-                    color: "rgba(255,255,255,0.6)",
-                    backgroundColor: "rgba(255,255,255,0.06)",
+                    color: "rgba(230, 249, 252, 0.82)",
+                    backgroundColor: "rgba(255,255,255,0.09)",
+                    border: "1px solid rgba(255,255,255,0.12)",
                     borderRadius: "10px",
                     width: 40,
                     height: 40,
@@ -188,7 +211,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <Box
           sx={{
-            borderTop: "1px solid rgba(255,255,255,0.08)",
+            borderTop: "1px solid rgba(255,255,255,0.14)",
             pt: 2.5,
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
@@ -200,7 +223,7 @@ const Footer = () => {
           <Typography
             variant="caption"
             sx={{
-              color: "rgba(255,255,255,0.4)",
+              color: "rgba(236,250,252,0.62)",
               fontSize: "0.75rem",
             }}
           >
@@ -209,7 +232,7 @@ const Footer = () => {
           <Typography
             variant="caption"
             sx={{
-              color: "rgba(255,255,255,0.35)",
+              color: "rgba(236,250,252,0.58)",
               fontSize: "0.72rem",
             }}
           >
